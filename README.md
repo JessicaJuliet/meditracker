@@ -36,7 +36,7 @@ The colour blue appears to be very standard across many medical websites so it w
 ### Mockups
 I create some higher fidelity desktop mockups for the key pages on the website. This provided me with an opportunity to sample my chosen colours and ensure the layout I had wireframed looks visually appealing. See sample of hompage mockup below and the remaining in bullet points after:
 
-<img src="images/readme/homepage-mockup.png">
+<img src="images/readme/homepage-mockup.png" width="200">
 
 * [Homepage Mockup](images/readme/homepage-mockup.png)
 * [Register Mockup](images/readme/register-mockup.png)
@@ -49,7 +49,7 @@ I create some higher fidelity desktop mockups for the key pages on the website. 
 
 MongoDB was used to set up the database for MediTracker. Please see the outlined collections in the image below along with their documents:
 
-<img src="images/readme/meditracker-database.png">
+<img src="images/readme/meditracker-database.png" width="200">
 
 
 ### Sitemap
