@@ -35,6 +35,12 @@ The colour blue appears to be very standard across many medical websites so it w
 ### Wireframes
 ### Mockups
 ### Database Structure
+
+MongoDB was used to set up the database for MediTracker. Please see the outlined collections in the image below along with their documents:
+
+<img src="images/readme/meditracker-database.png">
+
+
 ### Sitemap
 
 ## Features
