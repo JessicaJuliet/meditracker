@@ -43,16 +43,28 @@ I created some higher fidelity desktop mockups for the key pages on the website.
 
 ### Database Structure
 
-MongoDB was used to set up the database for MediTracker. I used Canva to illustrate the collections, along with their documents, in the image below:
+MongoDB was used to set up the database for MediTracker. I used [Canva](www.canva.com) to illustrate the collections, along with their documents, in the image below:
 
 <img src="images/readme/meditracker-database.png" alt="MediTracker MongoDB Collections">
 
 ### Sitemap
 
-I used Canva to design a sitemap for this website as displayed below:
+I also used Canva to design a sitemap for this website as displayed below:
 
 <img src="images/readme/meditracker-sitemap.png" alt="MediTracker Sitemap">
 
 ## Features
 ### Existing Features
 ### Features To Be Implemented
+
+## Technologies Used
+
+### Languages
+* [HTML]() was the main language used to create this website
+* [CSS]() was used to add bespoke design
+* [JavaScript]() was used to create interactive elements on the website
+* [Python]() was used for the backend of the website
+
+### Libraries and Frameworks
+
+### Tools
