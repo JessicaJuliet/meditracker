@@ -17,7 +17,7 @@ View the [MediTracker live website here]().
     * Logo
     * User Stories
 * [Website Structure](##website-structure)
-    * Wiresframes
+    * Wireframes
     * Mockups
     * Database Structure
     * Sitemap
@@ -63,7 +63,10 @@ The main base colour chosen for this website (red) was sourced from a patient po
 ### Logo
 
 ### User Stories
-As a website user:
+
+**As a website owner:**
+
+**As a website user:**
 * I want a website which is easy to navigate on both mobile and desktop devices
 * I want a website which is visually appealing and its purpose immediately apparent
 * I want to be able to register to create my own personal account
@@ -79,6 +82,21 @@ As a website user:
 ## Website Structure
 
 ### Wireframes
+
+I created wireframes for this web application using [balsamiq](https://balsamiq.com/wireframes/):
+
+**Desktop wireframes:**
+* [Homepage Wireframe](images/readme/homepage-desktop-wireframe.png)
+* [Register Wireframe](images/readme/register-desktop-wireframe.png)
+* [Sign In Wireframe](images/readme/signin-desktop-wireframe.png)
+* [Dashboard Wireframe](images/readme/dashboard-desktop-wireframe.png)
+* [Health Profile Wireframe](images/readme/edit-profile-desktop-wireframe.png)
+* [Add Log Wireframe](images/readme/add-log-desktop-wireframe.png)
+
+**Mobile Wireframes**
+
+**Tablet Wireframes**
+
 ### Mockups
 I created some higher fidelity desktop mockups for the key pages on the website. This provided me with an opportunity to sample my chosen colours and ensure the layout I had wireframed looked visually appealing. Please see desktop mockups below:
 
