@@ -68,3 +68,12 @@ I also used Canva to design a sitemap for this website as displayed below:
 ### Libraries and Frameworks
 
 ### Tools
+* [Adobe Illustrator](https://www.adobe.com/ie/products/illustrator.html) was used to create the logo and high fidelity mock ups
+* [TinyPNG](https://tinypng.com/) was used to reduce the size of all the images on the website
+* [Google Fonts](https://fonts.google.com/) was used to find, sample and import fonts for the logo and website
+* [balsamiq](https://balsamiq.com/wireframes/) was used to create low-fidelity wireframes of the website
+* [Git](https://git-scm.com/) was used as the version control software to add, commit and push code to the GitHub repository
+* [Gitpod](https://gitpod.io/) was used as the development environment to write my code
+* [GitHub](https://github.com/) is the hosting site used to store the source code for the Website
+* [W3C Markup validator](https://validator.w3.org/) was used regularly to check for any errors in the HTML on the site
+* [W3C CSS validator](https://jigsaw.w3.org/css-validator/) was used regularly to check for any errors in the CSS on the site
