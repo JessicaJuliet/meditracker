@@ -28,6 +28,16 @@ The main base colour chosen for this website (red) was sourced from a patient po
 ### Typography
 ### Logo
 ### User Stories
+As a website user:
+* I want a website which is easy to navigate on both mobile and desktop devices
+* I want a website which is visually appealing and its purpose immediately apparent
+* I want to be able to register to create my own personal account
+* I want to feel that my information is secure by creating a password to my personal account
+* I want to be able to update my health profile with my personal details
+* I want to be able to add and edit logs to record my medical symptoms over time
+* I want to be able to delete logs I no longer wish to record
+* I want to be able to filter logs by date they were entered
+* I want to be able to request an appointment with a medical professional
 
 ## Website Structure
 ### Wireframes
