@@ -4,6 +4,37 @@ Code Institute | Milestone Project 3 | Backend Development
 
 View the [MediTracker live website here]().
 
+## Table of Contents
+
+* [Purpose](##purpose)
+    * Introduction
+    * Vision and Mission
+    * Target Audience
+* [User Experience Design](##user-experience-design)
+    * Design Inspiration
+    * Colour Scheme
+    * Typography
+    * Logo
+    * User Stories
+* [Website Structure](##website-structure)
+    * Wiresframes
+    * Mockups
+    * Database Structure
+    * Sitemap
+* [Features](##features)
+    * Existing Features
+    * Features to be Implemented
+* [Technologies Used](##technologies-used)
+    * Languages
+    * Libraries and Frameworks
+    * Tools
+* [Testing](#testing)
+* [Deployment](#deployment)
+    * Local Deployment
+    * Heroku Deployment
+* [Credits](#credits)
+
+
 ## Purpose
 
 ### Introduction
@@ -14,6 +45,8 @@ MediTracker's Vision is to empower chronic illness patients to take control of t
 
 ### Target Audience
 The target audience for this web application are inviduals who have chronic illnesses and want to get more from their interactions with their medical team by providing an accurate  representation of their symptoms over time, rather than recalling from memory at appointments. 
+
+[Back to top](##Table-of-Contents)
 
 ## User Experience Design
 
@@ -26,7 +59,9 @@ The main base colour chosen for this website (red) was sourced from a patient po
 <img src="images/readme/adobe-color.png" alt="MediTracker Adobe Color swatch">
 
 ### Typography
+
 ### Logo
+
 ### User Stories
 As a website user:
 * I want a website which is easy to navigate on both mobile and desktop devices
@@ -39,7 +74,10 @@ As a website user:
 * I want to be able to filter logs by date they were entered
 * I want to be able to request an appointment with a medical professional
 
+[Back to top](##Table-of-Contents)
+
 ## Website Structure
+
 ### Wireframes
 ### Mockups
 I created some higher fidelity desktop mockups for the key pages on the website. This provided me with an opportunity to sample my chosen colours and ensure the layout I had wireframed looked visually appealing. Please see desktop mockups below:
@@ -63,9 +101,15 @@ I also used Canva to design a sitemap for this website as displayed below:
 
 <img src="images/readme/meditracker-sitemap.png" alt="MediTracker Sitemap">
 
+[Back to top](##Table-of-Contents)
+
 ## Features
+
 ### Existing Features
+
 ### Features To Be Implemented
+
+[Back to top](##Table-of-Contents)
 
 ## Technologies Used
 
@@ -87,3 +131,5 @@ I also used Canva to design a sitemap for this website as displayed below:
 * [GitHub](https://github.com/) is the hosting site used to store the source code for the Website
 * [W3C Markup validator](https://validator.w3.org/) was used regularly to check for any errors in the HTML on the site
 * [W3C CSS validator](https://jigsaw.w3.org/css-validator/) was used regularly to check for any errors in the CSS on the site
+
+[Back to top](##Table-of-Contents)
