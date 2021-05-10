@@ -23,7 +23,7 @@ I sourced a lot of design inspiration for this website by researching patient po
 ### Colour Scheme
 The main base colour chosen for this website (red) was sourced from a patient portal mockup for [Orlando Health](http://struongux.com/ohealth.html). I used Adobe Illustrator's colour picker tools to identify the hexadecimal value for this colour, which was **#9E0035**. I also used [Adobe Color](https://color.adobe.com/create/color-wheel) to generate more monochromatic shades from this base colour, which I used on the homepage. The colour blue appears to be very standard across many medical website designs, so it was nice to try out something a little different here.
 
-<img src="images/readme/adobe-color.png">
+<img src="images/readme/adobe-color.png" alt="MediTracker Adobe Color swatch">
 
 ### Typography
 ### Logo
@@ -43,13 +43,15 @@ I created some higher fidelity desktop mockups for the key pages on the website.
 
 ### Database Structure
 
-MongoDB was used to set up the database for MediTracker. Please see the outlined collections in the image below along with their documents:
+MongoDB was used to set up the database for MediTracker. I used Canva to illustrate the collections, along with their documents, in the image below:
 
-<img src="images/readme/meditracker-database.png">
+<img src="images/readme/meditracker-database.png" alt="MediTracker MongoDB Collections">
 
 ### Sitemap
 
+I used Canva to design a sitemap for this website as displayed below:
 
+<img src="images/readme/meditracker-sitemap.png" alt="MediTracker Sitemap">
 
 ## Features
 ### Existing Features
