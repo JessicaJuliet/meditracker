@@ -86,16 +86,15 @@ The main base colour chosen for this website (red) was sourced from a patient po
 I created wireframes for this web application using [balsamiq](https://balsamiq.com/wireframes/):
 
 **Desktop wireframes:**
-* [Homepage Wireframe](images/readme/homepage-desktop-wireframe.png)
-* [Register Wireframe](images/readme/register-desktop-wireframe.png)
-* [Sign In Wireframe](images/readme/signin-desktop-wireframe.png)
-* [Dashboard Wireframe](images/readme/dashboard-desktop-wireframe.png)
-* [Health Profile Wireframe](images/readme/edit-profile-desktop-wireframe.png)
-* [Add Log Wireframe](images/readme/add-log-desktop-wireframe.png)
 
-**Mobile Wireframes**
-
-**Tablet Wireframes**
+Desktop Wireframes | Mobile Wireframes | Tablet Wireframes
+------------------ | ------------------ | ----------------
+[Homepage](images/readme/homepage-desktop-wireframe.png) | 
+[Register](images/readme/register-desktop-wireframe.png)
+[Sign In](images/readme/signin-desktop-wireframe.png) | 
+[Dashboard](images/readme/dashboard-desktop-wireframe.png)
+[Health Profile](images/readme/edit-profile-desktop-wireframe.png)
+[Add Log](images/readme/add-log-desktop-wireframe.png)G
 
 ### Mockups
 I created some higher fidelity desktop mockups for the key pages on the website. This provided me with an opportunity to sample my chosen colours and ensure the layout I had wireframed looked visually appealing. Please see desktop mockups below:
