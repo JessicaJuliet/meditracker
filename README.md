@@ -23,7 +23,7 @@ View the [MediTracker's live website here]().
     * [Sitemap](#Sitemap)
 * [Features](#features)
     * [Existing Features](#Existing-Features)
-    * [Features to be Implemented](###Features-to-be-Implemented)
+    * [Features to be Implemented](#Features-to-be-Implemented)
 * [Technologies Used](#technologies-used)
     * [Languages](#Languages)
     * [Libraries and Frameworks](#Libraries-and-Frameworks)
@@ -38,22 +38,21 @@ View the [MediTracker's live website here]().
 ## Purpose
 
 ### Introduction
-With chronic illness prevalence expected to continue rising, it's important that patients are able to monitor their condition(s) and provide their medical team with a clear picture of their disease progression. In addition, the disruptions which COVID-19 has brought to the medical system, makes it's easier for new symptoms or disease progression to potentially be missed until a later point. To tackle this, MediTracker allows patients who deal with chronic illnesses to take control of their symptoms by keeping a log of their disease status over time. They can then share this log with their medical team.
+With chronic illness prevalence expected to continue rising, it's important that patients are able to monitor their condition(s) and provide their medical team with a clear picture of their disease status. Furthermore, with the disruptions which COVID-19 has brought to the medical system, it makes it easier for new symptoms or disease progression to potentially be missed until a later stage. 
+
+To tackle this problem, MediTracker allows patients who deal with chronic illnesses to take control of their health by keeping a log of their symptoms over time which they can share with their medical team. It also keeps medical professionals up to date on their patient's disease activity. 
 
 ### Vision and Mission
 MediTracker's Vision is to empower chronic illness patients to take control of their health and its Mission is to provide patients with a secure web application which allows them to keep logs of their medical records and report it back to their medical team. 
 
 ### Target Audience
-The target audience for this web application are inviduals who have chronic illnesses and want to get more from their interactions with their medical team by providing an accurate  representation of their symptoms over time, rather than recalling from memory at appointments. 
+The target audience for this web application are inviduals who have a chronic illness and want to keep a better log of their symptoms so they can provide their medical team with more accurate data over time and also for their own personal reference.
 
-[Back to top](##Table-of-Contents)
+[Back to top](#Table-of-Contents)
 
 ## User Experience Design
 
 ### User Stories
-
-**As a website owner:**
-
 
 **As a website user:**
 * I want a website which is easy to navigate on both mobile and desktop devices
@@ -63,8 +62,13 @@ The target audience for this web application are inviduals who have chronic illn
 * I want to be able to update my health profile with my personal details
 * I want to be able to add and edit logs to record my medical symptoms over time
 * I want to be able to delete logs I no longer wish to record
-* I want to be able to filter logs by date they were entered
+* I want to be able to filter logs by the date they were entered
 * I want to be able to request an appointment with a medical professional
+
+**As a website owner:**
+* I want to improve the standard of care between patients and medical professionals
+* I want to provide hospitals and General Practioners with a patient portal application
+* I want to provide chronic illness patients with a way to create, read, update and delete medical data
 
 ### Design Inspiration
 I sourced a lot of design inspiration for this website by researching patient portals online and websites for hospitals and GPs. This provided me with a better understanding of the typical user interface for these applications and the type of colour schemes used.
@@ -78,7 +82,7 @@ The main base colour chosen for this website (red) was sourced from a patient po
 
 ### Logo
 
-[Back to top](##Table-of-Contents)
+[Back to top](#Table-of-Contents)
 
 ## Website Structure
 
@@ -119,7 +123,7 @@ I also used Canva to design a sitemap for this website as displayed below:
 
 <img src="images/readme/meditracker-sitemap.png" alt="MediTracker Sitemap">
 
-[Back to top](##Table-of-Contents)
+[Back to top](#Table-of-Contents)
 
 ## Features
 
@@ -127,7 +131,7 @@ I also used Canva to design a sitemap for this website as displayed below:
 
 ### Features To Be Implemented
 
-[Back to top](##Table-of-Contents)
+[Back to top](#Table-of-Contents)
 
 ## Technologies Used
 
@@ -150,4 +154,4 @@ I also used Canva to design a sitemap for this website as displayed below:
 * [W3C Markup validator](https://validator.w3.org/) was used regularly to check for any errors in the HTML on the site
 * [W3C CSS validator](https://jigsaw.w3.org/css-validator/) was used regularly to check for any errors in the CSS on the site
 
-[Back to top](##Table-of-Contents)
+[Back to top](#Table-of-Contents)
