@@ -6,16 +6,16 @@ View the [MediTracker's live website here]().
 
 ## Table of Contents
 
-* [Purpose](##Purpose)
-    * [Introduction](###Introduction)
-    * [Vision and Mission](###Vision-and-Mission)
-    * [Target Audience](###Target-Audience)
+* [Purpose](#Purpose)
+    * [Introduction](#Introduction)
+    * [Vision and Mission](#Vision-and-Mission)
+    * [Target Audience](##Target-Audience)
 * [User Experience Design](##User-Experience-Design)
+    * [User Stories](###User-Stories)
     * [Design Inspiration](###Design-Inspiration)
     * [Colour Scheme](###Colour-Scheme)
     * [Typography](###Typography)
     * [Logo](###Logo)
-    * [User Stories](###User-Stories)
 * [Website Structure](##Website-Structure)
     * [Wireframes](###Wireframes)
     * [Mockups](###Mockups)
@@ -50,21 +50,10 @@ The target audience for this web application are inviduals who have chronic illn
 
 ## User Experience Design
 
-### Design Inspiration
-I sourced a lot of design inspiration for this website by researching patient portals online and websites for hospitals and GPs. This provided me with a better understanding of the typical user interface for these applications and the type of colour schemes used.
-
-### Colour Scheme
-The main base colour chosen for this website (red) was sourced from a patient portal mockup for [Orlando Health](http://struongux.com/ohealth.html). I used Adobe Illustrator's colour picker tools to identify the hexadecimal value for this colour, which was **#9E0035**. I also used [Adobe Color](https://color.adobe.com/create/color-wheel) to generate more monochromatic shades from this base colour, which I used on the homepage. The colour blue appears to be very standard across many medical website designs, so it was nice to try out something a little different here.
-
-<img src="images/readme/adobe-color.png" alt="MediTracker Adobe Color swatch">
-
-### Typography
-
-### Logo
-
 ### User Stories
 
 **As a website owner:**
+
 
 **As a website user:**
 * I want a website which is easy to navigate on both mobile and desktop devices
@@ -76,6 +65,18 @@ The main base colour chosen for this website (red) was sourced from a patient po
 * I want to be able to delete logs I no longer wish to record
 * I want to be able to filter logs by date they were entered
 * I want to be able to request an appointment with a medical professional
+
+### Design Inspiration
+I sourced a lot of design inspiration for this website by researching patient portals online and websites for hospitals and GPs. This provided me with a better understanding of the typical user interface for these applications and the type of colour schemes used.
+
+### Colour Scheme
+The main base colour chosen for this website (red) was sourced from a patient portal mockup for [Orlando Health](http://struongux.com/ohealth.html). I used Adobe Illustrator's colour picker tools to identify the hexadecimal value for this colour, which was **#9E0035**. I also used [Adobe Color](https://color.adobe.com/create/color-wheel) to generate more monochromatic shades from this base colour, which I used on the homepage. The colour blue appears to be very standard across many medical website designs, so it was nice to try out something a little different here.
+
+<img src="images/readme/adobe-color.png" alt="MediTracker Adobe Color swatch">
+
+### Typography
+
+### Logo
 
 [Back to top](##Table-of-Contents)
 
@@ -94,10 +95,10 @@ Desktop Wireframes | Mobile Wireframes | Tablet Wireframes
 [Sign In](images/readme/signin-desktop-wireframe.png) | 
 [Dashboard](images/readme/dashboard-desktop-wireframe.png)
 [Health Profile](images/readme/edit-profile-desktop-wireframe.png)
-[Add Log](images/readme/add-log-desktop-wireframe.png)G
+[Add Log](images/readme/add-log-desktop-wireframe.png)
 
 ### Mockups
-I created some higher fidelity desktop mockups for the key pages on the website. This provided me with an opportunity to sample my chosen colours and ensure the layout I had wireframed looked visually appealing. Please see desktop mockups below:
+I also created some higher fidelity desktop mockups for the key pages on the website. This provided me with an opportunity to sample my chosen colours and ensure the layout I had wireframed looked visually appealing. Please see desktop mockups below:
 
 * [Homepage Mockup](images/readme/homepage-mockup.png)
 * [Register Mockup](images/readme/register-mockup.png)
