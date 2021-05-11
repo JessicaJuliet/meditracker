@@ -2,37 +2,37 @@
 
 Code Institute | Milestone Project 3 | Backend Development
 
-View the [MediTracker live website here]().
+View the [MediTracker's live website here]().
 
 ## Table of Contents
 
-* [Purpose](##purpose)
-    * Introduction
-    * Vision and Mission
-    * Target Audience
-* [User Experience Design](##user-experience-design)
-    * Design Inspiration
-    * Colour Scheme
-    * Typography
-    * Logo
-    * User Stories
-* [Website Structure](##website-structure)
-    * Wireframes
-    * Mockups
-    * Database Structure
-    * Sitemap
+* [Purpose](##Purpose)
+    * [Introduction](###Introduction)
+    * [Vision and Mission](###Vision-and-Mission)
+    * [Target Audience](###Target-Audience)
+* [User Experience Design](##User-Experience-Design)
+    * [Design Inspiration](###Design-Inspiration)
+    * [Colour Scheme](###Colour-Scheme)
+    * [Typography](###Typography)
+    * [Logo](###Logo)
+    * [User Stories](###User-Stories)
+* [Website Structure](##Website-Structure)
+    * [Wireframes](###Wireframes)
+    * [Mockups](###Mockups)
+    * [Database Structure](###Database-Structure)
+    * [Sitemap](###Sitemap)
 * [Features](##features)
-    * Existing Features
-    * Features to be Implemented
+    * [Existing Features](###Existing-Features)
+    * [Features to be Implemented](###Features-to-be-Implemented)
 * [Technologies Used](##technologies-used)
-    * Languages
-    * Libraries and Frameworks
-    * Tools
-* [Testing](#testing)
-* [Deployment](#deployment)
-    * Local Deployment
-    * Heroku Deployment
-* [Credits](#credits)
+    * [Languages](###Languages)
+    * [Libraries and Frameworks](###Libraries-and-Frameworks)
+    * [Tools](###Tools)
+* [Testing](##testing)
+* [Deployment](##deployment)
+    * [Local Deployment](###Loccal-Deployment)
+    * [Heroku Deployment](###Heroku-Deployment)
+* [Credits](##credits)
 
 
 ## Purpose
