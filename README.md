@@ -78,7 +78,9 @@ The target audience for this web application are inviduals who have a chronic il
 I sourced a lot of design inspiration for this website by researching patient portals online and websites for hospitals and GPs. This provided me with a better understanding of the typical user interface for these applications and the type of colour schemes used.
 
 ### Colour Scheme
-The main base colour chosen for this website (red) was sourced from a patient portal mockup for [Orlando Health](http://struongux.com/ohealth.html). I used Adobe Illustrator's colour picker tools to identify the hexadecimal value for this colour, which was **#9E0035**. I also used [Adobe Color](https://color.adobe.com/create/color-wheel) to generate more monochromatic shades from this base colour, which I used on the homepage. The colour blue appears to be very standard across many medical website designs, so it was nice to try out something a little different here.
+The main base colour chosen for this website (dark red) was sourced from a patient portal mockup for [Orlando Health](http://struongux.com/ohealth.html). I used Adobe Illustrator's colour picker tools to identify the hexadecimal value for this colour, which was **#9E0035**. I then used [Adobe Color](https://color.adobe.com/create/color-wheel) to generate more monochromatic shades from this base colour which I used on the homepage. 
+
+The colour blue appears to be very standard across many medical website designs, and this is because blue is often ["associated with credibility, trust, knowledge, power, professionalism, cleanliness, calm and focus"](https://doctormultimedia.com/medical-logos-blue/). I decided to go with the dark red colour because it's MediTracker's brand colour and not directly a hospital of GP website. 
 
 <img src="images/readme/adobe-color.png" alt="MediTracker Adobe Color swatch">
 
