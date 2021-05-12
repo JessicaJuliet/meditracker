@@ -1,8 +1,15 @@
 # MediTracker
 
-Code Institute | Milestone Project 3 | Backend Development
+## Purpose
 
-View the [MediTracker's live website here]().
+### Introduction
+With chronic illness prevalence expected to continue rising, it's important that patients are able to monitor their condition(s) and provide their medical team with a clear picture of their disease status. Furthermore, with the disruptions which COVID-19 has brought to the medical system, it makes it easier for new symptoms or disease progression to potentially be missed until a later stage. 
+
+To tackle this problem, MediTracker allows patients who deal with chronic illnesses to take control of their health by keeping a log of their symptoms over time which they can share with their medical team. It also keeps medical professionals up to date on their patient's disease activity.
+
+**Please note, this project is for education purposes only. Do not share your own personal medical information.**
+
+---
 
 ## Table of Contents
 
@@ -34,21 +41,11 @@ View the [MediTracker's live website here]().
     * [Heroku Deployment](#Heroku-Deployment)
 * [Credits](#credits)
 
-
-## Purpose
-
-### Introduction
-With chronic illness prevalence expected to continue rising, it's important that patients are able to monitor their condition(s) and provide their medical team with a clear picture of their disease status. Furthermore, with the disruptions which COVID-19 has brought to the medical system, it makes it easier for new symptoms or disease progression to potentially be missed until a later stage. 
-
-To tackle this problem, MediTracker allows patients who deal with chronic illnesses to take control of their health by keeping a log of their symptoms over time which they can share with their medical team. It also keeps medical professionals up to date on their patient's disease activity. 
-
 ### Vision and Mission
 MediTracker's Vision is to empower chronic illness patients to take control of their health and its Mission is to provide patients with a secure web application which allows them to keep logs of their medical records and report it back to their medical team. 
 
 ### Target Audience
 The target audience for this web application are inviduals who have a chronic illness and want to keep a better log of their symptoms so they can provide their medical team with more accurate data over time and also for their own personal reference.
-
-[Back to top](#Table-of-Contents)
 
 ## User Experience Design
 
