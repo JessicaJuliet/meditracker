@@ -51,21 +51,28 @@ The target audience for this web application are inviduals who have a chronic il
 
 ### User Stories
 
-**As a website user:**
-* I want a website which is easy to navigate on both mobile and desktop devices
-* I want a website which is visually appealing and its purpose immediately apparent
-* I want to be able to register to create my own personal account
-* I want to feel that my information is secure by creating a password to my personal account
-* I want to be able to update my health profile with my personal details
-* I want to be able to add and edit logs to record my medical symptoms over time
-* I want to be able to delete logs I no longer wish to record
-* I want to be able to filter logs by the date they were entered
-* I want to be able to request an appointment with a medical professional
+**Application Owner**
+* As the application owner, I want to improve the standard of care between patients and medical professionals
+* As the application owner, I want to provide hospitals and General Practicioners (GPs) with a patient portal application to use with their patients
+* As the application owner, I want to provide chronic illness patients with a way to create, read, update and delete medical data
+* As the application owner, I want to provide a secure application to patients, hospitals and GPs
 
-**As a website owner:**
-* I want to improve the standard of care between patients and medical professionals
-* I want to provide hospitals and General Practioners with a patient portal application
-* I want to provide chronic illness patients with a way to create, read, update and delete medical data
+**General Practicioner (GP)**
+* As a GP, I want to improve the standard of patient/GP care
+* As a GP, I want to provide my patients with a secure patient portal
+* As a GP, I want to empower patients to take control of their medical condition(s) by keeping their own logs
+* As a GP, I want to better understand patients disease activity
+
+**Patient:**
+* As a patient, I want a website which is easy to navigate on both mobile and desktop devices
+* As a patient, I want a website which is visually appealing and its purpose immediately apparent
+* As a patient, I want to be able to register to create my own personal account
+* As a patient, I want to feel that my information is secure by creating a password to my personal account
+* As a patient, I want to be able to update my health profile with my personal details
+* As a patient, I want to be able to add and edit logs to record my medical symptoms over time
+* As a patient, I want to be able to delete logs I no longer wish to record
+* As a patient, I want to be able to filter logs by the date they were entered
+* As a patient, I want to be able to request an appointment with a medical professional
 
 ### Design Inspiration
 I sourced a lot of design inspiration for this website by researching patient portals online and websites for hospitals and GPs. This provided me with a better understanding of the typical user interface for these applications and the type of colour schemes used.
