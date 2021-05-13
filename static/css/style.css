@@ -15,7 +15,7 @@
 /* ----------- Footer -----------*/
 /* Used Chrome Dev Tools to find padding on bulleted items */
 .footer{
-    background-color: grey;
+    background-color: rgb(66, 65, 65);
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -32,4 +32,10 @@
 
 .footer h5 {
     color: white;
+}
+
+.copyright {
+    background-color: black;
+    color: white;
+    font-size: 13px;
 }
