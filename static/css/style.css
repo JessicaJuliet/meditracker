@@ -14,7 +14,22 @@
 
 /* ----------- Footer -----------*/
 /* Used Chrome Dev Tools to find padding on bulleted items */
+.footer{
+    background-color: grey;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 .footer-link {
     list-style-type: none;
     padding-inline-start: 0;
+    color: white;
+}
+
+.footer-link li {
+    color: white;
+}
+
+.footer h5 {
+    color: white;
 }
