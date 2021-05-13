@@ -7,3 +7,7 @@
 .nav-link {
     color: white;
 }
+
+.nav-link:hover {
+    color: rgb(204, 204, 204);
+}
