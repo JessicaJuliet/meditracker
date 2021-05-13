@@ -11,3 +11,10 @@
 .nav-link:hover {
     color: rgb(204, 204, 204);
 }
+
+/* ----------- Footer -----------*/
+/* Used Chrome Dev Tools to find padding on bulleted items */
+.footer-link {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
