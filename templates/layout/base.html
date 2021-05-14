@@ -1,18 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Font Awesome CDN sourced from https://www.bootstrapcdn.com/fontawesome/ -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" type="text/css">
-    <!-- Bootstrap CDN sourced from https://www.bootstrapcdn.com/ -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" type="text/css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-    {% block styles %}
-    {% endblock %}
-    <title>MediTracker</title>
+    {% include 'layout/head.html' %}
 </head>
 <body>
     <!-- Header Starts -->
@@ -58,13 +47,6 @@
     <div class="copyright">
         <p class="container">(c) 2021 Jessica Akomfrah. All rights reserved</p>
     </div>
-    <!-- Scripts Start -->
-    <!-- Bootstrap CDN sourced from https://www.bootstrapcdn.com/ -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- Custom JavaScript -->
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    {% block scripts %}
-    {% endblock %}
+    {% include 'layout/scripts.html' %}
 </body>
 </html>
