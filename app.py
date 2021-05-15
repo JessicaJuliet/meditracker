@@ -4,6 +4,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
@@ -31,6 +32,11 @@ def home():
     Function to load the homepage
     """
     return render_template('pages/home.html')
+
+
+app.route('/register', methods=["GET", "POST"])
+def register():
+    return render_template("authentication.html")
 
 
 @app.route('/facebook')
