@@ -124,3 +124,16 @@
     margin-top: 330px;
     margin-bottom: 100px; 
 }
+
+/* ----------- Register ----------- */
+
+.welcome-alternate {
+    background-color: rgb(204, 202, 202);
+    padding: 120px 0px 70px 0px;
+    text-align: center;
+    height: 500px;
+}
+
+.welcome-alternate h3 {
+    font-weight: 700;
+}
