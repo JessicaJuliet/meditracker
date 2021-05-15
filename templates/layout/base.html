@@ -9,8 +9,26 @@
         {% include 'components/navigation/navbar.html' %}
     </header>
 
-    {% block content %}
-    {% endblock %}
+    <div>
+        <section class="flash-section">
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages() %}
+                {% if messages%}
+                    {% for message in messages %}
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h6>{{ message }}</h6>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </section>
+        {% block content %}
+        {% endblock %}
+    </div>
     
     {% include 'components/footer/footer.html' %}
     {% include 'layout/scripts.html' %}

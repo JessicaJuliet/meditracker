@@ -37,6 +37,22 @@ def home():
 
 @app.route('/register', methods=["GET", "POST"])
 def register():
+    if request.method == "POST":
+        # Check if username already exisits in db
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+        if existing_user:
+            flash("Sorry, this username already exists")
+            return redirect(url_for("register"))
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(register)
+
+        # put the new user into 'session' cookie
+        session["user"] = request.form.get("username").lower()
+        flash("You have successfully registered")
     return render_template("pages/register.html")
 
 

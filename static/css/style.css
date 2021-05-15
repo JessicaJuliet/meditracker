@@ -186,3 +186,11 @@ form .btn {
     padding: 10px 40px 10px 40px;
     color: white;
 }
+
+/* ----------- Flash Messages ----------- */
+
+.flash-section {
+    background-color: #3B424A;
+    color: white;
+    text-align: center;
+}
