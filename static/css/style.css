@@ -63,7 +63,7 @@
     color: white;
 }
 
-.footer-link li {
+.footer-link a {
     color: white;
 }
 
@@ -131,17 +131,30 @@
     height: 600px;
 }
 
+.register h3 {
+    font-weight: 700;
+    text-align: center;
+}
+
+.register p {
+    text-align: center;
+}
+
 .welcome-alternate {
     background-color: rgb(204, 202, 202);
     padding-top: 140px;
     text-align: center;
 }
 
-.welcome-alternate h3 {
-    font-weight: 700;
-}
-
 .welcome-alternate .btn {
     border-radius: 40px;
     padding: 10px 40px 10px 40px;
+}
+
+.create-account h3 {
+    color: #9E0035;
+}
+
+.create-account {
+    padding-top: 50px;
 }

@@ -1,18 +1,17 @@
 {% extends "layout/base.html" %}
 {% block content %}
-    <div class="">
-        <div class="row register">
-            <div class="col-sm-4 welcome-alternate">
-                <h3>Welcome Back</h3>
-                <p>
-                    Sign in to your account to access your <br> MediTracker dashboard
-                </p>
-                <!-- Resource: https://getbootstrap.com/docs/4.0/components/buttons/ -->
-                <button class="btn btn-outline-dark">Sign In</button>
-            </div>
-            <div class="col-sm-8">
-                <h3>Create Account</h3>
-            </div>
+    <div class="row register">
+        <div class="col-sm-4 welcome-alternate">
+            <h3>Welcome Back</h3>
+            <p>
+                Sign in to your account to access your <br> MediTracker dashboard
+            </p>
+            <!-- Resource: https://getbootstrap.com/docs/4.0/components/buttons/ -->               
+            <button class="btn btn-outline-dark">Sign In</button>
+        </div>
+        <div class="col-sm-8 create-account">
+            <h3>Create Account</h3>
+            <p>Create an account to start using MediTracker today</p>
         </div>
     </div>
 {% endblock %}
