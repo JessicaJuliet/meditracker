@@ -1,4 +1,4 @@
-/* ----------- Navbar -----------*/
+/* ----------- Navbar ----------- */
 
 .nav-top {
     margin-top: 30px;
@@ -37,7 +37,18 @@
     color: rgb(204, 204, 204);
 }
 
-/* ----------- Footer -----------*/
+/* ----------- Hero ----------- */
+
+#hero-image {
+    background: url("images/hero-image.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+
+/* ----------- Footer ----------- */
 /* Used Chrome Dev Tools to find padding on bulleted items */
 .footer{
     background-color: rgb(66, 65, 65);
