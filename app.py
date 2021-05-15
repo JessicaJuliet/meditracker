@@ -16,12 +16,21 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-
+"""
 @app.route("/")
 @app.route("/get_patients")
 def get_patients():
     patients = mongo.db.patients.find()
     return render_template("patients.html", patients=patients)
+"""
+
+
+@app.route('/')
+def home():
+    """
+    Function to load the homepage
+    """
+    return render_template('pages/home.html')
 
 
 if __name__ == "__main__":
