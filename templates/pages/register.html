@@ -16,7 +16,7 @@
             <p>Create an account to start using MediTracker today</p>
             <!-- Form Starts -->
             <!-- Resource: https://getbootstrap.com/docs/4.0/components/forms/ -->
-            <form method="POST" action="{{ url_for('register') }}">
+            <form class="form" method="POST" action="{{ url_for('register') }}">
                 <!-- Username -->
                 <div class="form-group">
                     <label for="username">Username</label>
@@ -25,19 +25,22 @@
                 <!-- Email Address -->
                 <div class="form-group">
                     <label for="email">Email address</label>
-                    <input id="email" name="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" required>
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <input id="email" name="email" type="email" class="form-control" placeholder="Enter email" required>
                 </div>
                 <!-- Password -->
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input id="password" name="password" type="password" class="form-control" placeholder="Password" required>
                 </div>
+                <!-- GDPR -->
+                <small id="gdpir" class="gdpr form-text text-muted">We take the privacy and security of individuals personal data very seriously. Your data will not be shared with any third parties. By checking the box below, you consent to MediCare storing your personal data.</small>
+                <br>
                 <!-- Check Box -->
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="checkbox" required>
                     <label class="form-check-label" for="checkbox">I consent to MediTracker processing my medical data</label>
                 </div>
+                <br>
                 <!-- Register button -->
                 <button type="submit" class="btn btn-primary">
                     Register
