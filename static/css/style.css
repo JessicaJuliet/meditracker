@@ -128,7 +128,7 @@
 /* ----------- Register ----------- */
 
 .register {
-    height: 600px;
+    height: 700px;
 }
 
 .register h3 {
@@ -163,4 +163,11 @@
     padding-top: 40px;
     max-width: 60%;
     margin: 0 auto;
+}
+
+form .btn {
+    background-color: #9E0035;
+    border-radius: 40px;
+    padding: 10px 40px 10px 40px;
+    color: white;
 }
