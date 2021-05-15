@@ -56,7 +56,7 @@
 /* ----------- Footer ----------- */
 /* Used Chrome Dev Tools to find padding on bulleted items */
 .footer{
-    background-color: rgb(66, 65, 65);
+    background-color: #3B424A;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -75,10 +75,11 @@
     color: white;
 }
 
-.fab {
+footer .fab {
     color: white;
-    font-size: 45px;
-    padding-right: 6px;
+    font-size: 40px;
+    padding-right: 13px;
+    padding-top: 10px;
 }
 
 .copyright {
