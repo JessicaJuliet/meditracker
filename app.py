@@ -33,6 +33,30 @@ def home():
     return render_template('pages/home.html')
 
 
+@app.route('/facebook')
+def facebook():
+    """
+    Function to load the Facebook
+    """
+    return redirect("https://www.facebook.com")
+
+
+@app.route('/instagram')
+def instagram():
+    """
+    Function to load the Instagram
+    """
+    return redirect("https://www.instagram.com")
+
+
+@app.route('/linkedin')
+def linkedin():
+    """
+    Function to load the Linkedin
+    """
+    return redirect("https://www.linkedin.com")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
