@@ -17,6 +17,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+
 """
 @app.route("/")
 @app.route("/get_patients")
@@ -34,9 +35,9 @@ def home():
     return render_template('pages/home.html')
 
 
-app.route('/register', methods=["GET", "POST"])
+@app.route('/register', methods=["GET", "POST"])
 def register():
-    return render_template("authentication.html")
+    return render_template("pages/register.html")
 
 
 @app.route('/facebook')
