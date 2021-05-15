@@ -107,3 +107,8 @@
 .box3 {
     background-color: #6B0024;
 }
+
+.box-text {
+    color: white;
+    text-align: center;
+}
