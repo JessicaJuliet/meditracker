@@ -39,14 +39,15 @@
 
 /* ----------- Hero ----------- */
 
-#hero-image {
-    background: url("images/hero-image.jpg");
+.hero-image {
+    /* Resource: Image sourced from Unsplash: https://unsplash.com/photos/KOID4ns1Ii4 */
+    background: url("https://images.unsplash.com/photo-1557825835-a526494be845?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
+    position: relative;
 }
-
 
 /* ----------- Footer ----------- */
 /* Used Chrome Dev Tools to find padding on bulleted items */
@@ -80,4 +81,29 @@
     background-color: black;
     color: white;
     font-size: 13px;
+}
+
+/* ----------- Homepage ----------- */
+
+.box {
+    width: 300px;
+    height: 300px;
+    background-color: #9E0035;
+    margin-top: 450px;
+}
+
+.about {
+    margin: 200px 0 200px 0;
+}
+
+.box1 {
+    background-color: #AE345D;
+}
+
+.box2 {
+    background-color: #9E0035;
+}
+
+.box3 {
+    background-color: #6B0024;
 }
