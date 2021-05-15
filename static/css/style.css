@@ -87,6 +87,10 @@
     font-size: 13px;
 }
 
+.copyright p {
+    margin-bottom: 0px;
+}
+
 /* ----------- Homepage ----------- */
 
 .box {
