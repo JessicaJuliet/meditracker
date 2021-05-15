@@ -1,6 +1,7 @@
 {% extends "layout/base.html" %}
 {% block content %}
     <div class="row register">
+        <!-- Welcome Back Starts -->
         <div class="col-sm-4 welcome-alternate">
             <h3>Welcome Back</h3>
             <p>
@@ -9,29 +10,38 @@
             <!-- Resource: https://getbootstrap.com/docs/4.0/components/buttons/ -->               
             <button class="btn btn-outline-dark">Sign In</button>
         </div>
+        <!-- Create Account Starts -->
         <div class="col-sm-8 create-account">
             <h3>Create Account</h3>
             <p>Create an account to start using MediTracker today</p>
+            <!-- Form Starts -->
             <!-- Resource: https://getbootstrap.com/docs/4.0/components/forms/ -->
-            <form>
+            <form method="POST" action="{{ url_for('register') }}">
+                <!-- Username -->
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input id="username" name="username" type="text" class="form-control" placeholder="Enter username">
+                    <input id="username" name="username" type="text" class="form-control" placeholder="Enter username" required>
                 </div>
+                <!-- Email Address -->
                 <div class="form-group">
                     <label for="email">Email address</label>
                     <input id="email" name="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" required>
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
+                <!-- Password -->
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input id="password" name="password" type="password" class="form-control" placeholder="Password" required>
                 </div>
+                <!-- Check Box -->
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="checkbox">
-                    <label class="form-check-label" for="checkbox" required>I consent to MediTracker processing my medical data</label>
+                    <input type="checkbox" class="form-check-input" id="checkbox" required>
+                    <label class="form-check-label" for="checkbox">I consent to MediTracker processing my medical data</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <!-- Register button -->
+                <button type="submit" class="btn btn-primary">
+                    Register
+                </button>
             </form>
         </div>
     </div>
