@@ -6,7 +6,9 @@
                 <a class="logo" href="{{ url_for('home') }}"><p>Medi<span class="t">T</span>racker</p></a>
             </div>
             <span class="col-sm-1">
-                <p class="sign-in"><strong>Sign In </strong></p>
+                <a href="{{ url_for('login') }}" class="login" role="button">
+                    <strong>Login</strong>
+                </a>
             </span>
             <div class="col-sm-1">
                 <!-- Resource: https://getbootstrap.com/docs/4.0/components/buttons/ -->

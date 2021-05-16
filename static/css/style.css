@@ -30,8 +30,9 @@
     color: white;
 }
 
-.sign-in {
-    padding-top: 10px;
+.login {
+    padding-top: 20px;
+    color: #3B424A;
 }
 
 .navbar-style {

@@ -56,10 +56,10 @@ def register():
     return render_template("pages/user-authentication.html", register=True)
 
 
-@app.route('/signin')
-def signin():
+@app.route('/login')
+def login():
     """
-    Link to signin page
+    Link to login page
     """
     return render_template("pages/user-authentication.html")
 

@@ -3,7 +3,7 @@
     {% if register == True %}
         <form class="form" method="POST" action="{{ url_for('register') }}">
     {% else %}
-        <form class="form" method="POST" action="{{ url_for('signin') }}">
+        <form class="form" method="POST" action="{{ url_for('login') }}">
     {% endif %}
     <!-- Username -->
     <div class="form-group">
@@ -31,7 +31,7 @@
     {% endif %}
     <br>
     <button type="submit" class="btn register-btn" name="action">
-        {% if register == True %} Register {% else %} Sign In {% endif %}
+        {% if register == True %} Register {% else %} Login {% endif %}
     </button>
 </form>
 {% endblock %}

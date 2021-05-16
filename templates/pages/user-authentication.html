@@ -5,11 +5,11 @@
         <div class="col-sm-4 welcome-alternate">
             <h3>Welcome Back</h3>
             <p>
-                Sign in to your account to access your 
+                Login to your account to access your 
                 <br> MediTracker dashboard
             </p>
             <!-- Resource: Button code from https://getbootstrap.com/docs/4.0/components/buttons -->               
-            <button class="btn btn-outline-dark">Sign In</button>
+            <button class="btn btn-outline-dark">Login</button>
         </div>
         <!-- Register/ Login Starts -->
         <div class="col-sm-8 user-authentication">
@@ -17,8 +17,8 @@
                 <h3>Create Account</h3>
                 <p>Create an account to start using MediTracker today</p>
             {% else %}
-                <h3>Sign in </h3>
-                <p>Sign in to access your MediTracker dashboard</p>
+                <h3>Login</h3>
+                <p>Login to access your MediTracker dashboard</p>
             {% endif %}
             {% include 'components/forms/authentication.html' %}
         </div>
