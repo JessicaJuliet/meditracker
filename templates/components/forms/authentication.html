@@ -1,7 +1,10 @@
 {% block content %}
 <!-- Resource: Form code from Bootstrap https://getbootstrap.com/docs/4.0/components/forms/ -->
-
-    <form class="form" method="POST" action="{{ url_for('register') }}">
+    {% if register == True %}
+        <form class="form" method="POST" action="{{ url_for('register') }}">
+    {% else %}
+        <form class="form" method="POST" action="{{ url_for('signin') }}">
+    {% endif %}
     <!-- Username -->
     <div class="form-group">
         <label for="username">Username</label>
@@ -28,7 +31,7 @@
     {% endif %}
     <br>
     <button type="submit" class="btn register-btn" name="action">
-        {% if register == True %} Sign In {% else %} Register {% endif %}
+        {% if register == True %} Register {% else %} Sign In {% endif %}
     </button>
 </form>
 {% endblock %}

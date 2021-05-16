@@ -14,11 +14,11 @@
         <!-- Register/ Login Starts -->
         <div class="col-sm-8 user-authentication">
             {% if register == True %}
-                <h3>Sign in </h3>
-                <p>Sign in to access your MediTracker dashboard</p>
-            {% else %}
                 <h3>Create Account</h3>
                 <p>Create an account to start using MediTracker today</p>
+            {% else %}
+                <h3>Sign in </h3>
+                <p>Sign in to access your MediTracker dashboard</p>
             {% endif %}
             {% include 'components/forms/authentication.html' %}
         </div>

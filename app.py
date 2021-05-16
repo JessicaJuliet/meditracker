@@ -53,15 +53,15 @@ def register():
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("You have successfully registered")
-    return render_template("pages/register.html")
+    return render_template("pages/user-authentication.html", register=True)
 
 
-@app.route('/authentication')
-def authentication():
+@app.route('/signin')
+def signin():
     """
-    Link to register and login page
+    Link to signin page
     """
-    return render_template("components/forms/authentication.html")
+    return render_template("pages/user-authentication.html")
 
 
 @app.route('/facebook')
