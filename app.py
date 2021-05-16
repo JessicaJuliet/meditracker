@@ -56,6 +56,14 @@ def register():
     return render_template("pages/register.html")
 
 
+@app.route('/authentication')
+def authentication():
+    """
+    Link to register and login page
+    """
+    return render_template("components/forms/authentication.html")
+
+
 @app.route('/facebook')
 def facebook():
     """
