@@ -6,15 +6,15 @@
                 <a class="logo" href="{{ url_for('home') }}"><p>Medi<span class="t">T</span>racker</p></a>
             </div>
             <span class="col-sm-1">
-                <a href="{{ url_for('login') }}" class="login" role="button">
+                <!-- Resource: https://getbootstrap.com/docs/4.0/components/buttons/ -->
+                <a type="button" class="btn login-button" href="{{ url_for('login') }}" role="button">
                     <strong>Login</strong>
                 </a>
             </span>
             <div class="col-sm-1">
-                <!-- Resource: https://getbootstrap.com/docs/4.0/components/buttons/ -->
-                <button type="button" class="btn register-button">
-                    <a href="{{ url_for('register') }}">Register</a>
-                </button>
+                <a type="button" class="btn register-button" href="{{ url_for('register') }}">
+                    Register
+                </a>
             </div>
         </div>
     </div>
