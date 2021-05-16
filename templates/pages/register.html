@@ -5,47 +5,22 @@
         <div class="col-sm-4 welcome-alternate">
             <h3>Welcome Back</h3>
             <p>
-                Sign in to your account to access your <br> MediTracker dashboard
+                Sign in to your account to access your 
+                <br> MediTracker dashboard
             </p>
-            <!-- Resource: https://getbootstrap.com/docs/4.0/components/buttons/ -->               
+            <!-- Resource: Button code from https://getbootstrap.com/docs/4.0/components/buttons -->               
             <button class="btn btn-outline-dark">Sign In</button>
         </div>
-        <!-- Create Account Starts -->
-        <div class="col-sm-8 create-account">
-            <h3>Create Account</h3>
-            <p>Create an account to start using MediTracker today</p>
-            <!-- Form Starts -->
-            <!-- Resource: https://getbootstrap.com/docs/4.0/components/forms/ -->
-            <form class="form" method="POST" action="{{ url_for('register') }}">
-                <!-- Username -->
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input id="username" name="username" type="text" class="form-control" placeholder="Enter username" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
-                </div>
-                <!-- Email Address 
-                <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input id="email" name="email" type="email" class="form-control" placeholder="Enter email" required>
-                </div> -->
-                <!-- Password -->
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input id="password" name="password" type="password" class="form-control" placeholder="Password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
-                </div>
-                <!-- GDPR -->
-                <small id="gdpir" class="gdpr form-text text-muted">We take the privacy and security of individuals personal data very seriously. Your data will not be shared with any third parties. By checking the box below, you consent to MediCare storing your personal data.</small>
-                <br>
-                <!-- Check Box -->
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="checkbox" required>
-                    <label class="form-check-label" for="checkbox">I consent to MediTracker storing my medical data</label>
-                </div>
-                <br>
-                <!-- Register button -->
-                <button type="submit" class="btn register-btn">
-                    Register
-                </button>
-            </form>
+        <!-- Register/ Login Starts -->
+        <div class="col-sm-8 user-authentication">
+            {% if register == True %}
+                <h3>Sign in </h3>
+                <p>Sign in to access your MediTracker dashboard</p>
+            {% else %}
+                <h3>Create Account</h3>
+                <p>Create an account to start using MediTracker today</p>
+            {% endif %}
+            {% include 'components/forms/authentication.html' %}
         </div>
     </div>
 {% endblock %}

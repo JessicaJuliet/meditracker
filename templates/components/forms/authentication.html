@@ -1,11 +1,7 @@
-{% extends "layout/base.html" %}
 {% block content %}
 <!-- Resource: Form code from Bootstrap https://getbootstrap.com/docs/4.0/components/forms/ -->
-{% if register == True %}
-<form class="form" method="POST" action="{{ url_for('register') }}">
-{% elseif %}
-<form class="form" method="POST" action="{{ url_for('sign_in') }}">
-{% endif %}
+
+    <form class="form" method="POST" action="{{ url_for('register') }}">
     <!-- Username -->
     <div class="form-group">
         <label for="username">Username</label>
@@ -16,26 +12,23 @@
         <label for="password">Password</label>
         <input id="password" name="password" type="password" class="form-control" placeholder="Enter Password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
     </div>
-    {$ if register == True $}
-    <!-- GDPR -->
-    <small id="gdpr" class="form-text text-muted">
-        We take the privacy and security of individuals personal data very seriously. Your data will not be shared with any third parties. By checking the box below, you consent to MediCare storing your personal data.
-    </small>
-    <br>
-    <!-- Check Box -->
-    <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="checkbox" required>
-        <label class="form-check-label" for="checkbox">
-            I consent to MediTracker storing my medical data.
-        </label>
-    </div>
-    {% endif %}
-    <br>
     {% if register == True %}
-    <!-- Register button -->
-    <button type="submit" class="btn register-btn">Register</button>
-    {% else %}
-    <a href="#" class="btn register-btn" role="button" aria-pressed="true">Login</a>
+        <!-- GDPR -->
+        <small id="gdpr" class="form-text text-muted">
+            We take the privacy and security of individuals personal data very seriously. Your data will not be shared with any third parties. By checking the box below, you consent to MediCare storing your personal data.
+        </small>
+        <br>
+        <!-- Check Box -->
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="checkbox" required>
+            <label class="form-check-label" for="checkbox">
+                I consent to MediTracker storing my medical data.
+            </label>
+        </div>
     {% endif %}
+    <br>
+    <button type="submit" class="btn register-btn" name="action">
+        {% if register == True %} Sign In {% else %} Register {% endif %}
+    </button>
 </form>
 {% endblock %}
