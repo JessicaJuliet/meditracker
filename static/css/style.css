@@ -141,18 +141,18 @@ footer .fab {
     margin-bottom: 100px; 
 }
 
-/* ----------- Register ----------- */
+/* ----------- User Authentication ----------- */
 
-.register {
-    height: 700px;
+.alternate-authentication {
+    height: 620px;
 }
 
-.register h3 {
+.alternate-authentication h3 {
     font-weight: 700;
     text-align: center;
 }
 
-.register p {
+.alternate-authentication p {
     text-align: center;
 }
 
