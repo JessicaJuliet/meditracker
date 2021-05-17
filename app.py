@@ -95,6 +95,19 @@ def dashboard(username):
         {"username": session["user"]})["username"]
     return render_template("pages/dashboard.html", username=username)
 
+    if session["user"]:
+        return render_template("dashboard.html", username=username)
+    
+    return redirect(url_for("login"))
+
+
+@app.route("/logout")
+def logout():
+    # Remove user from session cookies
+    flash("You have successfully logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
+
 
 @app.route('/facebook')
 def facebook():

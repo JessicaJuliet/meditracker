@@ -193,3 +193,9 @@ form .btn {
     background-color: #3B424A;
     color: white;
 }
+
+/* ----------- Dashboard ----------- */
+
+.dashboard h3 {
+    color: #9E0035
+}
