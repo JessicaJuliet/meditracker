@@ -28,6 +28,7 @@
                 <a class="nav-item nav-link active" href="{{ url_for('home') }}">Home</a>
                 <a class="nav-item nav-link" href="{{ url_for('home') }}">About Us</a>
                 <a class="nav-item nav-link" href="{{ url_for('home') }}">Clinic hours</a>
+                <a class="nav-item nav-link" href="{{ url_for('dashboard', username=session['user']) }}">My Dashboard</a>
             </div>
         </div>
     </nav>

@@ -53,6 +53,8 @@ def register():
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("You have successfully registered")
+        return redirect(url_for("dashboard", username=session["user"]))
+
     return render_template("pages/user-authentication.html", register=True)
 
 
@@ -68,7 +70,11 @@ def login():
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")))
+                    flash("Welcome, {}".format(
+                        request.form.get("username")))
+                    return redirect(url_for(
+                        "dashboard", username=session["user"]))
+                
             else:
                 # Invalid password match
                 flash("Incorrect Username and/or Password")
@@ -80,6 +86,14 @@ def login():
             return redirect(url_for("login"))
 
     return render_template("pages/user-authentication.html")
+
+
+@app.route("/dashboard/<username>", methods=["GET", "POST"])
+def dashboard(username):
+    # Grab the session user's username from db
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("pages/dashboard.html", username=username)
 
 
 @app.route('/facebook')
