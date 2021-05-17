@@ -34,6 +34,19 @@
     color: #3B424A;
 }
 
+.custom-dropdown {
+    background-color: #3B424A;
+    color: white;
+}
+
+.custom-dropdown:hover {
+    color: lightgrey;
+}
+
+.fa-user {
+    background-color: white;
+}
+
 .navbar-style {
     margin-top: 45px;
     background-color: #9E0035;
