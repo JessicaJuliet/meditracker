@@ -233,3 +233,7 @@ form .btn {
 .appointment-button:hover {
     color: lightgrey;
 }
+
+.edit-profile {
+    color: #3B424A;
+}

@@ -109,6 +109,14 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route('/profile')
+def profile():
+    """
+    Function to load the Facebook
+    """
+    return render_template("pages/patient-profile.html")
+
+
 @app.route('/facebook')
 def facebook():
     """
