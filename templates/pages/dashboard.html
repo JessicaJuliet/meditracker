@@ -1,5 +1,4 @@
 {% extends "layout/base.html" %}
-
 {% block content %}
 
 <div class="container dashboard">
@@ -8,7 +7,17 @@
             <h3>My Dashboard</h3>
             <span><strong>Date: </strong></span><span id="dateToday"></span>
         </div>
+        <div class="col-md-4">
+            <h4 class="dashboard-heading">Health Profile</h4> 
+            <h5>{{ username }}</h5>
+            <p>Gender:</p>
+            <p>DOB:</p>
+            <p>Height:</p>
+            <a class="btn appointment-button" type="button" role="button" href="mailto:meditracker@meditracker.com"><strong>Request Appointment <i class="fas fa-angle-right"></i></strong></a>
+        </div>
+        <div class="col md 8">
+            <h4 class="dashboard-heading">Symptom Tracker</h4>
+        </div>
     </div>
 </div>
-
 {% endblock %} 
