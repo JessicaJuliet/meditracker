@@ -207,12 +207,15 @@ form .btn {
     color: white;
 }
 
-/* ----------- Dashboard ----------- */
+/* ----------- Pages ----------- */
 
-.dashboard h3 {
+.page-heading {
     color: #9E0035;
     padding: 30px 0px 10px 0px;
 }
+
+
+/* ----------- Dashboard ----------- */
 
 .dashboard-heading {
     background-color: #3B424A;

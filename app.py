@@ -112,9 +112,9 @@ def logout():
 @app.route('/profile')
 def profile():
     """
-    Function to load the Facebook
+    Add/edit profile
     """
-    return render_template("pages/patient-profile.html")
+    return render_template("pages/profile.html")
 
 
 @app.route('/facebook')
