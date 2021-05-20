@@ -109,6 +109,14 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route('/log')
+def log():
+    """
+    Add/edit log
+    """
+    return render_template("pages/log.html")
+
+    
 @app.route('/profile')
 def profile():
     """
