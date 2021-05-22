@@ -11,11 +11,9 @@
             <h4 class="dashboard-heading">Health Profile</h4> 
             <h4>{{ username }}</h4>
             {% for profile in profiles %}
-            {% if session[user] == created.by %}
                 <p>{{ profile.gender }}</p>
                 <p>{{ profile.dob }}</p>
                 <p>{{ profile.height }}</p>
-            {% endif %}
             {% endfor %}
             <p>
                 <a class="edit-profile" href="{{ url_for('update_profile') }}">

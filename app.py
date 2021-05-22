@@ -121,7 +121,7 @@ def log():
 def update_profile():
     if request.method == "POST":
         profile = {
-            "userID": request.form.get("user"),
+            "Username": session["user"],
             "image": request.form.get("image"),
             "gender": request.form.get("gender"),
             "dob": request.form.get("dob"),
