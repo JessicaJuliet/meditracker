@@ -214,6 +214,10 @@ form .btn {
     padding: 30px 0px 10px 0px;
 }
 
+.breadcrumb a {
+    color: #9e0035;
+}
+
 
 /* ----------- Dashboard ----------- */
 
