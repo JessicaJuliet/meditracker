@@ -82,7 +82,7 @@ The main base colour chosen for this website (dark red) was sourced from a patie
 
 The colour blue appears to be very standard across many medical website designs, and this is because blue is often ["associated with credibility, trust, knowledge, power, professionalism, cleanliness, calm and focus"](https://doctormultimedia.com/medical-logos-blue/). I decided to go with the dark red colour because it's MediTracker's brand colour and not directly a hospital of GP website. 
 
-<img src="images/readme/adobe-color.png" alt="MediTracker Adobe Color swatch">
+<img src="wireframes/adobe-color.png" alt="MediTracker Adobe Color swatch">
 
 ### Typography
 
@@ -100,34 +100,34 @@ I created wireframes for this web application using [balsamiq](https://balsamiq.
 
 Desktop Wireframes | Mobile Wireframes | Tablet Wireframes
 ------------------ | ------------------ | ----------------
-[Homepage](images/readme/homepage-desktop-wireframe.png) | 
-[Register](images/readme/register-desktop-wireframe.png)
-[Sign In](images/readme/signin-desktop-wireframe.png) | 
-[Dashboard](images/readme/dashboard-desktop-wireframe.png)
-[Health Profile](images/readme/edit-profile-desktop-wireframe.png)
-[Add Log](images/readme/add-log-desktop-wireframe.png)
+[Homepage](wireframes/homepage-desktop-wireframe.png) | 
+[Register](wireframes/register-desktop-wireframe.png)
+[Sign In](wireframes/signin-desktop-wireframe.png) | 
+[Dashboard](wireframes/dashboard-desktop-wireframe.png)
+[Health Profile](wireframes/edit-profile-desktop-wireframe.png)
+[Add Log](wireframes/add-log-desktop-wireframe.png)
 
 ### Mockups
 I also created some higher fidelity desktop mockups for the key pages on the website. This provided me with an opportunity to sample my chosen colours and ensure the layout I had wireframed looked visually appealing. Please see desktop mockups below:
 
-* [Homepage Mockup](images/readme/homepage-mockup.png)
-* [Register Mockup](images/readme/register-mockup.png)
-* [Sign In Mockup](images/readme/sign-in-mockup.png)
-* [Dashboard Mockup](images/readme/dashboard-mockup.png)
-* [Health Profile Mockup](images/readme/health-profile-mockup.png)
-* [Add Log Mockup](images/readme/add-log-mockup.png)
+* [Homepage Mockup](wireframes/homepage-mockup.png)
+* [Register Mockup](wireframes/register-mockup.png)
+* [Sign In Mockup](wireframes/sign-in-mockup.png)
+* [Dashboard Mockup](wireframes/dashboard-mockup.png)
+* [Health Profile Mockup](wireframes/health-profile-mockup.png)
+* [Add Log Mockup](wireframes/add-log-mockup.png)
 
 ### Database Structure
 
 MongoDB was used to set up the database for MediTracker. I used [Canva](www.canva.com) to illustrate the collections, along with their documents, in the image below:
 
-<img src="images/readme/meditracker-database.png" alt="MediTracker MongoDB Collections">
+<img src="wireframes/meditracker-database.png" alt="MediTracker MongoDB Collections">
 
 ### Sitemap
 
 I also used Canva to design a sitemap for this website as displayed below:
 
-<img src="images/readme/meditracker-sitemap.png" alt="MediTracker Sitemap">
+<img src="wireframes/meditracker-sitemap.png" alt="MediTracker Sitemap">
 
 [Back to top](#Table-of-Contents)
 
