@@ -1,6 +1,12 @@
 {% extends "layout/base.html" %}
 {% block content %}
-
+<!-- Resource: Code sourced from https://getbootstrap.com/docs/4.0/components/breadcrumb/ -->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">My Dashboard</li>
+    </ol>
+</nav>
 <div class="container dashboard">
     <div class="row">
         <div class="col-12">
