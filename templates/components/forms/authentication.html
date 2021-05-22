@@ -1,9 +1,9 @@
 {% block content %}
 <!-- Resource: Form code from Bootstrap https://getbootstrap.com/docs/4.0/components/forms/ -->
     {% if register == True %}
-        <form class="form" method="POST" action="{{ url_for('register') }}">
+        <form class="form authentication-form" method="POST" action="{{ url_for('register') }}">
     {% else %}
-        <form class="form" method="POST" action="{{ url_for('login') }}">
+        <form class="form authentication-form" method="POST" action="{{ url_for('login') }}">
     {% endif %}
     <!-- Username -->
     <div class="form-group">
