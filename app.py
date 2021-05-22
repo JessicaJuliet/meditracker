@@ -122,7 +122,8 @@ def update_profile():
     """
     Update profile
     """
-    return render_template("pages/update_profile.html")
+    gender = mongo.db.gender.find().sort("gender", 1)
+    return render_template("pages/update_profile.html", gender=gender)
 
 
 @app.route('/facebook')

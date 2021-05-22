@@ -33,8 +33,9 @@
                 <div class="col-8">
                     <select id="gender" name="gender" class="form-control">
                         <option selected>Select...</option>
-                        <option>Female</option>
-                        <option>Male</option>
+                        {% for gender in gender %}
+                            <option value="{{ gender.gender }}">{{ gender.gender }}</option>
+                        {% endfor %}
                     </select>
                 </div>
             </div>
