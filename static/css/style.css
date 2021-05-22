@@ -241,7 +241,7 @@ form .btn {
     color: #3B424A;
 }
 
-/* ----------- Dashboard Forms ----------- */
+/* ----------- Profile Page ----------- */
 
 .profile-form {
     max-width: 50%;
@@ -257,6 +257,7 @@ form .btn {
     background-color: rgba(211, 211, 211, 0.315);
     padding: 30px 20px;
     border-radius: 5px;
+    font-size: 14px; 
 }
 
 /* Resource: Change box shadow color https://www.tutorialrepublic.com/faq/how-to-change-bootstrap-default-input-focus-glow-style.php */
