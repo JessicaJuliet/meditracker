@@ -136,6 +136,12 @@ def update_profile():
     return render_template("pages/update_profile.html", gender=gender)
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    # Resource: https://flask.palletsprojects.com/en/2.0.x/errorhandling/?highlight=404
+    return render_template("pages/404.html"), 404
+
+
 @app.route('/facebook')
 def facebook():
     """

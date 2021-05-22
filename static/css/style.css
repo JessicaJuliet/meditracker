@@ -273,3 +273,30 @@ form .btn {
     padding: 10px 40px 10px 40px;
     margin-top: 30px;
 }
+
+/* ----------- 404 Page ----------- */
+
+.error-page{
+    margin-bottom: 70px;
+}
+
+.error-page h3 {
+    font-size: 60px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.error-number {
+    color: #930035;
+}
+
+.error-page h4 {
+    padding-bottom: 30px;
+}
+
+.error-button {
+    background-color: #9E0035;
+    color: white !important;
+    border-radius: 40px;
+    padding: 10px 40px 10px 40px;
+}
