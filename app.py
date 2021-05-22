@@ -117,12 +117,12 @@ def log():
     return render_template("pages/log.html")
 
     
-@app.route('/profile')
-def profile():
+@app.route('/update_profile')
+def update_profile():
     """
-    Add/edit profile
+    Update profile
     """
-    return render_template("pages/profile.html")
+    return render_template("pages/update_profile.html")
 
 
 @app.route('/facebook')
