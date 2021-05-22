@@ -74,7 +74,7 @@ def login():
                         request.form.get("username")))
                     return redirect(url_for(
                         "dashboard", username=session["user"]))
-                
+
             else:
                 # Invalid password match
                 flash("Incorrect Username and/or Password")
@@ -97,7 +97,7 @@ def dashboard(username):
 
     if session["user"]:
         return render_template("dashboard.html", username=username)
-    
+
     return redirect(url_for("login"))
 
 
@@ -116,12 +116,22 @@ def log():
     """
     return render_template("pages/log.html")
 
-    
-@app.route('/update_profile')
+
+@app.route('/update_profile', methods=["GET", "POST"])
 def update_profile():
-    """
-    Update profile
-    """
+    if request.method == "POST":
+        profile = {
+            "userID": request.form.get("user"),
+            "image": request.form.get("image"),
+            "gender": request.form.get("gender"),
+            "dob": request.form.get("dob"),
+            "height": request.form.get("height")
+        }
+        mongo.db.profiles.insert_one(profile)
+        flash("Profile Updated")
+        return redirect(
+            url_for("dashboard", username=session["user"]))
+
     gender = mongo.db.gender.find().sort("gender", 1)
     return render_template("pages/update_profile.html", gender=gender)
 

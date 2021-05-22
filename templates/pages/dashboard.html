@@ -10,10 +10,19 @@
         <div class="col-md-4">
             <h4 class="dashboard-heading">Health Profile</h4> 
             <h4>{{ username }}</h4>
-            <p>Gender:</p>
-            <p>DOB:</p>
-            <p>Height:</p>
-            <p><a class="edit-profile" href="{{ url_for('profile') }}"><i class="fas fa-edit"></i> Edit Profile</a></p>
+            {% for profile in profiles %}
+            {% if session[user] == created.by %}
+                <p>{{ profile.gender }}</p>
+                <p>{{ profile.dob }}</p>
+                <p>{{ profile.height }}</p>
+            {% endif %}
+            {% endfor %}
+            <p>
+                <a class="edit-profile" href="{{ url_for('update_profile') }}">
+                    <i class="fas fa-edit"></i> 
+                    Edit Profile
+                </a>
+            </p>
             <!-- Resource: Icon from https://fontawesome.com/icons/angle-right?style=solid -->
             <a class="btn appointment-button" type="button" role="button" href="mailto:meditracker@meditracker.com"><strong>Request Appointment <i class="fas fa-angle-right"></i></strong></a>
         </div>
