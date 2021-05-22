@@ -1,57 +1,56 @@
-
-    <div class="container nav-top">
-        <div class="row">
-            <div class="col-sm-10">
-                <!-- Placeholder until logo designed -->
-                <a class="logo" href="{{ url_for('home') }}"><p>Medi<span class="t">T</span>racker</p></a>
-            </div>
-            <span class="col-sm-1">
-                <!-- Resource: https://getbootstrap.com/docs/4.0/components/buttons/ -->
-                {% if session.user %}
-                <!-- Resource: Navbar code from https://getbootstrap.com/docs/4.0/components/dropdowns/ -->
-                <div class="dropdown show">
-                    <a class="btn dropdown-toggle custom-dropdown" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-user"></i>
-                        My Account
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="{{ url_for('dashboard', username=session['user']) }}">My Dashboard</a>
-                        <a class="dropdown-item" href="{{ url_for('update_profile') }}">Update Profile</a>
-                        <a class="dropdown-item" href="{{ url_for('log') }}">Add Log</a>
-                        <a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a>
-                    </div>
+<div class="container nav-top">
+    <div class="row">
+        <div class="col-sm-10">
+            <!-- Placeholder until logo designed -->
+            <a class="logo" href="{{ url_for('home') }}"><p>Medi<span class="t">T</span>racker</p></a>
+        </div>
+        <span class="col-sm-1">
+            <!-- Resource: https://getbootstrap.com/docs/4.0/components/buttons/ -->
+            {% if session.user %}
+            <!-- Resource: Navbar code from https://getbootstrap.com/docs/4.0/components/dropdowns/ -->
+            <div class="dropdown show">
+                <a class="btn dropdown-toggle custom-dropdown" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user"></i>
+                    My Account
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="{{ url_for('dashboard', username=session['user']) }}">My Dashboard</a>
+                    <a class="dropdown-item" href="{{ url_for('update_profile') }}">Update Profile</a>
+                    <a class="dropdown-item" href="{{ url_for('log') }}">Add Log</a>
+                    <a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a>
                 </div>
-                {% else %}
-                <a type="button" class="btn login-button" href="{{ url_for('login') }}" role="button">
-                    <strong>Login</strong>
-                </a>
-            </span>
-            <div class="col-sm-1">
-                <a type="button" class="btn register-button" href="{{ url_for('register') }}">
-                    Register
-                </a>
             </div>
+            {% else %}
+            <a type="button" class="btn login-button" href="{{ url_for('login') }}" role="button">
+                <strong>Login</strong>
+            </a>
+        </span>
+        <div class="col-sm-1">
+            <a type="button" class="btn register-button" href="{{ url_for('register') }}">
+                Register
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+<!-- Navbar code sourced from Bootstrap - https://getbootstrap.com/docs/4.0/components/navbar/ -->
+<nav class="navbar navbar-expand-lg navbar-style">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse container" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            {% if session.user %}
+                <a class="nav-item nav-link active" href="{{ url_for('home') }}">Home</a>
+                <a class="nav-item nav-link" href="{{ url_for('home') }}">About Us</a>
+                <a class="nav-item nav-link" href="{{ url_for('home') }}">Clinic hours</a>
+                <a class="nav-item nav-link" href="{{ url_for('dashboard', username=session['user']) }}">My Dashboard</a>
+                <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+            {% else %}
+                <a class="nav-item nav-link active" href="{{ url_for('home') }}">Home</a>
+                <a class="nav-item nav-link" href="{{ url_for('home') }}">About Us</a>
+                <a class="nav-item nav-link" href="{{ url_for('home') }}">Clinic hours</a>
             {% endif %}
         </div>
     </div>
-    <!-- Navbar code sourced from Bootstrap - https://getbootstrap.com/docs/4.0/components/navbar/ -->
-    <nav class="navbar navbar-expand-lg navbar-style">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse container" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                {% if session.user %}
-                    <a class="nav-item nav-link active" href="{{ url_for('home') }}">Home</a>
-                    <a class="nav-item nav-link" href="{{ url_for('home') }}">About Us</a>
-                    <a class="nav-item nav-link" href="{{ url_for('home') }}">Clinic hours</a>
-                    <a class="nav-item nav-link" href="{{ url_for('dashboard', username=session['user']) }}">My Dashboard</a>
-                    <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
-                {% else %}
-                    <a class="nav-item nav-link active" href="{{ url_for('home') }}">Home</a>
-                    <a class="nav-item nav-link" href="{{ url_for('home') }}">About Us</a>
-                    <a class="nav-item nav-link" href="{{ url_for('home') }}">Clinic hours</a>
-                {% endif %}
-            </div>
-        </div>
-    </nav>
+</nav>
