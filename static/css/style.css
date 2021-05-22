@@ -243,14 +243,18 @@ form .btn {
 
 /* ----------- Dashboard Forms ----------- */
 
+.profile-form {
+    max-width: 50%;
+}
+
 .profile-form h5 {
     margin-top: 30px;
     margin-bottom: 15px;
 }
 
 .profile-input {
-    background-color: rgba(211, 211, 211, 0.5);
-    padding: 40px 20px;
+    background-color: rgba(211, 211, 211, 0.315);
+    padding: 30px 20px;
     border-radius: 5px;
 }
 
@@ -258,4 +262,12 @@ form .btn {
 .form-control:focus {
     border-color: #9E0035;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px #9e00355d;
+}
+
+.profile-button {
+    background-color: #9E0035;
+    color: white !important;
+    border-radius: 40px;
+    padding: 10px 40px 10px 40px;
+    margin: 30px 0;
 }
