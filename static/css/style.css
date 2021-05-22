@@ -240,3 +240,22 @@ form .btn {
 .edit-profile {
     color: #3B424A;
 }
+
+/* ----------- Dashboard Forms ----------- */
+
+.profile-form h5 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.profile-input {
+    background-color: rgba(211, 211, 211, 0.5);
+    padding: 40px 20px;
+    border-radius: 5px;
+}
+
+/* Resource: Change box shadow color https://www.tutorialrepublic.com/faq/how-to-change-bootstrap-default-input-focus-glow-style.php */
+.form-control:focus {
+    border-color: #9E0035;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px #9e00355d;
+}
