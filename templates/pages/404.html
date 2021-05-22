@@ -1,0 +1,19 @@
+{% extends "layout/base.html" %}
+{% block content %}
+<div class="container error-page">
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <!-- Resource: Design inspiration and text from https://xconomy.com/san-diego/2018/06/07/no-vital-signs-apparent-at-wireless-health-specialist-awarepoint/ -->
+            <h3>Error <span class="error-number">404</span></h3>
+            <h4>The page you are looking for no longer exists. Perhaps you can return back to the site's homepage and see if you find what you are looking for.</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <a class="error-button btn" href="{{ url_for('home') }}">
+                Back to home
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
