@@ -121,6 +121,10 @@ footer .fab {
     top: 430px;
 }
 
+.box p {
+    padding: 10px;
+}
+
 .box1 {
     background-color: #AE345D;
 }
@@ -144,7 +148,7 @@ footer .fab {
 
 .box-text .fa {
     font-size: 40px;
-    padding: 30px 0px 30px 0;
+    padding: 30px 0px 30px 0px;
 }
 
 .about {
@@ -316,5 +320,14 @@ footer .fab {
     .profile-form {
         max-width: 100%;
         margin-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .box {
+        width: 230px;
+        height: 300px;
+        position: relative;
+        top: 430px;
     }
 }
