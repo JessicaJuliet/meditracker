@@ -4,10 +4,10 @@
     <!-- Upload Profile Image -->
     <div class="profile-input shadow-sm">
         <div class="form-group row image-div">
-            <label for="image" class="col-3 col-form-label">
+            <label for="image" class="col-xs-12 col-md-3 col-form-label">
                 <strong>Profile Image</strong>
             </label>
-            <div class="col-8">
+            <div class="col-xs-12 col-md-8">
                 <input id="image" name="image" class="form-control" type="url" placeholder="Enter Image URL">
             </div>
         </div>
@@ -17,10 +17,10 @@
     <div class="profile-input shadow-sm">
         <!-- Enter Gender -->
         <div class="form-group row">
-            <label for="gender" class="col-3 col-form-label">
+            <label for="gender" class="col-xs-12 col-md-3 col-form-label">
                 <strong>Gender</strong>
             </label>
-            <div class="col-8">
+            <div class="col-xs-12 col-md-8">
                 <select id="gender" name="gender" class="form-control">
                     <option selected>Select...</option>
                     {% for gender in gender %}
@@ -31,28 +31,30 @@
         </div>
         <!-- Enter DOB -->
         <div class="form-group row">
-            <label for="dob" class="col-3 col-form-label">
+            <label for="dob" class="col-xs-12 col-md-3 col-form-label">
                 <strong>Date of Birth</strong>
             </label>
-            <div class="col-8">
+            <div class="col-xs-12 col-md-8">
                 <input id="dob" name="dob" class="form-control" type="date" placeholder="DD/MM/YYYY">
             </div>
         </div>
         <!-- Enter Height -->
         <div class="form-group row">
-            <label for="height" class="col-3 col-form-label">
+            <label for="height" class="col-xs-12 col-md-3 col-form-label">
                 <strong>Height</strong>
             </label>
-            <div class="col-8">
+            <div class="col-xs-12 col-md-8">
                 <input id="height" name="height" class="form-control" type="text" placeholder="Enter Height">
             </div>
         </div>
     </div>
     <!-- Update Button -->
-    <div class="row">
-        <button type="submit" class="btn profile-button">
-            Update Profile
-        </button>
+    <div class="container">
+        <div class="row">
+            <button type="submit" class="btn profile-button">
+                Update Profile
+            </button>
+        </div>
     </div>
 </form>
 {% endblock %}

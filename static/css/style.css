@@ -312,3 +312,10 @@ footer .fab {
         padding: 30px 0px;
         }
     }
+
+@media only screen and (max-width: 1024px) {
+    .profile-form {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+}
