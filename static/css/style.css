@@ -76,8 +76,7 @@
 /* Used Chrome Dev Tools to find padding on bulleted items */
 .footer{
     background-color: #3B424A;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 40px 0;
 }
 
 .footer-link {
