@@ -1,15 +1,16 @@
 <div class="container nav-top">
     <div class="row">
-        <div class="col-sm-10">
+        <span class="col-xs-12 col-md-8">
             <!-- Placeholder until logo designed -->
-            <a class="logo" href="{{ url_for('home') }}"><p>Medi<span class="t">T</span>racker</p></a>
-        </div>
-        <span class="col-sm-1">
-            <!-- Resource: https://getbootstrap.com/docs/4.0/components/buttons/ -->
+            <a class="logo" href="{{ url_for('home') }}">
+                <p>Medi<span class="t">T</span>racker</p>
+            </a>
+        </span>
+        <span class="col-sm-">
             {% if session.user %}
             <!-- Resource: Navbar code from https://getbootstrap.com/docs/4.0/components/dropdowns/ -->
             <div class="dropdown show">
-                <a class="btn dropdown-toggle custom-dropdown" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="btn dropdown-toggle custom-dropdown" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-user"></i>
                     My Account
                 </a>
@@ -20,16 +21,19 @@
                     <a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a>
                 </div>
             </div>
-            {% else %}
+        </span>
+        {% else %}
+        <!-- Resource: https://getbootstrap.com/docs/4.0/components/buttons/ -->
+        <span class="col-xs-12">
             <a type="button" class="btn login-button" href="{{ url_for('login') }}" role="button">
                 <strong>Login</strong>
             </a>
         </span>
-        <div class="col-sm-1">
+        <span class="col-xs-12">
             <a type="button" class="btn register-button" href="{{ url_for('register') }}">
                 Register
             </a>
-        </div>
+        </span>
         {% endif %}
     </div>
 </div>
