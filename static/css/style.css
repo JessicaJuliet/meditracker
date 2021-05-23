@@ -73,6 +73,7 @@
 }
 
 /* ----------- Footer ----------- */
+
 /* Used Chrome Dev Tools to find padding on bulleted items */
 .footer{
     background-color: #3B424A;
@@ -220,7 +221,6 @@ footer .fab {
 .breadcrumb a {
     color: #9e0035;
 }
-
 
 /* ----------- Dashboard ----------- */
 
