@@ -30,8 +30,15 @@
         </div>
     {% endif %}
     <br>
-    <button type="submit" class="btn register-btn" name="action">
-        {% if register == True %} Register {% else %} Login {% endif %}
-    </button>
+    <!-- Resource: Center button - https://stackoverflow.com/questions/41664991/bootstrap-4-how-do-i-center-align-a-button/41665025 -->
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <button type="submit" class="btn register-btn" name="action">
+                    {% if register == True %} Register {% else %} Login {% endif %}
+                </button>
+            </div>
+        </div>
+    </div>
 </form>
 {% endblock %}
