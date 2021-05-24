@@ -133,9 +133,38 @@ I also used Canva to design a sitemap for this website as displayed below:
 
 ## Features
 
+The websites features and how they meet the user stories identified at the beginning of the README document are outlined in greater details below:
+
 ### Existing Features
 
+> As a patient, I want a website which is easy to navigate on both mobile and desktop devices
+
+> As a patient, I want a website which is visually appealing and its purpose immediately apparent
+
+> As a patient, I want to be able to register to create my own personal account
+
+> As a patient, I want to feel that my information is secure by creating a password to my personal account
+
+> As a patient, I want to be able to update my health profile with my personal details
+
+> As a patient, I want to be able to add and edit logs to record my medical symptoms over time
+
+> As a patient, I want to be able to delete logs I no longer wish to record
+
+> As a patient, I want to be able to filter logs by the date they were entered
+
+> As a patient, I want to be able to request an appointment with a medical professional
+
+
 ### Features To Be Implemented
+Given the scope and timeframe for this project, there are other features which could be implemented in the future include:
+
+* A 'Forgot Password' functionality
+* Add pagination to reduce scrolling and set the max number of logs displayed to 10 on the dashboard
+* Have the functionality to upload an image as opposed to using an image URL
+* Have the option to filter patient logs by 'patient status' so it's quick to locate days when they were having a flare up of symptoms
+* Provide users with a walk through tutorial on how to use the Dashboard and update the profile and add logs
+* Provide the user with the last date they logged in on their Dashboard
 
 [Back to top](#Table-of-Contents)
 
