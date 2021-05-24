@@ -157,7 +157,7 @@ The websites features and how they meet the user stories identified at the begin
 
 
 ### Features To Be Implemented
-Given the scope and timeframe for this project, there are other features which could be implemented in the future include:
+Given the scope and timeframe for this project, not all features could be implemented. Other features to be added in the future include:  
 
 * A 'Forgot Password' functionality
 * Add pagination to reduce scrolling and set the max number of logs displayed to 10 on the dashboard
