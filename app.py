@@ -69,17 +69,17 @@ def login():
             # Ensure hashed password matches user input
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(
-                        request.form.get("username")))
-                    return redirect(url_for(
-                        "dashboard", username=session["user"]))
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(
+                    request.form.get("username")))
+                return redirect(url_for(
+                    "dashboard", username=session["user"]))
 
             else:
                 # Invalid password match
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
-            
+
         else:
             # Username doesn't exist
             flash("Incorrect Username and/or Password")
@@ -96,7 +96,7 @@ def dashboard(username):
     return render_template("pages/dashboard.html", username=username)
 
     if session["user"]:
-        return render_template("dashboard.html", username=username)
+        return render_template("pages/dashboard.html", username=username)
 
     return redirect(url_for("login"))
 
@@ -138,7 +138,8 @@ def update_profile():
 
 @app.errorhandler(404)
 def page_not_found(e):
-    # Resource: https://flask.palletsprojects.com/en/2.0.x/errorhandling/?highlight=404
+    # Resource:
+    # https://flask.palletsprojects.com/en/2.0.x/errorhandling/?highlight=404
     return render_template("pages/404.html"), 404
 
 

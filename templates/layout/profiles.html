@@ -1,0 +1,8 @@
+{% block content %}
+    {% for profile in profiles %}
+        <img src="{{ profile.image }}" width="250px"><br>
+        <strong>Gender:</strong> {{ profile.gender }}<br>
+        <strong>DOB:</strong> {{ profile.dob }}<br>
+        <strong>Height:</strong> {{ profile.height }}<br>
+    {% endfor %}
+{% endblock %}
