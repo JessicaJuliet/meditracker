@@ -43,8 +43,16 @@
             <label for="patient-height" class="col-xs-12 col-md-3 col-form-label">
                 <strong>Height</strong>
             </label>
-            <div class="col-xs-12 col-md-8">
+            <span class="col-xs-10 col-md-5">
                 <input id="patient-height" name="patient-height" class="form-control" type="text" placeholder="Enter Height">
+            </span>
+            <div class="col-xs-2 col-md-3">
+                <select id="height_metric" name="height_metric" class="form-control">
+                    <option selected>cm/ft</option>
+                    {% for height_metric in height_metric %}
+                        <option value="{{ height_metric.height_metric }}">{{ height_metric.height_metric }}</option>
+                    {% endfor %}
+                </select>
             </div>
         </div>
     </div>

@@ -37,20 +37,26 @@ def home():
 
 @app.route('/register', methods=["GET", "POST"])
 def register():
+    """
+    Allows user to register on the website
+    Checks if username already exists in Database
+    Puts new user into session cookie
+    Redirects user to dashboard
+    """
     if request.method == "POST":
-        # Check if username already exisits in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
+
         if existing_user:
             flash("Sorry, this username already exists")
             return redirect(url_for("register"))
+
         register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(register)
 
-        # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("You have successfully registered")
         return redirect(url_for("dashboard", username=session["user"]))
@@ -60,8 +66,10 @@ def register():
 
 @app.route('/login', methods=["GET", "POST"])
 def login():
+    """
+    Check if username exists in database
+    """
     if request.method == "POST":
-        # Check if username exists in database
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -90,7 +98,7 @@ def login():
 
 @app.route("/dashboard/<username>", methods=["GET", "POST"])
 def dashboard(username):
-    # Grab the session user's username from db
+    # Grab the session user's username from database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     return render_template("pages/dashboard.html", username=username)
@@ -121,19 +129,23 @@ def log():
 def update_profile():
     if request.method == "POST":
         profile = {
-            "Username": session["user"],
-            "image": request.form.get("image"),
-            "gender": request.form.get("gender"),
-            "dob": request.form.get("dob"),
-            "height": request.form.get("height")
+            "username": session["user"],
+            "image": request.form.get("patient-image"),
+            "gender": request.form.get("patient-gender"),
+            "dob": request.form.get("patient-dob"),
+            "height": request.form.get("patient-height"),
+            "height-metric": request.form.get("height-metric")
         }
         mongo.db.profiles.insert_one(profile)
         flash("Profile Updated")
         return redirect(
             url_for("dashboard", username=session["user"]))
 
+    height_metric = mongo.db.height_metric.find().sort("height_metric", 1)
     gender = mongo.db.gender.find().sort("gender", 1)
-    return render_template("pages/update_profile.html", gender=gender)
+    return render_template(
+        "pages/update_profile.html",
+        gender=gender, height_metric=height_metric)
 
 
 @app.errorhandler(404)
