@@ -15,15 +15,17 @@
         </div>
         <div class="col-md-4">
             <h4 class="dashboard-heading">Health Profile</h4> 
-            <h4>{{ username }}</h4>
             {% for profile in profiles %}
-                <p>{{ profile.gender }}</p>
-                <p>{{ profile.dob }}</p>
-                <p>{{ profile.height }}</p>
+                <img src="{{ profile.image}}" width="350px">
+                <h4>{{ profile.username }}</h4>
+                <strong>Gender:</strong> {{ profile.gender }} <br>
+                <strong>Date of Birth:</strong> {{ profile.dob }} <br>
+                <strong>Height:</strong> <span>{{ profile.height }}</span><span>{{ profile.height_metric}}</span>
             {% endfor %}
             <p>
                 <a class="edit-profile" href="{{ url_for('update_profile') }}">
-                    <i class="fas fa-edit"></i> 
+                    <br>
+                    <i class="fas fa-edit"></i>
                     Edit Profile
                 </a>
             </p>

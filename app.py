@@ -98,10 +98,13 @@ def login():
 
 @app.route("/dashboard/<username>", methods=["GET", "POST"])
 def dashboard(username):
+    """
     # Grab the session user's username from database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("pages/dashboard.html", username=username)
+    """
+    profiles = mongo.db.profiles.find()
+    return render_template("/pages/dashboard.html", username=username, profiles=profiles)
 
     if session["user"]:
         return render_template("pages/dashboard.html", username=username)
