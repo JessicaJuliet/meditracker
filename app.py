@@ -134,13 +134,14 @@ def update_profile():
             "gender": request.form.get("patient-gender"),
             "dob": request.form.get("patient-dob"),
             "height": request.form.get("patient-height"),
-            "height-metric": request.form.get("height-metric")
+            "height_metric": request.form.get("height_metric")
         }
         mongo.db.profiles.insert_one(profile)
         flash("Profile Updated")
         return redirect(
             url_for("dashboard", username=session["user"]))
 
+    # Dropdown form box for gender and height metrics
     height_metric = mongo.db.height_metric.find().sort("height_metric", 1)
     gender = mongo.db.gender.find().sort("gender", 1)
     return render_template(
