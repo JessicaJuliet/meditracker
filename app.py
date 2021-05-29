@@ -18,18 +18,6 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-@app.route('/profile', methods=["GET", "POST"])
-def profile():
-    profiles = mongo.db.profiles.find()
-    return render_template("/pages/profile.html", profiles=profiles)
-
-
-@app.route('/profile/add', methods=["GET", "POST"])
-def add_profile():
-    profiles = mongo.db.profiles.find()
-    return render_template("/pages/dashboard.html", profiles=profiles)
-
-
 @app.route('/')
 def home():
     """
@@ -158,6 +146,14 @@ def patientprofile():
         gender=gender, height_metric=height_metric)
 
 
+@app.route("/delete_profile/<user_id>")
+def delete_profile(user_id):
+    mongo.db.profiles.remove({"_id": ObjectId()})
+    flash("Profile Successfully Deleted")
+    return redirect(
+        url_for("dashboard", username=session["user"]))
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     # Resource:
@@ -199,6 +195,9 @@ if __name__ == "__main__":
 
 """
 TEST CODE
+"""
+
+"""
 @app.route("/profile/<user_id>", methods=["GET", "POST"])
 def profile(user_id):
     user_id = mongo.db.users.find_one(
@@ -212,4 +211,25 @@ def profile(user_id):
 def get_patients():
     patients = mongo.db.patients.find()
     return render_template("patients.html", patients=patients)
+"""
+
+"""
+@app.route('/profile', methods=["GET", "POST"])
+def profile():
+    profiles = mongo.db.profiles.find()
+    return render_template("/pages/profile.html", profiles=profiles)
+
+
+@app.route('/profile/add', methods=["GET", "POST"])
+def add_profile():
+    profiles = mongo.db.profiles.find()
+    return render_template("/pages/dashboard.html", profiles=profiles)
+"""
+
+"""
+@app.route("/profileform", methods=["GET", "POST"])
+def profileform():
+    profiles = mongo.db.profiles.find()
+    return render_template(
+        "components/forms/profileform.html", profiles=profiles)
 """

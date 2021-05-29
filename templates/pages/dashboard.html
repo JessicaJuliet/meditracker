@@ -33,7 +33,8 @@
                 </a>
             </span>
             <span>
-                <a class="profile-delete" href="{{ url_for('patientprofile') }}">
+                <!-- Resource: Icon from https://fontawesome.com/v5.15/icons/trash?style=solid -->
+                <a class="profile-delete" href="{{ url_for('delete_profile', user_id=user_id) }}">
                     <i class="fas fa-trash"></i><br>
                 </a>
             </span>
