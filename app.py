@@ -104,11 +104,15 @@ def dashboard(username):
     # Take the session user's username from database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+    # Set user_id equal to user["_id"]
+    user_id = mongo.db.users.find_one(
+        {"username": session["user"]})["_id"]
     # Add user profile
     profiles = mongo.db.profiles.find()
     if session["user"]:
         return render_template(
-            "pages/dashboard.html", username=username, profiles=profiles)
+            "pages/dashboard.html", username=username,
+            profiles=profiles, user_id=user_id)
 
     return redirect(url_for("login"))
 
