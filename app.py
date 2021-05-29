@@ -18,13 +18,16 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-"""
-@app.route("/")
-@app.route("/get_patients")
-def get_patients():
-    patients = mongo.db.patients.find()
-    return render_template("patients.html", patients=patients)
-"""
+@app.route('/profile', methods=["GET", "POST"])
+def profile():
+    profiles = mongo.db.profiles.find()
+    return render_template("/pages/profile.html", profiles=profiles)
+
+
+@app.route('/profile/add', methods=["GET", "POST"])
+def add_profile():
+    profiles = mongo.db.profiles.find()
+    return render_template("/pages/dashboard.html", profiles=profiles)
 
 
 @app.route('/')
@@ -98,16 +101,14 @@ def login():
 
 @app.route("/dashboard/<username>", methods=["GET", "POST"])
 def dashboard(username):
-    """
-    # Grab the session user's username from database
+    # Take the session user's username from database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    """
+    # Add user profile
     profiles = mongo.db.profiles.find()
-    return render_template("/pages/dashboard.html", username=username, profiles=profiles)
-
     if session["user"]:
-        return render_template("pages/dashboard.html", username=username)
+        return render_template(
+            "pages/dashboard.html", username=username, profiles=profiles)
 
     return redirect(url_for("login"))
 
@@ -189,3 +190,21 @@ if __name__ == "__main__":
             debug=True)
 # update to debug=False prior to actual
 # deployment of project submission
+
+
+"""
+TEST CODE
+@app.route("/profile/<user_id>", methods=["GET", "POST"])
+def profile(user_id):
+    user_id = mongo.db.users.find_one(
+        {"user": session["user"]})["_id"]
+    return render_template("/pages/dashboard.html", user_id=user_id)
+"""
+
+"""
+@app.route("/")
+@app.route("/get_patients")
+def get_patients():
+    patients = mongo.db.patients.find()
+    return render_template("patients.html", patients=patients)
+"""
