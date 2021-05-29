@@ -1,5 +1,5 @@
 {% block content %}
-<form class="profile-form" method="POST" action="{{ url_for('update_profile') }}">
+<form class="profile-form" method="POST" action="{{ url_for('patientprofile') }}">
     <h5>First, upload a profile image</h5>
     <!-- Upload Profile Image -->
     <div class="profile-input shadow-sm">
@@ -59,9 +59,16 @@
     <!-- Update Button -->
     <div class="container">
         <div class="row">
-            <button type="submit" class="btn profile-button">
-                Update Profile
-            </button>
+            <div class="col-xs-6 col-md-5">
+                <button type="submit" class="btn profile-button">
+                    <strong>Update Profile</strong>
+                </button>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <button type="submit" class="btn cancel-button">
+                    Cancel
+                </button>
+            </div>
         </div>
     </div>
 </form>

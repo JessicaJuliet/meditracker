@@ -133,11 +133,12 @@ def log():
     return render_template("pages/log.html")
 
 
-@app.route('/update_profile', methods=["GET", "POST"])
-def update_profile():
+@app.route('/patientprofile', methods=["GET", "POST"])
+def patientprofile():
     if request.method == "POST":
         profile = {
             "username": session["user"],
+            "created_by": session["user"],
             "image": request.form.get("patient-image"),
             "gender": request.form.get("patient-gender"),
             "dob": request.form.get("patient-dob"),
@@ -153,7 +154,7 @@ def update_profile():
     height_metric = mongo.db.height_metric.find().sort("height_metric", 1)
     gender = mongo.db.gender.find().sort("gender", 1)
     return render_template(
-        "pages/update_profile.html",
+        "pages/patientprofile.html",
         gender=gender, height_metric=height_metric)
 
 

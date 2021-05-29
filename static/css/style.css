@@ -297,6 +297,14 @@ footer .fab {
     margin-top: 30px;
 }
 
+.cancel-button {
+    background-color: lightgray;
+    color: black !important;
+    border-radius: 40px;
+    padding: 10px 40px 10px 40px;
+    margin-top: 30px;
+}
+
 /* ----------- 404 Page ----------- */
 
 .error-page{
