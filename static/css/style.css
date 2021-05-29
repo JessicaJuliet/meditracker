@@ -264,6 +264,20 @@ footer .fab {
     color: #3B424A;
 }
 
+.edit-profile:hover{
+    color: #9e0035;
+    text-decoration: none;
+}
+
+.profile-delete {
+    color: black;
+    padding-left: 10px;
+}
+
+.profile-delete:hover {
+    color: #9E0035;
+}
+
 /* ----------- Profile Page ----------- */
 
 .profile-form {

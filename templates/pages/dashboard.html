@@ -23,13 +23,20 @@
                 <strong>Date of Birth:</strong> {{ profile.dob }} <br>
                 <strong>Height:</strong> <span>{{ profile.height }}</span><span>{{ profile.height_metric}}</span>
             {% endfor %}
-            <p>
+            <br>
+            <br>
+            <!-- Edit/ delete buttons -->
+            <span>
                 <a class="edit-profile" href="{{ url_for('patientprofile') }}">
-                    <br>
                     <i class="fas fa-edit"></i>
                     Edit Profile
                 </a>
-            </p>
+            </span>
+            <span>
+                <a class="profile-delete" href="{{ url_for('patientprofile') }}">
+                    <i class="fas fa-trash"></i><br>
+                </a>
+            </span>
             <!-- Resource: Icon from https://fontawesome.com/icons/angle-right?style=solid -->
             <a class="btn appointment-button" type="button" role="button" href="mailto:meditracker@meditracker.com"><strong>Request Appointment <i class="fas fa-angle-right"></i></strong></a>
         </div>
