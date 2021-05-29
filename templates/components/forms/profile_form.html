@@ -64,10 +64,11 @@
                     <strong>Update Profile</strong>
                 </button>
             </div>
+            <!-- Cancel button -->
             <div class="col-xs-6 col-md-3">
-                <button type="submit" class="btn cancel-button">
+                <a href="{{ url_for('dashboard', username=session['user']) }}" type="submit" class="btn cancel-button">
                     Cancel
-                </button>
+                </a>
             </div>
         </div>
     </div>
