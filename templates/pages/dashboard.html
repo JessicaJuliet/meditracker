@@ -15,10 +15,10 @@
         </div>
         <div class="col-md-4 dashboard-profile">
             <h4 class="dashboard-heading">Health Profile</h4> 
+                <h4 class="dashboard-username">{{ username }}</h4>
+                <div class="user-id"><em>[UserID: {{ user_id }}]</em><br></div>
             {% for profile in profiles %}
                 <img src="{{ profile.image}}" width="350px">
-                <h5>{{ profile.username }}</h5>
-                {{ user_id }}<br>
                 <strong>Gender:</strong> {{ profile.gender }} <br>
                 <strong>Date of Birth:</strong> {{ profile.dob }} <br>
                 <strong>Height:</strong> <span>{{ profile.height }}</span><span>{{ profile.height_metric}}</span>
@@ -38,6 +38,7 @@
                     <i class="fas fa-trash"></i><br>
                 </a>
             </span>
+            <br>
             <!-- Resource: Icon from https://fontawesome.com/icons/angle-right?style=solid -->
             <a class="btn appointment-button" type="button" role="button" href="mailto:meditracker@meditracker.com"><strong>Request Appointment <i class="fas fa-angle-right"></i></strong></a>
         </div>

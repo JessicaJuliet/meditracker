@@ -238,27 +238,24 @@ footer .fab {
     color: #9e0035;
 }
 
-/* ----------- Dashboard ----------- */
+/* ----------- Dashboard Profile ----------- */
 
 .dashboard-heading {
     background-color: #3B424A;
     color: white;
     padding: 10px;
     margin-top: 60px;
-    margin-bottom: 45px;
+    margin-bottom: 15px;
     font-size: 20px;
 }
 
-.appointment-button {
-    padding: 10px;
-    margin-top: 30px;
-    background-color: #9E0035;
-    color: white;
-    margin-bottom: 30px
+.dashboard-username{
+    color: #9e0035;
 }
 
-.appointment-button:hover {
-    color: lightgrey;
+.user-id {
+    font-size: 11px;
+    padding-bottom: 10px;
 }
 
 .edit-profile {
@@ -283,10 +280,24 @@ footer .fab {
     color: #9E0035;
 }
 
+.appointment-button {
+    padding: 10px;
+    margin-top: 30px;
+    background-color: #9E0035;
+    color: white;
+    margin-bottom: 30px
+}
+
+.appointment-button:hover {
+    color: lightgrey;
+}
+
+/* ----------- Dashboard Log ----------- */
+
 .dashboard-profile h5 {
     color: #9E0035;
     font-weight: 700;
-    padding: 15px 0px;
+    padding: 15px 0px 0px 0px;
 }
 
 .dashboard-log {
