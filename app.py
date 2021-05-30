@@ -97,10 +97,12 @@ def dashboard(username):
         {"username": session["user"]})["_id"]
     # Add patient profile
     profiles = mongo.db.profiles.find()
+    # Add patient log
+    logs = mongo.db.logs.find()
     if session["user"]:
         return render_template(
             "pages/dashboard.html", username=username,
-            profiles=profiles, user_id=user_id)
+            profiles=profiles, logs=logs, user_id=user_id)
 
     return redirect(url_for("login"))
 

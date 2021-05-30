@@ -1,6 +1,7 @@
 /* Resource: Fonts from Google Fonts https://fonts.google.com/ */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 /* ----------- Google Fonts ----------- */
 
@@ -9,7 +10,7 @@ h1, h2, h3, h4 {
     font-weight: 700px;
 }
 
-body {
+body, p {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -277,6 +278,23 @@ footer .fab {
 .profile-delete:hover {
     color: #9E0035;
 }
+
+.dashboard-profile h5 {
+    color: #9E0035;
+    font-weight: 700;
+    padding: 15px 0px;
+}
+
+.dashboard-log {
+    background-color: rgba(235, 235, 235, 0.733);
+    padding: 15px;
+    box-shadow: 3px 3px rgba(169, 169, 169, 0.336);
+}
+
+.dashboard-log p {
+    line-height: 10px;
+}
+
 
 /* ----------- Profile Page ----------- */
 

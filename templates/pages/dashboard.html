@@ -13,12 +13,12 @@
             <h3 class="page-heading">My Dashboard</h3>
             <span><strong>Date: </strong></span><span id="dateToday"></span>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 dashboard-profile">
             <h4 class="dashboard-heading">Health Profile</h4> 
-            <h4>{{ user_id }}</h4>
             {% for profile in profiles %}
                 <img src="{{ profile.image}}" width="350px">
-                <h4>{{ profile.username }}</h4>
+                <h5>{{ profile.username }}</h5>
+                <strong>{{ user_id }}</strong><br>
                 <strong>Gender:</strong> {{ profile.gender }} <br>
                 <strong>Date of Birth:</strong> {{ profile.dob }} <br>
                 <strong>Height:</strong> <span>{{ profile.height }}</span><span>{{ profile.height_metric}}</span>
@@ -41,8 +41,15 @@
             <!-- Resource: Icon from https://fontawesome.com/icons/angle-right?style=solid -->
             <a class="btn appointment-button" type="button" role="button" href="mailto:meditracker@meditracker.com"><strong>Request Appointment <i class="fas fa-angle-right"></i></strong></a>
         </div>
-        <div class="col md 8">
+        <div class="col-md-8">
             <h4 class="dashboard-heading">Symptom Tracker</h4>
+            <div class="dashboard-log">
+                {% for log in logs %}
+                    <p><strong>Status:</strong> {{ log.status }}</p>
+                    <p><strong>Weight:</strong> <span>{{ log.weight }}</span><span>{{ log.weight_metric}}</span></p>
+                    <p><strong>Symptoms:</strong> {{ log.symptoms }}</p>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
