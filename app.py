@@ -89,16 +89,17 @@ def login():
 
 @app.route("/dashboard/<username>", methods=["GET", "POST"])
 def dashboard(username):
-    # Take the session user's username from database
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-    # Set user_id equal to user["_id"]
-    user_id = mongo.db.users.find_one(
-        {"username": session["user"]})["_id"]
+    """
+    Take the session user's username from database
+    Set user_id equal to user["_id]
+    """
+    user = mongo.db.users.find_one({"username": session["user"]})
+    username = user["username"]
+    user_id = user["_id"]
     # Add patient profile
     profiles = mongo.db.profiles.find()
     # Add patient log
-    logs = mongo.db.logs.find()
+    logs = mongo.db.logs.find({"username": user["username"]})
     if session["user"]:
         return render_template(
             "pages/dashboard.html", username=username,
@@ -259,3 +260,17 @@ def profileform():
     return render_template(
         "components/forms/profileform.html", profiles=profiles)
 """
+
+"""
+# Take the session user's username from database
+username = mongo.db.users.find_one(
+    {"username": session["user"]})["username"]
+# Set user_id equal to user["_id"]
+user_id = mongo.db.users.find_one(
+    {"username": session["user"]})["_id"]
+"""
+
+"""
+logs = mongo.db.logs.find({"username": username})
+"""
+

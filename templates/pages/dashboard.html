@@ -48,16 +48,17 @@
                 <i class="fas fa-folder-plus"></i>
                 Create New Log
             </a>
-            {% for log in logs %}
-            <div class="dashboard-log">
-                
-                    <p><strong>Log Date:</strong> {{ log.log_date }}</p>
-                    <p><strong>Status:</strong> {{ log.status }}</p>
-                    <p><strong>Weight:</strong> <span>{{ log.weight }}</span><span>{{ log.weight_metric}}</span></p>
-                    <p><strong>Symptoms:</strong> {{ log.symptoms }}</p>
-                    <br>
-            </div>
-            {% endfor %}
+            {% if logs %}
+                {% for log in logs %}
+                <div class="dashboard-log">
+                        <p><strong>Log Date:</strong> {{ log.log_date }}</p>
+                        <p><strong>Status:</strong> {{ log.status }}</p>
+                        <p><strong>Weight:</strong> <span>{{ log.weight }}</span><span>{{ log.weight_metric}}</span></p>
+                        <p><strong>Symptoms:</strong> {{ log.symptoms }}</p>
+                        <br>
+                </div>
+                {% endfor %}
+            {% endif %}
         </div>
     </div>
 </div>
