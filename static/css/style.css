@@ -303,7 +303,7 @@ footer .fab {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px #9e00355d;
 }
 
-.profile-button {
+.profile-button, .log-button {
     background-color: #9E0035;
     color: white !important;
     border-radius: 40px;
