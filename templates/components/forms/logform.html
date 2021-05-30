@@ -25,11 +25,11 @@
                 <strong>Weight</strong>
             </label>
             <span class="col-xs-10 col-md-5">
-                    <input id="patient-weight" name="patient-weight" class="form-control" type="text" placeholder="Enter Weight">
+                <input id="patient-weight" name="patient-weight" class="form-control" type="text" placeholder="Enter Weight">
             </span>
             <div class="col-xs-2 col-md-3">
                 <select id="weight_metric" name="weight_metric" class="form-control">
-                    <option selected></option>
+                    <option selected>...</option>
                     {% for weight_metric in weight_metric %}
                         <option value="{{ weight_metric.weight_metric }}">{{ weight_metric.weight_metric }}</option>
                     {% endfor %}
@@ -42,7 +42,7 @@
                 <strong>Symptoms</strong>
             </label>
             <div class="col-xs-12 col-md-8">
-                <textarea class="form-control" id="patient-symptoms" rows="4"></textarea>
+                <textarea class="form-control" id="patient-symptoms" rows="4" placeholder="Describe your symptoms"></textarea>
             </div>
         </div>
     </div>

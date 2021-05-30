@@ -113,12 +113,11 @@ def logout():
     return redirect(url_for("login"))
 
 
+"""
 @app.route('/log')
 def log():
-    """
-    Add/edit log
-    """
     return render_template("pages/log.html")
+"""
 
 
 @app.route('/patientprofile', methods=["GET", "POST"])
@@ -154,17 +153,15 @@ def delete_profile(user_id):
         url_for("dashboard", username=session["user"]))
 
 
-"""
-@app.route('/log', methods=["GET", "POST"])
-def log():
+@app.route('/patientlog', methods=["GET", "POST"])
+def patientlog():
     if request.method == "POST":
         log = {
             "username": session["user"],
             "status": request.form.get("patient-status"),
             "weight": request.form.get("patient-weight"),
             "weight_metric": request.form.get("weight_metric"),
-            "symptoms": request.form.get("patient-symptoms"),
-            "notes": request.form.get("patient-notes")
+            "symptoms": request.form.get("patient-symptoms")
         }
         mongo.db.log.insert_one(log)
         flash("Log Updated")
@@ -175,9 +172,8 @@ def log():
     weight_metric = mongo.db.weight_metric.find().sort("weight_metric", 1)
     status = mongo.db.status.find().sort("status", 1)
     return render_template(
-        "pages/log.html",
+        "pages/patientlog.html",
         status=status, weight_metric=weight_metric)
-"""
 
 
 @app.errorhandler(404)
