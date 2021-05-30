@@ -162,6 +162,7 @@ def patientlog():
     if request.method == "POST":
         log = {
             "username": session["user"],
+            "log_date": request.form.get("log-date"),
             "status": request.form.get("patient-status"),
             "weight": request.form.get("patient-weight"),
             "weight_metric": request.form.get("weight_metric"),
