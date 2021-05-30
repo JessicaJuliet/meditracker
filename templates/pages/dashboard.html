@@ -18,7 +18,7 @@
             {% for profile in profiles %}
                 <img src="{{ profile.image}}" width="350px">
                 <h5>{{ profile.username }}</h5>
-                <strong>{{ user_id }}</strong><br>
+                {{ user_id }}<br>
                 <strong>Gender:</strong> {{ profile.gender }} <br>
                 <strong>Date of Birth:</strong> {{ profile.dob }} <br>
                 <strong>Height:</strong> <span>{{ profile.height }}</span><span>{{ profile.height_metric}}</span>
@@ -29,7 +29,7 @@
             <span>
                 <a class="edit-profile" href="{{ url_for('patientprofile') }}">
                     <i class="fas fa-edit"></i>
-                    Edit Profile
+                    Update Profile
                 </a>
             </span>
             <span>
@@ -43,12 +43,17 @@
         </div>
         <div class="col-md-8">
             <h4 class="dashboard-heading">Symptom Tracker</h4>
+            <a href="{{ url_for('patientlog') }}" class="btn add-log">
+                <i class="fas fa-folder-plus"></i>
+                Create New Log
+            </a>
             <div class="dashboard-log">
                 {% for log in logs %}
                     <p><strong>Status:</strong> {{ log.status }}</p>
                     <p><strong>Weight:</strong> <span>{{ log.weight }}</span><span>{{ log.weight_metric}}</span></p>
                     <p><strong>Symptoms:</strong> {{ log.symptoms }}</p>
                 {% endfor %}
+                <br>
             </div>
         </div>
     </div>

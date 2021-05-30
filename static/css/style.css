@@ -265,6 +265,10 @@ footer .fab {
     color: #3B424A;
 }
 
+.fa-edit, .fa-trash {
+    font-size: 20px;
+}
+
 .edit-profile:hover{
     color: #9e0035;
     text-decoration: none;
@@ -287,7 +291,7 @@ footer .fab {
 
 .dashboard-log {
     background-color: rgba(235, 235, 235, 0.733);
-    padding: 15px;
+    padding: 25px;
     box-shadow: 3px 3px rgba(169, 169, 169, 0.336);
 }
 
@@ -295,6 +299,14 @@ footer .fab {
     line-height: 10px;
 }
 
+.add-log {
+    position: right;
+    padding-bottom: 10px;
+}
+
+.fa-folder-plus {
+    font-size: 30px;
+}
 
 /* ----------- Profile Page ----------- */
 
