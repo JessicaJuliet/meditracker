@@ -11,14 +11,21 @@
     <div class="row">
         <div class="col-12">
             <h3 class="page-heading">Add Log</h3>
-            <p>Fill in the form below to add a new symptom log to your dashboard:</p>
+            <p>Fill in the form below to add a new log to your dashboard:</p>
         </div>
+    </div>
+    {% include 'components/forms/logform.html' %}
+</div>
+<!-- Back to Dashboard -->
+<div class="container">
+    <div class="row">
         <div class="col-12">
-
-        </div>
-        <div class="col-12">
-            <p></p><i class="fas fa-chevron-left"></i><a href="{{ url_for('dashboard', username=session['user']) }}"> Back to Dashboard</a></p>
+            <i class="fas fa-chevron-left"></i>
+            <a href="{{ url_for('dashboard', username=session['user']) }}">
+                Back to Dashboard
+            </a>
         </div>
     </div>
 </div>
+<br>
 {% endblock %}
