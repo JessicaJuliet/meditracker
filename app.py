@@ -95,7 +95,7 @@ def dashboard(username):
     # Set user_id equal to user["_id"]
     user_id = mongo.db.users.find_one(
         {"username": session["user"]})["_id"]
-    # Add user profile
+    # Add patient profile
     profiles = mongo.db.profiles.find()
     if session["user"]:
         return render_template(
@@ -107,21 +107,20 @@ def dashboard(username):
 
 @app.route("/logout")
 def logout():
-    # Remove user from session cookies
+    """
+    Remove user from session cookies
+    """
     flash("You have successfully logged out")
     session.pop("user")
     return redirect(url_for("login"))
 
 
-"""
-@app.route('/log')
-def log():
-    return render_template("pages/log.html")
-"""
-
-
 @app.route('/patientprofile', methods=["GET", "POST"])
 def patientprofile():
+    """
+    Post profile form data to MongoDB
+    Link MongoDB height_metric and gender data to form dropdowns
+    """
     if request.method == "POST":
         profile = {
             "username": session["user"],
@@ -137,7 +136,6 @@ def patientprofile():
         return redirect(
             url_for("dashboard", username=session["user"]))
 
-    # Dropdown form box for gender and height metrics
     height_metric = mongo.db.height_metric.find().sort("height_metric", 1)
     gender = mongo.db.gender.find().sort("gender", 1)
     return render_template(
@@ -155,6 +153,10 @@ def delete_profile(user_id):
 
 @app.route('/patientlog', methods=["GET", "POST"])
 def patientlog():
+    """
+    Post log form data to MongoDB
+    Link MongoDB status and weight_metric data to form dropdowns
+    """
     if request.method == "POST":
         log = {
             "username": session["user"],
@@ -163,12 +165,11 @@ def patientlog():
             "weight_metric": request.form.get("weight_metric"),
             "symptoms": request.form.get("patient-symptoms")
         }
-        mongo.db.log.insert_one(log)
+        mongo.db.logs.insert_one(log)
         flash("Log Updated")
         return redirect(
             url_for("dashboard", username=session["user"]))
 
-    # Dropdown form box for status and weight metrics
     weight_metric = mongo.db.weight_metric.find().sort("weight_metric", 1)
     status = mongo.db.status.find().sort("status", 1)
     return render_template(

@@ -1,5 +1,5 @@
 {% block content %}
-<form class="profile-form" method="POST" action="{{ url_for('patientprofile') }}">
+<form class="log-form" method="POST" action="{{ url_for('patientlog') }}">
     <h5>What is your disease status?</h5>
     <div class="profile-input shadow-sm">
         <!-- Disease status -->
@@ -42,7 +42,7 @@
                 <strong>Symptoms</strong>
             </label>
             <div class="col-xs-12 col-md-8">
-                <textarea class="form-control" id="patient-symptoms" rows="4" placeholder="Describe your symptoms"></textarea>
+                <textarea class="form-control" name="patient-symptoms" id="patient-symptoms" rows="4" placeholder="Describe your symptoms"></textarea>
             </div>
         </div>
     </div>

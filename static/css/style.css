@@ -280,12 +280,17 @@ footer .fab {
 
 /* ----------- Profile Page ----------- */
 
-.profile-form {
+.profile-form, .log-form {
     max-width: 50%;
     margin-bottom: 40px;
 }
 
 .profile-form h5 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.log-form h5 {
     margin-top: 30px;
     margin-bottom: 15px;
 }
@@ -355,7 +360,7 @@ footer .fab {
     }
 
 @media only screen and (max-width: 1024px) {
-    .profile-form {
+    .profile-form, .log-form {
         max-width: 100%;
         margin-bottom: 40px;
     }
