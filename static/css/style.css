@@ -173,6 +173,11 @@ footer .fab {
     margin-bottom: 100px; 
 }
 
+.book-appointment {
+    background-color: white;
+    font-size: 14px;
+}
+
 /* ----------- User Authentication ----------- */
 
 .alternate-authentication {
