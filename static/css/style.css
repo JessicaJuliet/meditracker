@@ -255,12 +255,17 @@ footer .fab {
 }
 
 .dashboard-username{
-    color: #9e0035;
+    color: #3B424A;
 }
 
 .user-id {
     font-size: 11px;
     padding-bottom: 10px;
+}
+
+.profile-image{
+    width: 350px;
+    padding: 10px 0px;
 }
 
 .edit-profile {
