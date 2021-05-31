@@ -5,11 +5,17 @@
                 <div class="col-sm">
                     <h5>Quick links</h5>
                     <ul class="footer-link">
+                    {% if session.user %}
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('home') }}">About Us</a></li>
+                        <li><a href="{{ url_for('home') }}">Clinic Hours</a></li>
+                    {% else %}
                         <li><a href="{{ url_for('home') }}">Home</a></li>
                         <li><a href="{{ url_for('login') }}">Login</a></li>
                         <li><a href="{{ url_for('register') }}">Register</a></li>
                         <li><a href="{{ url_for('home') }}">About Us</a></li>
                         <li><a href="{{ url_for('home') }}">Clinic Hours</a></li>
+                    {% endif %}
                     </ul>
                 </div>
                 <div class="col-sm">
