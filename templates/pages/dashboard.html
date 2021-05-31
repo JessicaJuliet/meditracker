@@ -51,7 +51,8 @@
             {% if logs %}
                 {% for log in logs %}
                 <div class="dashboard-log">
-                        <p><strong>Log Date:</strong> {{ log.log_date }}</p>
+                    <!-- Resource: Icons source from Font Awesome -->
+                        <div class="log-date"><i class="fas fa-calendar-week"></i> <strong><span> Date:</strong> {{ log.log_date }}</div>
                         <p><strong>Status:</strong> {{ log.status }}</p>
                         <p><strong>Weight:</strong> <span>{{ log.weight }}</span><span>{{ log.weight_metric}}</span></p>
                         <p><strong>Symptoms:</strong> {{ log.symptoms }}</p>

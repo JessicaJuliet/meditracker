@@ -302,13 +302,13 @@ footer .fab {
 
 .dashboard-log {
     background-color: rgba(235, 235, 235, 0.733);
-    padding: 25px;
+    padding: 25px 0px 0px 25px;
     box-shadow: 3px 3px rgba(169, 169, 169, 0.336);
     margin: 20px 0;
 }
 
 .dashboard-log p {
-    line-height: 10px;
+    line-height: 15px;
 }
 
 .add-log {
@@ -318,6 +318,15 @@ footer .fab {
 
 .fa-folder-plus {
     font-size: 30px;
+}
+
+.log-date {
+    background-color: #9e0035;
+    color: white;
+    width: 25%;
+    padding: 3px 3px 3px 7px;
+    margin-bottom: 7px;
+    border-radius: 5px;
 }
 
 /* ----------- Profile Page ----------- */
