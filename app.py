@@ -44,7 +44,12 @@ def register():
 
         register = {
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
+            "password": generate_password_hash(request.form.get("password")),
+            "image": "",
+            "gender": "",
+            "dob": "",
+            "height": "",
+            "height_metric": ""
         }
         mongo.db.users.insert_one(register)
 
@@ -92,13 +97,12 @@ def dashboard(username):
     """
     Take the session user's username from database
     Set user_id equal to user["_id]
+    Add patient log
     """
     user = mongo.db.users.find_one({"username": session["user"]})
     username = user["username"]
     user_id = user["_id"]
-    # Add patient profile
-    profiles = mongo.db.profiles.find()
-    # Add patient log
+    profiles = mongo.db.users.find()
     logs = mongo.db.logs.find({"username": user["username"]})
     if session["user"]:
         return render_template(
@@ -125,16 +129,18 @@ def patientprofile():
     Link MongoDB height_metric and gender data to form dropdowns
     """
     if request.method == "POST":
-        profile = {
-            "username": session["user"],
-            "created_by": session["user"],
-            "image": request.form.get("patient-image"),
-            "gender": request.form.get("patient-gender"),
-            "dob": request.form.get("patient-dob"),
-            "height": request.form.get("patient-height"),
-            "height_metric": request.form.get("height_metric")
-        }
-        mongo.db.profiles.insert_one(profile)
+        users = mongo.db.users
+        users.update(
+            {"_id": "_id"},
+            {"$set":
+                {
+                    "image": request.form.get("patient-image"),
+                    "gender": request.form.get("patient-gender"),
+                    "dob": request.form.get("patient-dob"),
+                    "height": request.form.get("patient-height"),
+                    "height_metric": request.form.get("height_metric")
+                }}
+        )
         flash("Profile Updated")
         return redirect(
             url_for("dashboard", username=session["user"]))
@@ -274,3 +280,29 @@ user_id = mongo.db.users.find_one(
 logs = mongo.db.logs.find({"username": username})
 """
 
+"""
+@app.route('/patientprofile', methods=["GET", "POST"])
+def patientprofile():
+    Post profile form data to MongoDB
+    Link MongoDB height_metric and gender data to form dropdowns
+    if request.method == "POST":
+        profile = {
+            "username": session["user"],
+            "created_by": session["user"],
+            "image": request.form.get("patient-image"),
+            "gender": request.form.get("patient-gender"),
+            "dob": request.form.get("patient-dob"),
+            "height": request.form.get("patient-height"),
+            "height_metric": request.form.get("height_metric")
+        }
+        mongo.db.profiles.insert_one(profile)
+        flash("Profile Updated")
+        return redirect(
+            url_for("dashboard", username=session["user"]))
+
+    height_metric = mongo.db.height_metric.find().sort("height_metric", 1)
+    gender = mongo.db.gender.find().sort("gender", 1)
+    return render_template(
+        "pages/patientprofile.html",
+        gender=gender, height_metric=height_metric)
+    """
