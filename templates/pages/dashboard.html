@@ -19,7 +19,7 @@
                 <div class="user-id"><em>[UserID: {{ user_id }}]</em><br></div>
             {% if profiles %}
             {% for profile in profiles %}
-                <img class="profile-image" src="{{ profile.image}}">
+                <img class="profile-image" src="{{ profile.image}}"> <br>
                 <strong>Gender:</strong> {{ profile.gender }} <br>
                 <strong>DOB:</strong> {{ profile.dob }} <br>
                 <strong>Height:</strong> <span>{{ profile.height }}</span><span>{{ profile.height_metric}}</span>
@@ -58,7 +58,7 @@
                         <p><strong>Status:</strong> {{ log.status }}</p>
                         <p><strong>Weight:</strong> <span>{{ log.weight }}</span><span>{{ log.weight_metric}}</span></p>
                         <p><strong>Symptoms:</strong> {{ log.symptoms }}</p>
-                        <br>
+                        <a href=""><i class="fas fa-trash"></i></a><a href=""><i class="fas fa-pencil-alt"></i></a>
                 </div>
                 {% endfor %}
             {% endif %}

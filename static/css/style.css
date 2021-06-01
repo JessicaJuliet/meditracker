@@ -321,6 +321,16 @@ footer .fab {
     line-height: 15px;
 }
 
+.dashboard-log .fa-trash {
+    padding: 5px 10px 10px 0px;
+    font-size: 17px;
+    color: #3B424A;
+}
+
+.fa-pencil-alt, .fa-folder-plus, .fa-trash {
+    color: #3B424A;
+}
+
 .add-log {
     position: right;
     padding-bottom: 10px;

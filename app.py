@@ -147,12 +147,17 @@ def patientprofile():
         return redirect(
             url_for("dashboard", username=session["user"]))
 
+    if request.method == "POST":
+        user.count()
+        return redirect(
+            url_for("dashboard", username=session["user"]))
+
     height_metric = mongo.db.height_metric.find().sort("height_metric", 1)
     gender = mongo.db.gender.find().sort("gender", 1)
     return render_template(
         "pages/patientprofile.html",
         gender=gender, height_metric=height_metric)
-
+ 
 
 @app.route("/delete_profile/<user_id>")
 def delete_profile(user_id):
