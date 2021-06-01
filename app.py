@@ -157,7 +157,7 @@ def patientprofile():
     return render_template(
         "pages/patientprofile.html",
         gender=gender, height_metric=height_metric)
- 
+
 
 @app.route("/delete_profile/<user_id>")
 def delete_profile(user_id):

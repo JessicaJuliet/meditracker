@@ -44,9 +44,9 @@
                     <option selected>...</option>
                     {% for weight_metric in weight_metric %}
                         {% if weight_metric.weight_metric == weight_metric.weight_metric %}
-                            <option value="{{ weight_metric.weight_metric }}" selected>{{ weight_metric.weight_metric }}</option>
+                            <option value="{{ log.weight_metric }}" selected>{{ weight_metric.weight_metric }}</option>
                         {% else %}
-                            <option value="{{ weight_metric.weight_metric }}">{{ weight_metric.weight_metric }}</option>
+                            <option value="{{ log.weight_metric }}">{{ weight_metric.weight_metric }}</option>
                         {% endif %}
                     {% endfor %}
                 </select>
@@ -69,7 +69,7 @@
                 <strong>Log Date</strong>
             </label>
             <div class="col-xs-12 col-md-8">
-                <input id="log-date" name="log-date" class="form-control" type="date" placeholder="DD/MM/YYYY" value="{{ log.date }}">
+                <input id="log-date" name="log-date" class="form-control" type="date" placeholder="DD/MM/YYYY" value="{{ log.log_date }}">
             </div>
         </div>
     </div>
