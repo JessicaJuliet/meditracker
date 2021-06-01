@@ -102,7 +102,7 @@ def dashboard(username):
     user = mongo.db.users.find_one({"username": session["user"]})
     username = user["username"]
     user_id = user["_id"]
-    profiles = mongo.db.users.find()
+    profiles = mongo.db.users.find({"username": user["username"]})
     logs = mongo.db.logs.find({"username": user["username"]})
     if session["user"]:
         return render_template(
@@ -130,7 +130,8 @@ def patientprofile():
     """
     if request.method == "POST":
         user = mongo.db.users
-        # Resource: https://docs.mongodb.com/manual/reference/operator/update/set/
+        # Resource:
+        # https://docs.mongodb.com/manual/reference/operator/update/set/
         user.update(
             {"username": session["user"]},
             {"$set":
