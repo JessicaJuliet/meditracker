@@ -194,6 +194,16 @@ def patientlog():
         status=status, weight_metric=weight_metric)
 
 
+@app.route("/editlog/<log_id>", methods=["GET", "POST"])
+def editlog(log_id):
+    log = mongo.db.logs.find_one({"_id": ObjectId(log_id)})
+    weight_metric = mongo.db.weight_metric.find().sort("weight_metric", 1)
+    status = mongo.db.status.find().sort("status", 1)
+    return render_template(
+        "pages/editlog.html",
+        status=status, weight_metric=weight_metric, log=log)
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     # Resource:
