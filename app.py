@@ -129,9 +129,10 @@ def patientprofile():
     Link MongoDB height_metric and gender data to form dropdowns
     """
     if request.method == "POST":
-        users = mongo.db.users
-        users.update(
-            {"_id": "_id"},
+        user = mongo.db.users
+        # Resource: https://docs.mongodb.com/manual/reference/operator/update/set/
+        user.update(
+            {"username": session["user"]},
             {"$set":
                 {
                     "image": request.form.get("patient-image"),
