@@ -14,7 +14,9 @@
             <p>Fill in the form below to add a new log to your dashboard:</p>
         </div>
     </div>
-    {% include 'components/forms/logform.html' %}
+    <form class="log-form" method="POST" action="{{ url_for('patientlog') }}">
+        {% include 'components/forms/logform.html' %}
+    </form>
 </div>
 <!-- Back to Dashboard -->
 <div class="container">

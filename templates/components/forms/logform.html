@@ -1,9 +1,4 @@
 {% block content %}
-    {% if patientlog == True %}
-        <form class="log-form" method="POST" action="{{ url_for('patientlog') }}">
-    {% else %}
-        <form class="log-form" method="POST" action="{{ url_for('editlog', log_id=log._id) }}">
-    {% endif %}
         <h5>What is your disease status?</h5>
         <div class="profile-input shadow-sm">
             <!-- Disease status -->
@@ -73,7 +68,7 @@
                     <strong>Log Date</strong>
                 </label>
                 <div class="col-xs-12 col-md-8">
-                    <input id="log-date" name="log-date" class="form-control" type="date" placeholder="DD/MM/YYYY" value="{{ log.log_date }}">
+                <input id="log-date" name="log-date" class="form-control" type="date" placeholder="DD/MM/YYYY" value="{{ log.log_date }}">
                 </div>
             </div>
         </div>
@@ -93,5 +88,4 @@
                 </div>
             </div>
         </div>
-    </form>
 {% endblock %}
