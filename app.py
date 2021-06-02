@@ -175,7 +175,7 @@ def delete_profile(user_id):
 
 
 @app.route('/patientlog', methods=["GET", "POST"])
-def patientlog(user_id):
+def patientlog():
     """
     Post log form data to MongoDB
     Link MongoDB status and weight_metric data to form dropdowns
@@ -198,7 +198,7 @@ def patientlog(user_id):
     status = mongo.db.status.find().sort("status", 1)
     return render_template(
         "pages/patientlog.html",
-        status=status, weight_metric=weight_metric, user_id=user_id)
+        status=status, weight_metric=weight_metric)
 
 
 @app.route("/editlog/<log_id>", methods=["GET", "POST"])
@@ -224,6 +224,17 @@ def editlog(log_id):
     return render_template(
         "pages/editlog.html",
         status=status, weight_metric=weight_metric, log=log)
+
+
+@app.route("/delete_log/<log_id>")
+def delete_log(log_id):
+    """
+    Function to remove log from database
+    """
+    mongo.db.logs.remove({"_id": ObjectId(log_id)})
+    flash("Log Successfully Deleted")
+    return redirect(
+        url_for("dashboard", username=session["user"]))
 
 
 @app.errorhandler(404)

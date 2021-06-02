@@ -62,8 +62,12 @@
                         <p><strong>Status:</strong> {{ log.status }}</p>
                         <p><strong>Weight:</strong> <span>{{ log.weight }}</span><span>{{ log.weight_metric}}</span></p>
                         <p><strong>Symptoms:</strong> {{ log.symptoms }}</p>
-                        <a href=""><i class="fas fa-trash"></i></a>
-                        <a href="{{ url_for('editlog', log_id=log._id)}}"><i class="fas fa-pencil-alt"></i></a>
+                        <a href="{{ url_for('delete_log', log_id=log._id)}}">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                        <a href="{{ url_for('editlog', log_id=log._id)}}">
+                            <i class="fas fa-pencil-alt"></i>
+                        </a>
                 </div>
                 {% endfor %}
             {% endif %}
