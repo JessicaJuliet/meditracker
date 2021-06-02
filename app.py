@@ -168,7 +168,7 @@ def patientprofile(user_id):
 
 @app.route("/delete_profile/<user_id>")
 def delete_profile(user_id):
-    mongo.db.profiles.remove({"_id": ObjectId()})
+    mongo.db.users.remove({"_id": ObjectId()})
     flash("Profile Successfully Deleted")
     return redirect(
         url_for("dashboard", username=session["user"]))
