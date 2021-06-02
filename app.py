@@ -206,6 +206,18 @@ def editlog(log_id):
     """
     Function to edit existing log data
     """
+    if request.method == "POST":
+        submit = {
+            "username": session["user"],
+            "log_date": request.form.get("log-date"),
+            "status": request.form.get("patient-status"),
+            "weight": request.form.get("patient-weight"),
+            "weight_metric": request.form.get("weight_metric"),
+            "symptoms": request.form.get("patient-symptoms")
+        }
+        mongo.db.logs.update({"_id": ObjectId(log_id)}, submit)
+        flash("Log Successfully Updated")
+
     log = mongo.db.logs.find_one({"_id": ObjectId(log_id)})
     weight_metric = mongo.db.weight_metric.find().sort("weight_metric", 1)
     status = mongo.db.status.find().sort("status", 1)
