@@ -254,8 +254,27 @@ footer .fab {
     font-size: 20px;
 }
 
-.dashboard-username{
+.dashboard-profile h5 {
+    color: #9E0035;
+    font-weight: 700;
+    padding: 15px 0px 0px 0px;
+}
+
+.dashboard-username {
     color: #3B424A;
+}
+
+.health-profile p {
+    line-height: 15px;
+    color: black;
+}
+
+.health-profile {
+    /* Resource: Border styles. https://www.w3schools.com/css/css_border.asp */
+    border-style: solid;
+    border-width: 1px;
+    color: rgb(236, 236, 236);
+    padding: 10px;
 }
 
 .user-id {
@@ -303,12 +322,6 @@ footer .fab {
 }
 
 /* ----------- Dashboard Log ----------- */
-
-.dashboard-profile h5 {
-    color: #9E0035;
-    font-weight: 700;
-    padding: 15px 0px 0px 0px;
-}
 
 .dashboard-log {
     background-color: rgba(235, 235, 235, 0.733);

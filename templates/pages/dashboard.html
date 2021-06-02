@@ -15,34 +15,38 @@
         </div>
         <div class="col-md-4 dashboard-profile">
             <h4 class="dashboard-heading">Health Profile</h4> 
+            <div class="health-profile">
                 <h4 class="dashboard-username">Welcome, {{ username }}</h4>
-                <div class="user-id"><em>[UserID: {{ user_id }}]</em><br></div>
-            {% if profiles %}
-            {% for profile in profiles %}
-                <img class="profile-image" src="{{ profile.image}}"> <br>
-                <strong>Gender:</strong> {{ profile.gender }} <br>
-                <strong>DOB:</strong> {{ profile.dob }} <br>
-                <strong>Height:</strong> <span>{{ profile.height }}</span><span>{{ profile.height_metric}}</span>
-            {% endfor %}
-            {% endif %}
-            <br>
-            <br>
-            <!-- Edit/ delete buttons -->
-            <span>
-                <a class="edit-profile" href="{{ url_for('patientprofile') }}">
-                    <i class="fas fa-edit"></i>
-                    Update Profile
-                </a>
-            </span>
-            <span>
-                <!-- Resource: Icon from https://fontawesome.com/v5.15/icons/trash?style=solid -->
-                <a class="profile-delete" href="{{ url_for('delete_profile', user_id=user_id) }}">
-                    <i class="fas fa-trash"></i><br>
-                </a>
-            </span>
-            <br>
+                <p class="user-id"><em>[UserID: {{ user_id }}]</em><br></p>
+                {% if profiles %}
+                {% for profile in profiles %}
+                    <img class="profile-image" src="{{ profile.image}}">
+                    <p><strong>Gender:</strong> {{ profile.gender }}</p>
+                    <p><strong>DOB:</strong> {{ profile.dob }}</p>
+                    <p><strong>Height:</strong> <span>{{ profile.height }}</span><span>{{ profile.height_metric}}</span></p>
+                    <br>
+                {% endfor %}
+                {% endif %}
+                <!-- Edit/ delete buttons -->
+                <span>
+                    <a class="edit-profile" href="{{ url_for('patientprofile') }}">
+                        <i class="fas fa-edit"></i>
+                        Update Profile
+                    </a>
+                </span>
+                <span>
+                    <!-- Resource: Icon from https://fontawesome.com/v5.15/icons/trash?style=solid -->
+                    <a class="profile-delete" href="{{ url_for('delete_profile', user_id=user_id) }}">
+                        <i class="fas fa-trash"></i><br>
+                    </a>
+                </span>
+            </div>
             <!-- Resource: Icon from https://fontawesome.com/icons/angle-right?style=solid -->
-            <a class="btn appointment-button" type="button" role="button" href="mailto:meditracker@meditracker.com"><strong>Request Appointment <i class="fas fa-angle-right"></i></strong></a>
+            <a class="btn appointment-button" type="button" role="button" href="mailto:meditracker@meditracker.com">
+                <strong>Request Appointment 
+                    <i class="fas fa-angle-right"></i>
+                </strong>
+            </a>
         </div>
         <div class="col-md-8">
             <h4 class="dashboard-heading">Symptom Tracker</h4>
