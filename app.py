@@ -18,6 +18,10 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# Resource: Adding comments best practices -
+# https://www.askpython.com/python/python-comments
+
+
 @app.route('/')
 def home():
     """
@@ -253,82 +257,9 @@ if __name__ == "__main__":
 
 
 """
-TEST CODE
-"""
-
-"""
 @app.route("/profile/<user_id>", methods=["GET", "POST"])
 def profile(user_id):
     user_id = mongo.db.users.find_one(
         {"user": session["user"]})["_id"]
     return render_template("/pages/dashboard.html", user_id=user_id)
 """
-
-"""
-@app.route("/")
-@app.route("/get_patients")
-def get_patients():
-    patients = mongo.db.patients.find()
-    return render_template("patients.html", patients=patients)
-"""
-
-"""
-@app.route('/profile', methods=["GET", "POST"])
-def profile():
-    profiles = mongo.db.profiles.find()
-    return render_template("/pages/profile.html", profiles=profiles)
-
-
-@app.route('/profile/add', methods=["GET", "POST"])
-def add_profile():
-    profiles = mongo.db.profiles.find()
-    return render_template("/pages/dashboard.html", profiles=profiles)
-"""
-
-"""
-@app.route("/profileform", methods=["GET", "POST"])
-def profileform():
-    profiles = mongo.db.profiles.find()
-    return render_template(
-        "components/forms/profileform.html", profiles=profiles)
-"""
-
-"""
-# Take the session user's username from database
-username = mongo.db.users.find_one(
-    {"username": session["user"]})["username"]
-# Set user_id equal to user["_id"]
-user_id = mongo.db.users.find_one(
-    {"username": session["user"]})["_id"]
-"""
-
-"""
-logs = mongo.db.logs.find({"username": username})
-"""
-
-"""
-@app.route('/patientprofile', methods=["GET", "POST"])
-def patientprofile():
-    Post profile form data to MongoDB
-    Link MongoDB height_metric and gender data to form dropdowns
-    if request.method == "POST":
-        profile = {
-            "username": session["user"],
-            "created_by": session["user"],
-            "image": request.form.get("patient-image"),
-            "gender": request.form.get("patient-gender"),
-            "dob": request.form.get("patient-dob"),
-            "height": request.form.get("patient-height"),
-            "height_metric": request.form.get("height_metric")
-        }
-        mongo.db.profiles.insert_one(profile)
-        flash("Profile Updated")
-        return redirect(
-            url_for("dashboard", username=session["user"]))
-
-    height_metric = mongo.db.height_metric.find().sort("height_metric", 1)
-    gender = mongo.db.gender.find().sort("gender", 1)
-    return render_template(
-        "pages/patientprofile.html",
-        gender=gender, height_metric=height_metric)
-    """
