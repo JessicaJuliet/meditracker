@@ -1,31 +1,35 @@
 {% extends "layout/base.html" %}
 {% block content %}
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Home</a></li>
-      <li class="breadcrumb-item"><a href="{{ url_for('dashboard', username=session['user']) }}">My Dashboard</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Edit Log</li>
-    </ol>
-</nav>
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h3 class="page-heading">Edit Log</h3>
-            <p>Fill in the form below to add a new log to your dashboard:</p>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="{{ url_for('home') }}">Home</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="{{ url_for('dashboard', username=session['user']) }}">My Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Edit Log</li>
+        </ol>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="page-heading">Edit Log</h3>
+                <p>Edit your existing log by updating the form below:</p>
+            </div>
+        </div>
+        {% include 'components/forms/logform.html' %}
+    </div>
+    <!-- Back to Dashboard -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <i class="fas fa-chevron-left"></i>
+                <a href="{{ url_for('dashboard', username=session['user']) }}">
+                    Back to Dashboard
+                </a>
+            </div>
         </div>
     </div>
-    {% include 'components/forms/logform.html' %}
-</div>
-<!-- Back to Dashboard -->
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <i class="fas fa-chevron-left"></i>
-            <a href="{{ url_for('dashboard', username=session['user']) }}">
-                Back to Dashboard
-            </a>
-        </div>
-    </div>
-</div>
-<br>
+    <br>
 {% endblock %}

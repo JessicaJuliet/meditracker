@@ -1,93 +1,97 @@
 {% block content %}
-{% if patientlog == True %}
-    <form class="log-form" method="POST" action="{{ url_for('patientlog') }}">
-{% else %}
-    <form class="log-form" method="POST" action="{{ url_for('editlog', log_id=log._id) }}">
-{% endif %}
-    <h5>What is your disease status?</h5>
-    <div class="profile-input shadow-sm">
-        <!-- Disease status -->
-        <div class="form-group row">
-            <label for="patient-status" class="col-xs-12 col-md-3 col-form-label">
-                <strong>Status</strong>
-            </label>
-            <div class="col-xs-12 col-md-8">
-                <select id="patient-status" name="patient-status" class="form-control">
-                    {% if patientlog == True %}
-                        <option selected>Select...</option>
-                    {% else %}
-                        <option>Select...</option>
-                    {% endif %}
-                    {% for status in status %}
-                        {% if status.status == status.status %}
-                            <option value="{{ status.status }}" selected>{{ status.status }}</option>
+    {% if patientlog == True %}
+        <form class="log-form" method="POST" action="{{ url_for('patientlog') }}">
+    {% else %}
+        <form class="log-form" method="POST" action="{{ url_for('editlog', log_id=log._id) }}">
+    {% endif %}
+        <h5>What is your disease status?</h5>
+        <div class="profile-input shadow-sm">
+            <!-- Disease status -->
+            <div class="form-group row">
+                <label for="patient-status" class="col-xs-12 col-md-3 col-form-label">
+                    <strong>Status</strong>
+                </label>
+                <div class="col-xs-12 col-md-8">
+                    <select id="patient-status" name="patient-status" class="form-control">
+                        {% if patientlog == True %}
+                            <option selected>Select...</option>
                         {% else %}
-                            <option value="{{ status.status }}">{{ status.status }}</option>
+                            <option>Select...</option>
                         {% endif %}
-                    {% endfor %}
-                </select>
+                        {% for status in status %}
+                            {% if status.status == status.status %}
+                                <option value="{{ status.status }}" selected>{{ status.status }}</option>
+                            {% else %}
+                                <option value="{{ status.status }}">{{ status.status }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
             </div>
         </div>
-    </div>
-    <h5>Update your weight and symptoms</h5>
-    <div class="profile-input shadow-sm">
-        <!-- Enter weight -->
-        <div class="form-group row">
-            <label for="patient-weight" class="col-xs-12 col-md-3 col-form-label">
-                <strong>Weight</strong>
-            </label>
-            <span class="col-xs-10 col-md-5">
-                <input id="patient-weight" name="patient-weight" class="form-control" type="text" placeholder="Enter Weight" value="{{ log.weight }}">
-            </span>
-            <div class="col-xs-2 col-md-3">
-                <select id="weight_metric" name="weight_metric" class="form-control">
-                    <option selected>...</option>
-                    {% for weight_metric in weight_metric %}
-                        {% if weight_metric.weight_metric == weight_metric.weight_metric %}
-                            <option value="{{ log.weight_metric }}" selected>{{ weight_metric.weight_metric }}</option>
+        <h5>Update your weight and symptoms</h5>
+        <div class="profile-input shadow-sm">
+            <!-- Enter weight -->
+            <div class="form-group row">
+                <label for="patient-weight" class="col-xs-12 col-md-3 col-form-label">
+                    <strong>Weight</strong>
+                </label>
+                <span class="col-xs-10 col-md-5">
+                    <input id="patient-weight" name="patient-weight" class="form-control" type="text" placeholder="Enter Weight" value="{{ log.weight }}">
+                </span>
+                <div class="col-xs-2 col-md-3">
+                    <select id="weight_metric" name="weight_metric" class="form-control">
+                        {% if patientlog == True %}
+                            <option selected>...</option>
                         {% else %}
-                            <option value="{{ log.weight_metric }}">{{ weight_metric.weight_metric }}</option>
+                            <option>Select...</option>
                         {% endif %}
-                    {% endfor %}
-                </select>
+                        {% for weight_metric in weight_metric %}
+                            {% if weight_metric.weight_metric == weight_metric.weight_metric %}
+                                <option value="{{ weight_metric.weight_metric }}" selected>{{ weight_metric.weight_metric }}</option>
+                            {% else %}
+                                <option value="{{ weight_metric.weight_metric }}">{{ weight_metric.weight_metric }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <!-- Enter symptoms -->
+            <div class="form-group row">
+                <label for="patient-symptoms" class="col-xs-12 col-md-3 col-form-label">
+                    <strong>Symptoms</strong>
+                </label>
+                <div class="col-xs-12 col-md-8">
+                    <textarea class="form-control" name="patient-symptoms" id="patient-symptoms" rows="4" placeholder="Describe your symptoms">
+                        {{- log.symptoms -}}
+                    </textarea>
+                </div>
+            </div>
+            <!-- Enter log date -->
+            <div class="form-group row">
+                <label for="log-date" class="col-xs-12 col-md-3 col-form-label">
+                    <strong>Log Date</strong>
+                </label>
+                <div class="col-xs-12 col-md-8">
+                    <input id="log-date" name="log-date" class="form-control" type="date" placeholder="DD/MM/YYYY" value="{{ log.log_date }}">
+                </div>
             </div>
         </div>
-        <!-- Enter symptoms -->
-        <div class="form-group row">
-            <label for="patient-symptoms" class="col-xs-12 col-md-3 col-form-label">
-                <strong>Symptoms</strong>
-            </label>
-            <div class="col-xs-12 col-md-8">
-                <textarea class="form-control" name="patient-symptoms" id="patient-symptoms" rows="4" placeholder="Describe your symptoms">
-                    {{- log.symptoms -}}
-                </textarea>
+        <!-- Update Button -->
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-md-4">
+                    <button type="submit" class="btn log-button">
+                        <strong>Edit Log</strong>
+                    </button>
+                </div>
+                <!-- Cancel button -->
+                <div class="col-xs-6 col-md-3">
+                    <a href="{{ url_for('dashboard', username=session['user']) }}" type="submit" class="btn cancel-button">
+                        Cancel
+                    </a>
+                </div>
             </div>
         </div>
-        <!-- Enter log date -->
-        <div class="form-group row">
-            <label for="log-date" class="col-xs-12 col-md-3 col-form-label">
-                <strong>Log Date</strong>
-            </label>
-            <div class="col-xs-12 col-md-8">
-                <input id="log-date" name="log-date" class="form-control" type="date" placeholder="DD/MM/YYYY" value="{{ log.log_date }}">
-            </div>
-        </div>
-    </div>
-    <!-- Update Button -->
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-6 col-md-4">
-                <button type="submit" class="btn log-button">
-                    <strong>Edit Log</strong>
-                </button>
-            </div>
-            <!-- Cancel button -->
-            <div class="col-xs-6 col-md-3">
-                <a href="{{ url_for('dashboard', username=session['user']) }}" type="submit" class="btn cancel-button">
-                    Cancel
-                </a>
-            </div>
-        </div>
-    </div>
-</form>
+    </form>
 {% endblock %}
