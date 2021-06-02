@@ -31,8 +31,8 @@ def register():
     """
     Allows user to register on the website
     Checks if username already exists in Database
-    Puts new user into session cookie
-    Redirects user to dashboard
+    Adds blank user profile data to mongoDB
+    Redirects user to Dashboard
     """
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
@@ -64,13 +64,14 @@ def register():
 def login():
     """
     Check if username exists in database
+    Ensure hashed password matches user input
+    Redirect to login if no username/password match
     """
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            # Ensure hashed password matches user input
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
@@ -80,12 +81,10 @@ def login():
                     "dashboard", username=session["user"]))
 
             else:
-                # Invalid password match
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
 
         else:
-            # Username doesn't exist
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
@@ -96,8 +95,10 @@ def login():
 def dashboard(username):
     """
     Take the session user's username from database
-    Set user_id equal to user["_id]
-    Add patient log
+    Set variable username equal to user's username
+    Set variable user_id equal to user's _id
+    Set variable profiles equal to user's username
+    Set variable logs equal to user's username
     """
     user = mongo.db.users.find_one({"username": session["user"]})
     username = user["username"]
@@ -115,7 +116,7 @@ def dashboard(username):
 @app.route("/logout")
 def logout():
     """
-    Remove user from session cookies
+    Logout function to remove user from session cookies
     """
     flash("You have successfully logged out")
     session.pop("user")
@@ -125,12 +126,13 @@ def logout():
 @app.route('/patientprofile', methods=["GET", "POST"])
 def patientprofile():
     """
-    Post profile form data to MongoDB
-    Link MongoDB height_metric and gender data to form dropdowns
+    Post profile form data to mongoDB user document
+    Allow user to create one profile
+    Link mongoDB height_metric and gender data to form dropdowns
     """
     if request.method == "POST":
         user = mongo.db.users
-        # Resource:
+        # Resource: Set Operator -
         # https://docs.mongodb.com/manual/reference/operator/update/set/
         user.update(
             {"username": session["user"]},
@@ -170,8 +172,8 @@ def delete_profile(user_id):
 @app.route('/patientlog', methods=["GET", "POST"])
 def patientlog():
     """
-    Post log form data to MongoDB
-    Link MongoDB status and weight_metric data to form dropdowns
+    Post log form data to mongoDB
+    Link mongoDB status and weight_metric data to form dropdowns
     """
     if request.method == "POST":
         log = {
@@ -183,7 +185,7 @@ def patientlog():
             "symptoms": request.form.get("patient-symptoms")
         }
         mongo.db.logs.insert_one(log)
-        flash("Log Updated")
+        flash("Log Created")
         return redirect(
             url_for("dashboard", username=session["user"]))
 
@@ -196,9 +198,13 @@ def patientlog():
 
 @app.route("/editlog/<log_id>", methods=["GET", "POST"])
 def editlog(log_id):
+    """
+    Function to edit existing log data
+    """
     log = mongo.db.logs.find_one({"_id": ObjectId(log_id)})
     weight_metric = mongo.db.weight_metric.find().sort("weight_metric", 1)
     status = mongo.db.status.find().sort("status", 1)
+    flash("Log Successfully Updated")
     return render_template(
         "pages/editlog.html",
         status=status, weight_metric=weight_metric, log=log)
@@ -206,7 +212,10 @@ def editlog(log_id):
 
 @app.errorhandler(404)
 def page_not_found(e):
-    # Resource:
+    """
+    Function for custom 404 error page
+    """
+    # Resource: Linking to 404 page -
     # https://flask.palletsprojects.com/en/2.0.x/errorhandling/?highlight=404
     return render_template("pages/404.html"), 404
 
