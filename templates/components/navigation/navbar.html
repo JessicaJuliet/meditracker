@@ -16,7 +16,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <a class="dropdown-item" href="{{ url_for('dashboard', username=session['user']) }}">My Dashboard</a>
-                    <a class="dropdown-item" href="{{ url_for('patientprofile') }}">Update Profile</a>
+                    <a class="dropdown-item" href="{{ url_for('patientprofile', user_id=user_id) }}">Update Profile</a>
                     <a class="dropdown-item" href="{{ url_for('patientlog') }}">Add Log</a>
                     <a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a>
                 </div>

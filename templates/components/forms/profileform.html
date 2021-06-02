@@ -1,5 +1,5 @@
 {% block content %}
-<form class="profile-form" method="POST" action="{{ url_for('patientprofile') }}">
+<form class="profile-form" method="POST" action="{{ url_for('patientprofile', user_id=user_id) }}">
     <h5>First, upload a profile image</h5>
     <!-- Disease status -->
     <div class="profile-input shadow-sm">
@@ -44,7 +44,7 @@
                 <strong>Height</strong>
             </label>
             <span class="col-xs-10 col-md-5">
-                    <input id="patient-height" name="patient-height" class="form-control" type="text" placeholder="Enter Height">
+                    <input id="patient-height" name="patient-height" class="form-control" type="text" placeholder="Enter Height" value="user_id.height">
             </span>
             <div class="col-xs-2 col-md-3">
                 <select id="height_metric" name="height_metric" class="form-control">

@@ -127,8 +127,8 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route('/patientprofile', methods=["GET", "POST"])
-def patientprofile():
+@app.route('/patientprofile/<user_id>', methods=["GET", "POST"])
+def patientprofile(user_id):
     """
     Post profile form data to MongoDB user document
     Allow user to create one profile
@@ -136,6 +136,7 @@ def patientprofile():
     """
     if request.method == "POST":
         user = mongo.db.users
+        user_id = mongo.db.users.find_one({"_id": ObjectId(user_id)})
         # Resource: Set Operator -
         # https://docs.mongodb.com/manual/reference/operator/update/set/
         user.update(
@@ -162,7 +163,7 @@ def patientprofile():
     gender = mongo.db.gender.find().sort("gender", 1)
     return render_template(
         "pages/patientprofile.html",
-        gender=gender, height_metric=height_metric)
+        gender=gender, height_metric=height_metric, user_id=user_id)
 
 
 @app.route("/delete_profile/<user_id>")
@@ -174,7 +175,7 @@ def delete_profile(user_id):
 
 
 @app.route('/patientlog', methods=["GET", "POST"])
-def patientlog():
+def patientlog(user_id):
     """
     Post log form data to MongoDB
     Link MongoDB status and weight_metric data to form dropdowns
@@ -197,7 +198,7 @@ def patientlog():
     status = mongo.db.status.find().sort("status", 1)
     return render_template(
         "pages/patientlog.html",
-        status=status, weight_metric=weight_metric)
+        status=status, weight_metric=weight_metric, user_id=user_id)
 
 
 @app.route("/editlog/<log_id>", methods=["GET", "POST"])
