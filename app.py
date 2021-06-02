@@ -35,7 +35,7 @@ def register():
     """
     Allows user to register on the website
     Checks if username already exists in Database
-    Adds blank user profile data to mongoDB
+    Adds blank user profile data to MongoDB
     Redirects user to Dashboard
     """
     if request.method == "POST":
@@ -130,9 +130,9 @@ def logout():
 @app.route('/patientprofile', methods=["GET", "POST"])
 def patientprofile():
     """
-    Post profile form data to mongoDB user document
+    Post profile form data to MongoDB user document
     Allow user to create one profile
-    Link mongoDB height_metric and gender data to form dropdowns
+    Link MongoDB height_metric and gender data to form dropdowns
     """
     if request.method == "POST":
         user = mongo.db.users
@@ -176,8 +176,8 @@ def delete_profile(user_id):
 @app.route('/patientlog', methods=["GET", "POST"])
 def patientlog():
     """
-    Post log form data to mongoDB
-    Link mongoDB status and weight_metric data to form dropdowns
+    Post log form data to MongoDB
+    Link MongoDB status and weight_metric data to form dropdowns
     """
     if request.method == "POST":
         log = {
@@ -208,7 +208,6 @@ def editlog(log_id):
     log = mongo.db.logs.find_one({"_id": ObjectId(log_id)})
     weight_metric = mongo.db.weight_metric.find().sort("weight_metric", 1)
     status = mongo.db.status.find().sort("status", 1)
-    flash("Log Successfully Updated")
     return render_template(
         "pages/editlog.html",
         status=status, weight_metric=weight_metric, log=log)
