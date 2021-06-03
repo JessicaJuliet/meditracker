@@ -15,10 +15,10 @@
                     My Account
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="{{ url_for('dashboard', username=session['user']) }}">My Dashboard</a>
-                    <a class="dropdown-item" href="{{ url_for('patientprofile', username=session['user']) }}">My Profile</a>
-                    <a class="dropdown-item" href="{{ url_for('patientlog') }}">Create Log</a>
-                    <a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a>
+                    <a class="dropdown-item" href="{{ url_for('dashboard', username=session['user']) }}"><i class="fas fa-columns"></i> My Dashboard</a>
+                    <a class="dropdown-item" href="{{ url_for('patientprofile', username=session['user']) }}"><i class="fas fa-user-circle"></i> My Profile</a>
+                    <a class="dropdown-item" href="{{ url_for('patientlog') }}"><i class="fas fa-plus-circle"></i> Create Log</a>
+                    <a class="dropdown-item" href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
                 </div>
             </div>
         </span>
