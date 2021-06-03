@@ -26,8 +26,11 @@ mongo = PyMongo(app)
 def home():
     """
     Function to load the homepage
+    Pull User's username from MongoDB
     """
-    return render_template('pages/home.html')
+    user = mongo.db.users.find_one({"username": session["user"]})
+    username = user["username"]
+    return render_template('pages/home.html', username=username)
 
 
 @app.route('/register', methods=["GET", "POST"])
@@ -158,11 +161,13 @@ def patientprofile(username):
         return redirect(
             url_for("dashboard", username=session["user"]))
 
+    user = mongo.db.users.find_one({"username": session["user"]})
+    username = user["username"]
     height_metric = mongo.db.height_metric.find().sort("height_metric", 1)
     gender = mongo.db.gender.find().sort("gender", 1)
     return render_template(
         "pages/patientprofile.html",
-        gender=gender, height_metric=height_metric)
+        gender=gender, height_metric=height_metric, username=username)
 
 
 @app.route("/delete_profile/<user_id>")
@@ -193,11 +198,13 @@ def patientlog():
         return redirect(
             url_for("dashboard", username=session["user"]))
 
+    user = mongo.db.users.find_one({"username": session["user"]})
+    username = user["username"]
     weight_metric = mongo.db.weight_metric.find().sort("weight_metric", 1)
     status = mongo.db.status.find().sort("status", 1)
     return render_template(
         "pages/patientlog.html",
-        status=status, weight_metric=weight_metric)
+        status=status, weight_metric=weight_metric, username=username)
 
 
 @app.route("/editlog/<log_id>", methods=["GET", "POST"])
@@ -217,12 +224,14 @@ def editlog(log_id):
         mongo.db.logs.update({"_id": ObjectId(log_id)}, submit)
         flash("Log Successfully Updated")
 
+    user = mongo.db.users.find_one({"username": session["user"]})
+    username = user["username"]
     log = mongo.db.logs.find_one({"_id": ObjectId(log_id)})
     weight_metric = mongo.db.weight_metric.find().sort("weight_metric", 1)
     status = mongo.db.status.find().sort("status", 1)
     return render_template(
         "pages/editlog.html",
-        status=status, weight_metric=weight_metric, log=log)
+        status=status, weight_metric=weight_metric, log=log, username=username)
 
 
 @app.route("/delete_log/<log_id>")
