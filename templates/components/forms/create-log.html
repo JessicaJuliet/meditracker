@@ -8,9 +8,9 @@
                 </label>
                 <div class="col-xs-12 col-md-8">
                     <select id="patient-status" name="patient-status" class="form-control">
-                            <option selected>Select...</option>
+                            <option></option>
                         {% for status in status %}
-                                <option value="{{ status.status }}">{{ status.status }}</option>
+                                <option value="{{ status.status }}" selected>{{ status.status }}</option>
                         {% endfor %}
                     </select>
                 </div>
@@ -24,13 +24,13 @@
                     <strong>Weight</strong>
                 </label>
                 <span class="col-xs-10 col-md-5">
-                    <input id="patient-weight" name="patient-weight" class="form-control" type="text" placeholder="Enter Weight">
+                    <input id="patient-weight" name="patient-weight" class="form-control" type="text" placeholder="Enter Weight" required>
                 </span>
                 <div class="col-xs-2 col-md-3">
-                    <select id="weight_metric" name="weight_metric" class="form-control">
-                            <option selected>...</option>
+                    <select id="weight_metric" name="weight_metric" class="form-control" required>
+                            <option></option>
                         {% for weight_metric in weight_metric %}
-                            <option value="{{ weight_metric.weight_metric }}">{{ weight_metric.weight_metric }}</option>
+                            <option value="{{ weight_metric.weight_metric }}" selected>{{ weight_metric.weight_metric }}</option>
                         {% endfor %}
                     </select>
                 </div>
@@ -41,7 +41,7 @@
                     <strong>Symptoms</strong>
                 </label>
                 <div class="col-xs-12 col-md-8">
-                    <textarea class="form-control" name="patient-symptoms" id="patient-symptoms" rows="4" placeholder="Describe your symptoms"></textarea>
+                    <textarea class="form-control" name="patient-symptoms" id="patient-symptoms" rows="4" placeholder="Describe your symptoms" required></textarea>
                 </div>
             </div>
             <!-- Enter log date -->
@@ -50,7 +50,7 @@
                     <strong>Log Date</strong>
                 </label>
                 <div class="col-xs-12 col-md-8">
-                <input id="log-date" name="log-date" class="form-control" type="date" placeholder="DD/MM/YYYY">
+                <input id="log-date" name="log-date" class="form-control" type="date" placeholder="DD/MM/YYYY" required>
                 </div>
             </div>
         </div>

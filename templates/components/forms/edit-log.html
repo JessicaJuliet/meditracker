@@ -12,8 +12,6 @@
                         {% for status in status %}
                             {% if status.status == status.status %}
                                 <option value="{{ status.status }}" selected>{{ status.status }}</option>
-                            {% else %}
-                                <option value="{{ status.status }}">{{ status.status }}</option>
                             {% endif %}
                         {% endfor %}
                     </select>
