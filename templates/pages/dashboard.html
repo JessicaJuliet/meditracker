@@ -29,7 +29,7 @@
                 {% endif %}
                 <!-- Edit/ delete buttons -->
                 <span>
-                    <a class="edit-profile" href="{{ url_for('patientprofile', user_id=user_id) }}">
+                    <a class="edit-profile" href="{{ url_for('patientprofile', username=session['user']) }}">
                         <i class="fas fa-edit"></i>
                         Update Profile
                     </a>

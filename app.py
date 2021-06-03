@@ -127,8 +127,8 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route('/patientprofile/<user_id>', methods=["GET", "POST"])
-def patientprofile(user_id):
+@app.route('/patientprofile/<username>', methods=["GET", "POST"])
+def patientprofile(username):
     """
     Post profile form data to MongoDB user document
     Allow user to create one profile
@@ -136,7 +136,6 @@ def patientprofile(user_id):
     """
     if request.method == "POST":
         user = mongo.db.users
-        user_id = mongo.db.users.find_one({"_id": ObjectId(user_id)})
         # Resource: Set Operator -
         # https://docs.mongodb.com/manual/reference/operator/update/set/
         user.update(
@@ -163,7 +162,7 @@ def patientprofile(user_id):
     gender = mongo.db.gender.find().sort("gender", 1)
     return render_template(
         "pages/patientprofile.html",
-        gender=gender, height_metric=height_metric, user_id=user_id)
+        gender=gender, height_metric=height_metric)
 
 
 @app.route("/delete_profile/<user_id>")

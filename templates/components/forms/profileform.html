@@ -1,5 +1,5 @@
 {% block content %}
-<form class="profile-form" method="POST" action="{{ url_for('patientprofile', user_id=user_id) }}">
+<form class="profile-form" method="POST" action="{{ url_for('patientprofile', username=session['user']) }}">
     <h5>First, upload a profile image</h5>
     <!-- Disease status -->
     <div class="profile-input shadow-sm">
