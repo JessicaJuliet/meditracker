@@ -28,9 +28,7 @@ def home():
     Function to load the homepage
     Pull User's username from MongoDB
     """
-    user = mongo.db.users.find_one({"username": session["user"]})
-    username = user["username"]
-    return render_template('pages/home.html', username=username)
+    return render_template('pages/home.html')
 
 
 @app.route('/register', methods=["GET", "POST"])
