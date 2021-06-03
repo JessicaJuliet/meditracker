@@ -49,7 +49,6 @@
                 <a class="nav-item nav-link" href="{{ url_for('home') }}#about-link">About Us</a>
                 <a class="nav-item nav-link" href="{{ url_for('home') }}#clinic-hours">Clinic hours</a>
                 <a class="nav-item nav-link" href="{{ url_for('dashboard', username=session['user']) }}">My Dashboard</a>
-                <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
             {% else %}
                 <a class="nav-item nav-link active" href="{{ url_for('home') }}">Home</a>
                 <a class="nav-item nav-link" href="{{ url_for('home') }}#about-link">About Us</a>
