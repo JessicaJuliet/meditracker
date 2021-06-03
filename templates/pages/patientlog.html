@@ -4,18 +4,18 @@
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Home</a></li>
       <li class="breadcrumb-item"><a href="{{ url_for('dashboard', username=session['user']) }}">My Dashboard</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Add Log</li>
+      <li class="breadcrumb-item active" aria-current="page">Create Log</li>
     </ol>
 </nav>
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h3 class="page-heading">Add Log</h3>
+            <h3 class="page-heading">Create Log</h3>
             <p>Fill in the form below to add a new log to your dashboard:</p>
         </div>
     </div>
     <form class="log-form" method="POST" action="{{ url_for('patientlog') }}">
-        {% include 'components/forms/addlog.html' %}
+        {% include 'components/forms/create-log.html' %}
     </form>
 </div>
 <!-- Back to Dashboard -->

@@ -8,17 +8,9 @@
                 </label>
                 <div class="col-xs-12 col-md-8">
                     <select id="patient-status" name="patient-status" class="form-control">
-                        {% if patientlog == True %}
                             <option selected>Select...</option>
-                        {% else %}
-                            <option>Select...</option>
-                        {% endif %}
                         {% for status in status %}
-                            {% if status.status == status.status %}
-                                <option value="{{ status.status }}" selected>{{ status.status }}</option>
-                            {% else %}
                                 <option value="{{ status.status }}">{{ status.status }}</option>
-                            {% endif %}
                         {% endfor %}
                     </select>
                 </div>
@@ -32,21 +24,13 @@
                     <strong>Weight</strong>
                 </label>
                 <span class="col-xs-10 col-md-5">
-                    <input id="patient-weight" name="patient-weight" class="form-control" type="text" placeholder="Enter Weight" value="{{ log.weight }}">
+                    <input id="patient-weight" name="patient-weight" class="form-control" type="text" placeholder="Enter Weight">
                 </span>
                 <div class="col-xs-2 col-md-3">
                     <select id="weight_metric" name="weight_metric" class="form-control">
-                        {% if patientlog == True %}
                             <option selected>...</option>
-                        {% else %}
-                            <option>Select...</option>
-                        {% endif %}
                         {% for weight_metric in weight_metric %}
-                            {% if weight_metric.weight_metric == weight_metric.weight_metric %}
-                                <option value="{{ weight_metric.weight_metric }}" selected>{{ weight_metric.weight_metric }}</option>
-                            {% else %}
-                                <option value="{{ weight_metric.weight_metric }}">{{ weight_metric.weight_metric }}</option>
-                            {% endif %}
+                            <option value="{{ weight_metric.weight_metric }}">{{ weight_metric.weight_metric }}</option>
                         {% endfor %}
                     </select>
                 </div>
@@ -57,9 +41,7 @@
                     <strong>Symptoms</strong>
                 </label>
                 <div class="col-xs-12 col-md-8">
-                    <textarea class="form-control" name="patient-symptoms" id="patient-symptoms" rows="4" placeholder="Describe your symptoms">
-                        {{- log.symptoms -}}
-                    </textarea>
+                    <textarea class="form-control" name="patient-symptoms" id="patient-symptoms" rows="4" placeholder="Describe your symptoms"></textarea>
                 </div>
             </div>
             <!-- Enter log date -->
@@ -68,16 +50,16 @@
                     <strong>Log Date</strong>
                 </label>
                 <div class="col-xs-12 col-md-8">
-                <input id="log-date" name="log-date" class="form-control" type="date" placeholder="DD/MM/YYYY" value="{{ log.log_date }}">
+                <input id="log-date" name="log-date" class="form-control" type="date" placeholder="DD/MM/YYYY">
                 </div>
             </div>
         </div>
         <!-- Update Button -->
         <div class="container">
             <div class="row">
-                <div class="col-xs-6 col-md-4">
+                <div class="col-xs-6 col-md-5">
                     <button type="submit" class="btn log-button">
-                        <strong>Edit Log</strong>
+                        <strong>Create Log</strong>
                     </button>
                 </div>
                 <!-- Cancel button -->
