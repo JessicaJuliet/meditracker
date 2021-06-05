@@ -244,6 +244,14 @@ footer .fab {
     color: #9e0035;
 }
 
+.back-to-dashboard {
+    color: #3B424A;
+}
+
+.back-to-dashboard:hover {
+    color: #3B424A;
+}
+
 /* ----------- Dashboard Profile ----------- */
 
 .dashboard-heading {
@@ -296,9 +304,8 @@ footer .fab {
     font-size: 20px;
 }
 
-.edit-profile:hover{
+.edit-profile:hover {
     color: #9e0035;
-    text-decoration: none;
 }
 
 .profile-delete {
@@ -319,8 +326,9 @@ footer .fab {
 }
 
 .appointment-button:hover {
-    color: lightgrey;
-}
+    background-color: #9e0035e1;
+    color: white;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;}
 
 /* ----------- Dashboard Log ----------- */
 
@@ -341,13 +349,22 @@ footer .fab {
     color: #3B424A;
 }
 
-.fa-pencil-alt, .fa-folder-plus, .fa-trash {
+.fa-pencil-alt, .fa-trash {
     color: #3B424A;
 }
 
+.fa-trash:hover, .fa-pencil-alt:hover {
+    color: #9E0035;
+}
+
 .add-log {
-    position: right;
     padding-bottom: 10px;
+    color: #3B424A;
+}
+
+.add-log:hover {
+    color: #9e0035;
+    text-decoration: underline;
 }
 
 .fa-folder-plus {
@@ -399,6 +416,13 @@ footer .fab {
     border-radius: 40px;
     padding: 10px 40px 10px 40px;
     margin-top: 30px;
+}
+
+.log-button:hover, .profile-button:hover {
+    background-color: #9e0035e1;
+    color: white;
+    /* Resource: Box shadow form https://getcssscan.com/css-box-shadow-examples */
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .cancel-button {

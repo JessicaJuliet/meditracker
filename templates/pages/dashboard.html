@@ -31,7 +31,7 @@
                 <span>
                     <a class="edit-profile" href="{{ url_for('patientprofile', username=session['user']) }}">
                         <i class="fas fa-edit"></i>
-                        Update Profile
+                        Edit Profile
                     </a>
                 </span>
                 <span>
@@ -50,10 +50,12 @@
         </div>
         <div class="col-md-8">
             <h4 class="dashboard-heading">Symptom Tracker</h4>
-            <a href="{{ url_for('patientlog') }}" class="btn add-log">
-                <i class="fas fa-folder-plus"></i>
-                Create New Log
-            </a>
+            <div>
+                <a href="{{ url_for('patientlog') }}" class="btn add-log">
+                    <i class="fas fa-folder-plus"></i>
+                    Create New Log
+                </a>
+            </div>
             {% if logs %}
                 {% for log in logs %}
                 <div class="dashboard-log">
