@@ -8,7 +8,7 @@
                 <strong>Profile Image</strong>
             </label>
             <div class="col-xs-12 col-md-8">
-                <input id="patient-image" name="patient-image" class="form-control" type="url" placeholder="Enter Image URL">
+                <input id="patient-image" name="patient-image" class="form-control" type="url" placeholder="Enter Image URL" required>
             </div>
         </div>
     </div>
@@ -21,8 +21,7 @@
                 <strong>Gender</strong>
             </label>
             <div class="col-xs-12 col-md-8">
-                <select id="patient-gender" name="patient-gender" class="form-control">
-                    <option selected>Select...</option>
+                <select id="patient-gender" name="patient-gender" class="form-control" required>
                     {% for gender in gender %}
                         <option value="{{ gender.gender }}">{{ gender.gender }}</option>
                     {% endfor %}
@@ -35,7 +34,7 @@
                 <strong>Date of Birth</strong>
             </label>
             <div class="col-xs-12 col-md-8">
-                <input id="patient-dob" name="patient-dob" class="form-control" type="date" placeholder="DD/MM/YYYY">
+                <input id="patient-dob" name="patient-dob" class="form-control" type="date" placeholder="DD/MM/YYYY" required>
             </div>
         </div>
         <!-- Enter Height -->
@@ -44,13 +43,12 @@
                 <strong>Height</strong>
             </label>
             <span class="col-xs-10 col-md-5">
-                    <input id="patient-height" name="patient-height" class="form-control" type="text" placeholder="Enter Height" value="user_id.height">
+                    <input id="patient-height" name="patient-height" class="form-control" type="text" placeholder="Enter Height" required>
             </span>
             <div class="col-xs-2 col-md-3">
                 <select id="height_metric" name="height_metric" class="form-control">
-                    <option selected>cm/ft</option>
                     {% for height_metric in height_metric %}
-                        <option value="{{ height_metric.height_metric }}">{{ height_metric.height_metric }}</option>
+                        <option selected value="{{ height_metric.height_metric }}">{{ height_metric.height_metric }}</option>
                     {% endfor %}
                 </select>
             </div>
