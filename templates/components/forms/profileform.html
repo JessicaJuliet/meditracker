@@ -58,14 +58,15 @@
     </div>
     <!-- Update Button -->
     <div class="container">
-        <div class="row">
-            <div class="col-xs-6 col-md-6">
+        <!-- Resource: Flex Direction https://getbootstrap.com/docs/4.0/utilities/flex/ -->
+        <div class="row d-flex flex-row-reverse">
+            <div class="p-2">
                 <button type="submit" class="btn profile-button">
                     <strong>Update Profile</strong>
                 </button>
             </div>
             <!-- Cancel button -->
-            <div class="col-xs-6 col-md-3">
+            <div class="p-2">
                 <a href="{{ url_for('dashboard', username=session['user']) }}" type="submit" class="btn cancel-button">
                     Cancel
                 </a>
