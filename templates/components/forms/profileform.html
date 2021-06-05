@@ -8,7 +8,7 @@
                 <strong>Profile Image</strong>
             </label>
             <div class="col-xs-12 col-md-8">
-                <input id="patient-image" name="patient-image" class="form-control" type="url" placeholder="Enter Image URL" required>
+                <input id="patient-image" name="patient-image" class="form-control" type="url" placeholder="Enter Image URL" required value="{{ image }}">
             </div>
         </div>
     </div>
@@ -34,7 +34,7 @@
                 <strong>Date of Birth</strong>
             </label>
             <div class="col-xs-12 col-md-8">
-                <input id="patient-dob" name="patient-dob" class="form-control" type="date" placeholder="DD/MM/YYYY" required>
+                <input id="patient-dob" name="patient-dob" class="form-control" type="date" placeholder="DD/MM/YYYY" required value="{{ dob }}">
             </div>
         </div>
         <!-- Enter Height -->
@@ -43,7 +43,7 @@
                 <strong>Height</strong>
             </label>
             <span class="col-xs-10 col-md-5">
-                    <input id="patient-height" name="patient-height" class="form-control" type="text" placeholder="Enter Height" required>
+                    <input id="patient-height" name="patient-height" class="form-control" type="text" placeholder="Enter Height" required value="{{ height }}">
             </span>
             <div class="col-xs-2 col-md-3">
                 <select id="height_metric" name="height_metric" class="form-control">

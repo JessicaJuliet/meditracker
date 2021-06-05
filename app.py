@@ -160,12 +160,16 @@ def patientprofile(username):
             url_for("dashboard", username=session["user"]))
 
     user = mongo.db.users.find_one({"username": session["user"]})
+    image = user["image"]
     username = user["username"]
+    height = user["height"]
+    dob = user["dob"]
     height_metric = mongo.db.height_metric.find().sort("height_metric", 1)
     gender = mongo.db.gender.find().sort("gender", 1)
     return render_template(
         "pages/patientprofile.html",
-        gender=gender, height_metric=height_metric, username=username)
+        gender=gender, height_metric=height_metric,
+        username=username, height=height, dob=dob, image=image)
 
 
 @app.route("/delete_profile/<user_id>")
@@ -291,4 +295,43 @@ def profile(user_id):
     user_id = mongo.db.users.find_one(
         {"user": session["user"]})["_id"]
     return render_template("/pages/dashboard.html", user_id=user_id)
+"""
+
+"""
+@app.route('/patientprofile/<username>', methods=["GET", "POST"])
+def patientprofile(username):
+    Post profile form data to MongoDB user document
+    Allow user to create one profile
+    Link MongoDB height_metric and gender data to form dropdowns
+    if request.method == "POST":
+        user = mongo.db.users
+        # Resource: Set Operator -
+        # https://docs.mongodb.com/manual/reference/operator/update/set/
+        user.update(
+            {"username": session["user"]},
+            {"$set":
+                {
+                    "image": request.form.get("patient-image"),
+                    "gender": request.form.get("patient-gender"),
+                    "dob": request.form.get("patient-dob"),
+                    "height": request.form.get("patient-height"),
+                    "height_metric": request.form.get("height_metric")
+                }}
+        )
+        flash("Profile Updated")
+        return redirect(
+            url_for("dashboard", username=session["user"]))
+
+    if request.method == "POST":
+        user.count()
+        return redirect(
+            url_for("dashboard", username=session["user"]))
+
+    user = mongo.db.users.find_one({"username": session["user"]})
+    username = user["username"]
+    height_metric = mongo.db.height_metric.find().sort("height_metric", 1)
+    gender = mongo.db.gender.find().sort("gender", 1)
+    return render_template(
+        "pages/patientprofile.html",
+        gender=gender, height_metric=height_metric, username=username)
 """
