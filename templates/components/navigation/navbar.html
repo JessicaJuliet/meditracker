@@ -2,7 +2,7 @@
     <div class="row">
         <span class="col-xs-12 col-md-8">
             <!-- MediTracker logo -->
-            <a href="{{ url_for('home') }}"><img src="static/images/meditracker-logo.png" width="300" alt="MediTracker logo"></a>
+            <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/meditracker-logo.png') }}" width="300" alt="MediTracker logo"></a>
         </span>
         <span class="col-sm-">
             {% if session.user %}
