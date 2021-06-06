@@ -172,12 +172,39 @@ def patientprofile(username):
         username=username, height=height, dob=dob, image=image)
 
 
-@app.route("/delete_profile/<user_id>")
-def delete_profile(user_id):
-    mongo.db.users.remove({"_id": ObjectId()})
+# DELETE PROFILE CODE
+@app.route("/delete_profile")
+def delete_profile():
+    {"username": session["user"]}
+    user = mongo.db.users
+    filter = {
+        "username": session["user"]}
+
+    newvalues = {"$set": {
+        "image": " ",
+        "gender": " ",
+        "dob": " ",
+        "height": " ",
+        "height_metric": " "
+        }}
+
+    user.update_one(filter, newvalues)
+
     flash("Profile Successfully Deleted")
     return redirect(
         url_for("dashboard", username=session["user"]))
+
+
+"""
+@app.route("/delete_profile/<username>")
+def delete_profile(username):
+    Delete profile
+    mongo.db.users.remove({
+        "username": username})
+    flash("Profile Successfully Deleted")
+    return redirect(
+        url_for("dashboard", username=session["user"]))
+"""
 
 
 @app.route('/patientlog', methods=["GET", "POST"])
@@ -334,4 +361,78 @@ def patientprofile(username):
     return render_template(
         "pages/patientprofile.html",
         gender=gender, height_metric=height_metric, username=username)
+"""
+
+"""
+ORIGINAL
+@app.route("/delete_profile/<user_id>")
+def delete_profile(user_id):
+    mongo.db.users.remove({"_id": ObjectId()})
+    flash("Profile Successfully Deleted")
+    return redirect(
+        url_for("dashboard", username=session["user"]))
+"""
+
+"""
+@app.route("/delete_profile/<username>")
+def delete_profile(username):
+    mongo.db.users.remove({"username": username})
+    flash("Profile Successfully Deleted")
+    return redirect(
+        url_for("dashboard", username=session["user"]))
+"""
+
+"""
+DELETE PROFILE. Change Dashboard to username=username
+@app.route("/delete_profile/<username>")
+def delete_profile(username):
+    Delete entire profile
+    mongo.db.users.remove({"username": username})
+    flash("Profile Successfully Deleted")
+    return redirect(
+        url_for("dashboard", username=session["user"]))
+"""
+
+"""
+@app.route("/delete_profile/<username>")
+def delete_profile(username):
+    {"username": session["user"]}
+    user = mongo.db.users
+    filter = {"username": username}
+
+    newvalues = {"$set": {
+        "image": " ",
+        "gender": " ",
+        "dob": " ",
+        "height": " ",
+        "height_metric": " "
+        }}
+
+    user.update_one(filter, newvalues)
+
+    flash("Profile Successfully Deleted")
+    return redirect(
+        url_for("dashboard", username=session["user"]))
+"""
+
+"""
+@app.route("/delete_profile")
+def delete_profile():
+    {"username": session["user"]}
+    user = mongo.db.users
+    filter = {session["user"]}
+
+    newvalues = {"$set": {
+        "image": " ",
+        "gender": " ",
+        "dob": " ",
+        "height": " ",
+        "height_metric": " "
+        }}
+
+    user.update_one(filter, newvalues)
+
+    flash("Profile Successfully Deleted")
+    return redirect(
+        url_for("dashboard", username=session["user"]))
 """
