@@ -17,23 +17,8 @@ body, p {
 /* ----------- Navbar ----------- */
 
 .nav-top {
-    margin-top: 30px;
-}
-
-.logo {
-    font-size: 50px;
-    font-family: 'Open Sans', sans-serif;
-    margin-bottom: 0px;
-    color: #3B424A;
-}
-
-.logo:hover {
-    text-decoration: none;
-    color: #3B424A; 
-}
-
-.t {
-    color: #9E0035;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .register-button {

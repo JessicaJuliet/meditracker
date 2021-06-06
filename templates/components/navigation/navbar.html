@@ -1,10 +1,8 @@
 <div class="container nav-top">
     <div class="row">
         <span class="col-xs-12 col-md-8">
-            <!-- Placeholder until logo designed -->
-            <a class="logo" href="{{ url_for('home') }}">
-                <p>Medi<span class="t">T</span>racker</p>
-            </a>
+            <!-- MediTracker logo -->
+            <a href="{{ url_for('home') }}"><img src="static/images/meditracker-logo.png" width="300" alt="MediTracker logo"></a>
         </span>
         <span class="col-sm-">
             {% if session.user %}

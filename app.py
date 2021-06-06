@@ -160,8 +160,8 @@ def patientprofile(username):
             url_for("dashboard", username=session["user"]))
 
     user = mongo.db.users.find_one({"username": session["user"]})
-    image = user["image"]
     username = user["username"]
+    image = user["image"]
     height = user["height"]
     dob = user["dob"]
     height_metric = mongo.db.height_metric.find().sort("height_metric", 1)

@@ -100,6 +100,10 @@ For the typography, I researched popular fonts for medical websites and discover
 
 ### Logo
 
+I created the logo using Adobe Illustrator. It consists of Lato Bold for the font and the 'T' in same red used on the website.
+
+<img src="static/images/meditracker-logo.png" alt="Meditracker logo">
+
 [Back to top](#Table-of-Contents)
 
 ## Website Structure
@@ -122,12 +126,14 @@ Desktop Wireframes | Mobile Wireframes | Tablet Wireframes
 ### Mockups
 I also created some higher fidelity desktop mockups for the key pages on the website. This provided me with an opportunity to sample my chosen colours and ensure the layout I had wireframed looked visually appealing. Please see desktop mockups below:
 
-* [Homepage Mockup](wireframes/homepage-mockup.png)
-* [Register Mockup](wireframes/register-mockup.png)
-* [Sign In Mockup](wireframes/sign-in-mockup.png)
-* [Dashboard Mockup](wireframes/dashboard-mockup.png)
-* [Health Profile Mockup](wireframes/health-profile-mockup.png)
-* [Add Log Mockup](wireframes/add-log-mockup.png)
+Desktop Mockups |
+--------------- |
+[Homepage Mockup](wireframes/homepage-mockup.png)
+[Register Mockup](wireframes/register-mockup.png) 
+[Sign In Mockup](wireframes/sign-in-mockup.png)
+[Dashboard Mockup](wireframes/dashboard-mockup.png)
+[Health Profile Mockup](wireframes/health-profile-mockup.png)
+[Add Log Mockup](wireframes/add-log-mockup.png)
 
 ### Database Structure
 
