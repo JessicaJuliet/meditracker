@@ -8,7 +8,8 @@
 <!-- Custom CSS -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
 <!-- Favicon -->
-<link rel="icon" type="img/png" href="static/images/meditracker-favicon.png"/>
+<!-- Resource: Adding a Favicon https://flask.palletsprojects.com/en/1.1.x/patterns/favicon/-->
+<link rel="icon" type="img/png" href="{{ url_for('static', filename='images/meditracker-favicon.png') }}">
 {% block styles %}
 {% endblock %}
 <title>MediTracker | Patient Portal</title>
