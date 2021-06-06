@@ -3,11 +3,11 @@
 ## Purpose
 
 ### Introduction
-With chronic illness prevalence expected to continue rising, it's important that patients are able to monitor their condition(s) and provide their medical team with a clear picture of their disease status. Furthermore, with the disruptions which COVID-19 has brought to the medical system, it makes it easier for new symptoms or disease progression to potentially be missed until a later stage. 
+With chronic illness prevalence expected to continue rising, it's important that patients are able to monitor their condition(s) and provide their medical team with a clear picture of their disease status. Furthermore, the disruptions which COVID-19 has brought to healthcare systems across the globe system makes it easier for new symptoms of disease progression to potentially be missed until a later stage.
 
-To tackle this problem, MediTracker allows patients who deal with chronic illnesses to take control of their health by keeping a log of their symptoms over time which they can share with their medical team. It also keeps medical professionals up to date on their patient's disease activity.
+To tackle this problem, I have devised a patient portal application called MediTracker. MediTracker allows chronic illness patients to take control of their health by keeping logs of their disease over time. They can demonstrate these logs to their medical team at appointments to provide them with a more accurate account of their disease activity. In addition, these logs help medical professionals to provide better patient care by seeing their disease activity over time.
 
-**Please note, this project is for education purposes only. Do not share your own personal medical information.**
+**Please note, this project is for educational purposes only. Do not share your own personal medical information.**
 
 ---
 
@@ -18,6 +18,9 @@ To tackle this problem, MediTracker allows patients who deal with chronic illnes
     * [Vision and Mission](#Vision-and-Mission)
     * [Target Audience](#Target-Audience)
 * [User Experience Design](#User-Experience-Design)
+    * [Goals](#Goals)
+        * [Application Owner Goals](#Application-Owner-Goals)
+        * [Medical Professional Goals](#Medical-Professional-Goals)
     * [User Stories](#User-Stories)
     * [Design Inspiration](#Design-Inspiration)
     * [Colour Scheme](#Colour-Scheme)
@@ -42,49 +45,58 @@ To tackle this problem, MediTracker allows patients who deal with chronic illnes
 * [Credits](#credits)
 
 ### Vision and Mission
-MediTracker's Vision is to empower chronic illness patients to take control of their health and its Mission is to provide patients with a secure web application which allows them to keep logs of their medical records and report it back to their medical team. 
+MediTracker's Vision is to empower chronic illness patients to take control of their health. Its Mission is to provide patients with a secure web application which allows them to keep logs of their medical records and report it back to their medical team. 
 
 ### Target Audience
-The target audience for this web application are inviduals who have a chronic illness and want to keep a better log of their symptoms so they can provide their medical team with more accurate data over time and also for their own personal reference.
+The target audience for this application are both medical professionals who want to provide better patient care and chronic illness patients who want to take control of their health by improving their record keeping of their disease symtpoms for their medical team and also for their own personal reference.
 
 ## User Experience Design
 
-### User Stories
+### Goals
 
-**Application Owner**
+#### Application Owner Goals
 * As the application owner, I want to improve the standard of care between patients and medical professionals
-* As the application owner, I want to provide hospitals and General Practicioners (GPs) with a patient portal application to use with their patients
+* As the application owner, I want to provide hospitals and General Practicioners with a patient portal application to share with their patients so they can better monitor their health
 * As the application owner, I want to provide chronic illness patients with a way to create, read, update and delete medical data
+* As the application owner, I want to empower chronic illness patients to take control of their health
 * As the application owner, I want to provide a secure application to patients, hospitals and GPs
 
-**General Practicioner (GP)**
-* As a GP, I want to improve the standard of patient/GP care
-* As a GP, I want to provide my patients with a secure patient portal
-* As a GP, I want to empower patients to take control of their medical condition(s) by keeping their own logs
-* As a GP, I want to better understand patients disease activity
+#### Medical Professional Goals
+* As a medical professional, I want to improve the standard of patient/GP care
+* As a medical professional, I want to provide my patients with a secure patient portal
+* As a medical professional, I want to empower my patients to take control of their medical condition(s) by keeping their own logs
+* As a medical professional, I want to better understand my patient's disease activity
 
-**Patient:**
-* As a patient, I want a website which is easy to navigate on both mobile and desktop devices
-* As a patient, I want a website which is visually appealing and its purpose immediately apparent
+### User Stories
+* As a patient, I want a web application which is easy to navigate on both mobile and desktop devices
+* As a patient, I want a web application which is visually appealing and its purpose immediately apparent
 * As a patient, I want to be able to register to create my own personal account
 * As a patient, I want to feel that my information is secure by creating a password to my personal account
 * As a patient, I want to be able to update my health profile with my personal details
 * As a patient, I want to be able to add and edit logs to record my medical symptoms over time
 * As a patient, I want to be able to delete logs I no longer wish to record
 * As a patient, I want to be able to filter logs by the date they were entered
-* As a patient, I want to be able to request an appointment with a medical professional
+* As a patient, I want to be able to request an appointment with my medical team
 
 ### Design Inspiration
-I sourced a lot of design inspiration for this website by researching patient portals online and websites for hospitals and GPs. This provided me with a better understanding of the typical user interface for these applications and the type of colour schemes used.
+
+Before developing this application, I dedicated time to exploring patient portal application design online and websites for hospitals and GPs to gather design inspiration. I used applications such as Pinterest, Behance and Google. This provided me with a richer understanding of the typical user interfaces for medical applications and the type of colour schemes used. 
 
 ### Colour Scheme
-The main base colour chosen for this website (dark red) was sourced from a patient portal mockup for [Orlando Health](http://struongux.com/ohealth.html). I used Adobe Illustrator's colour picker tools to identify the hexadecimal value for this colour, which was **#9E0035**. I then used [Adobe Color](https://color.adobe.com/create/color-wheel) to generate more monochromatic shades from this base colour which I used on the homepage. 
+From my research outlined above, it was evident that the colour blue was very standard across many medical website designs and this is because blue is often ["associated with credibility, trust, knowledge, power, professionalism, cleanliness, calm and focus"](https://doctormultimedia.com/medical-logos-blue/). 
 
-The colour blue appears to be very standard across many medical website designs, and this is because blue is often ["associated with credibility, trust, knowledge, power, professionalism, cleanliness, calm and focus"](https://doctormultimedia.com/medical-logos-blue/). I decided to go with the dark red colour because it's MediTracker's brand colour and not directly a hospital of GP website. 
+However, I came across a patient portal mockup for [Orlando Health](http://struongux.com/ohealth.html) which in contrast used a deep wine red for its colour scheme. This really stood out to me as it was something different and memorable.
+
+<img src="wireframes/orlando-portal-mockup.png" alt="Orlando Patient Portal Mockup">
+
+Although red seems to be more uncommon in medical website design, as we often associate it with danger, the deepness of this particular red made it more subtle and less provoking of the feelings of danger and alert. Thus, I decided to use this as the main base colour for MediTracker as it's a distinctive brand colour and the application is not directly that of a hospital or General Practicioner's website. 
+
+I used Adobe Illustrator's colour picker tool to identify the hexadecimal value for this colour, which was **#9E0035**. I then used [Adobe Color](https://color.adobe.com/create/color-wheel) to generate more monochromatic shades from this base colour which I used on the homepage. The result was a strong brand colour for MediTracker.
 
 <img src="wireframes/adobe-color.png" alt="MediTracker Adobe Color swatch">
 
 ### Typography
+For the typography, I researched popular fonts for medical websites and discovered a site which lists the [Most Used Google Fonts on Hospital Websites](https://www.ilovewp.com/resources/medical/wordpress-for-hospitals/most-used-google-fonts-on-hospital-websites/). I used this as a basis for choosing a font and decided to go with Open Sans for the headings and Montserrat for paragraph text. These are both sans serif fonts and I imported them into the CSS file from [Google Fonts](https://fonts.google.com).
 
 ### Logo
 
