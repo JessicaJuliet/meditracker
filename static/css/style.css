@@ -513,6 +513,6 @@ footer .fab {
   }
   
   #myBtn:hover {
-    background-color: white; /* Add a dark-grey background on hover */
-    color: #9e0035;
+    background-color: #3B424A; /* Add a dark-grey background on hover */
+    border: 1px solid white;    
   }
