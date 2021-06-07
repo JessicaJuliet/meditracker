@@ -70,46 +70,19 @@ body, p {
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
-    position: relative;
 }
 
-/* ----------- Footer ----------- */
-
-/* Used Chrome Dev Tools to find padding on bulleted items */
-.footer{
-    background-color: #3B424A;
-    padding: 40px 0;
-}
-
-.footer-link {
-    list-style-type: none;
-    padding-inline-start: 0;
+.hero-heading {
+    color: #3B424A;
+    padding: 100px 0px 0px 0px;
     color: white;
 }
 
-.footer-link a {
+.hero-text {
+    font-size: 30px;
+    line-height: 35px;
     color: white;
-}
-
-.footer h5 {
-    color: white;
-}
-
-footer .fab {
-    color: white;
-    font-size: 40px;
-    padding-right: 13px;
-    padding-top: 10px;
-}
-
-.copyright {
-    background-color: #24292e;
-    color: white;
-    font-size: 13px;
-}
-
-.copyright p {
-    margin-bottom: 0px;
+    position: absolute;
 }
 
 /* ----------- Homepage ----------- */
@@ -120,7 +93,7 @@ footer .fab {
     background-color: #9E0035;
     /* Resource: https://www.youtube.com/watch?v=3PDQDRJq5Ls */
     position: relative;
-    top: 430px;
+    top: 280px;
 }
 
 .box p {
@@ -162,6 +135,45 @@ footer .fab {
 .book-appointment {
     background-color: white;
     font-size: 14px;
+}
+
+/* ----------- Footer ----------- */
+
+/* Used Chrome Dev Tools to find padding on bulleted items */
+.footer{
+    background-color: #3B424A;
+    padding: 40px 0;
+}
+
+.footer-link {
+    list-style-type: none;
+    padding-inline-start: 0;
+    color: white;
+}
+
+.footer-link a {
+    color: white;
+}
+
+.footer h5 {
+    color: white;
+}
+
+footer .fab {
+    color: white;
+    font-size: 40px;
+    padding-right: 13px;
+    padding-top: 10px;
+}
+
+.copyright {
+    background-color: #24292e;
+    color: white;
+    font-size: 13px;
+}
+
+.copyright p {
+    margin-bottom: 0px;
 }
 
 /* ----------- User Authentication ----------- */
