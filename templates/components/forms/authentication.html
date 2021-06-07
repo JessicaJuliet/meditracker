@@ -8,12 +8,13 @@
     <!-- Username -->
     <div class="form-group">
         <label for="username">Username</label>
-        <input id="username" name="username" type="text" class="form-control" placeholder="Enter username" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
+        <input id="username" name="username" type="text" class="form-control" placeholder="Enter username" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" title = "Username must be a minimum of 5 characters, using upper and/or lowercase letters and/or numbers."required>
     </div>
     <!-- Password -->
     <div class="form-group">
         <label for="password">Password</label>
-        <input id="password" name="password" type="password" class="form-control" placeholder="Enter Password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
+        <!-- Resource: Adding title https://stackoverflow.com/questions/65254917/change-please-match-the-format-requested-to-something-else -->
+        <input id="password" name="password" type="password" class="form-control" placeholder="Enter Password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" title = "Password must be a minimum of 5 characters, using upper and/or lowercase letters and/or numbers." required>
     </div>
     {% if register == True %}
         <!-- GDPR -->
