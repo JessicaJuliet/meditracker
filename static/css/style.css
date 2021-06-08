@@ -505,6 +505,26 @@ footer .fab {
         }
 }
 
+/* Resource: CSS flex column reverse - https://stackoverflow.com/questions/51719144/css-flex-column-reverse-responsive */
+
+.alternate-authentication {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+@media screen and (min-width: 770px) {
+    .alternate-authentication {
+        flex-direction: row;
+    }
+    .user-authentication {
+        width: 100%;
+    }
+    .welcome-alternat {
+        color: #222;
+        background: #ccc;
+    }
+}
+
 /* ----------- Scroll to top button ----------- */
 
 /* Resource: Code sourced from W3Schools and styling ammended to match website branding - https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
