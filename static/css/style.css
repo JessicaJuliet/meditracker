@@ -252,6 +252,12 @@ footer .fab {
     color: #3B424A;
 }
 
+.btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 /* ----------- Dashboard Profile ----------- */
 
 .dashboard-heading {
