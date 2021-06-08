@@ -347,7 +347,8 @@ footer .fab {
 }
 
 .dashboard-log p {
-    line-height: 15px;
+    line-height: 23px;
+    margin-bottom: 10px;
 }
 
 .dashboard-log .fa-trash {
@@ -381,7 +382,7 @@ footer .fab {
 .log-date {
     background-color: #9e0035;
     color: white;
-    width: 25%;
+    width: 30%;
     padding: 3px 3px 3px 7px;
     margin-bottom: 15px;
     border-radius: 5px;
@@ -524,6 +525,19 @@ footer .fab {
         background: #ccc;
     }
 }
+
+@media screen and (max-width: 998px) {
+    .log-date {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    .log-date {
+        width: 70%;
+    }
+}
+
 
 /* ----------- Scroll to top button ----------- */
 
