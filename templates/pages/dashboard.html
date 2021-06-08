@@ -21,10 +21,12 @@
                 {% if profiles %}
                 {% for profile in profiles %}
                     <img class="profile-image" src="{{ profile.image}}">
+                <div class="profile-details">
                     <p><strong>Gender:</strong> {{ profile.gender }}</p>
                     <p><strong>DOB:</strong> {{ profile.dob }}</p>
                     <p><strong>Height:</strong> <span>{{ profile.height }}</span><span>{{ profile.height_metric}}</span></p>
                     <br>
+                </div>
                 {% endfor %}
                 {% endif %}
                 <!-- Edit/ delete buttons -->
