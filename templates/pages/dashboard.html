@@ -31,15 +31,16 @@
                 {% endif %}
                 <!-- Edit/ delete buttons -->
                 <span>
+                    <!-- Resource: Icon from https://fontawesome.com/v5.15/icons/trash?style=solid -->
+                    <a type="button" data-toggle="modal" data-target="#delete-profile-modal" class="profile-delete" href="{{ url_for('delete_profile') }}">
+                        <i class="fas fa-trash"></i><br>
+                    </a>
+                    {% include 'components/modals/delete-profile-modal.html' %}
+                </span>
+                <span>
                     <a class="edit-profile" href="{{ url_for('patientprofile', username=session['user']) }}">
                         <i class="fas fa-edit"></i>
                         Edit Profile
-                    </a>
-                </span>
-                <span>
-                    <!-- Resource: Icon from https://fontawesome.com/v5.15/icons/trash?style=solid -->
-                    <a class="profile-delete" href="{{ url_for('delete_profile') }}">
-                        <i class="fas fa-trash"></i><br>
                     </a>
                 </span>
             </div>
@@ -69,7 +70,7 @@
                         <p><strong>Status:</strong> {{ log.status }}</p>
                         <p><strong>Weight:</strong> <span>{{ log.weight }}</span><span>{{ log.weight_metric}}</span></p>
                         <p><strong>Symptoms:</strong> {{ log.symptoms }}</p>
-                        <a type="button" data-toggle="modal" data-target="#exampleModalCenter">
+                        <a type="button" data-toggle="modal" data-target="#delete-log-modal">
                             <i class="fas fa-trash"></i>
                         </a>
                         {% include 'components/modals/delete-log-modal.html' %}

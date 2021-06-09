@@ -1,0 +1,22 @@
+<!-- Resource: Modal code sourced from Bootstrap https://getbootstrap.com/docs/4.0/components/modal/ -->
+<div class="modal fade" id="delete-profile-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Are you sure you want to delete your profile?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                These changes cannot be undone.
+            </div>
+            <div class="modal-footer">
+                <!-- Cancel button -->
+                <a type="button" class="btn btn-modal-cancel" data-dismiss="modal">Cancel</a>
+                <!-- Delete button -->
+                <a href="{{ url_for('delete_profile') }}" type="button" class="btn btn-modal-delete">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
