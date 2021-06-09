@@ -233,6 +233,22 @@ footer .fab {
     color: white;
 }
 
+/* ----------- Modals ----------- */
+
+.btn-modal-cancel {
+    background-color: #3B424A;
+    color: white;
+}
+
+.btn-modal-delete {
+    background-color: #930035;
+    color: white;
+}
+
+.btn-modal-delete:hover, .btn-modal-cancel:hover {
+    color: lightgray;
+}
+
 /* ----------- Pages ----------- */
 
 .page-heading {
