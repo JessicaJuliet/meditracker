@@ -140,7 +140,28 @@ body, p {
     font-size: 14px;
 }
 
-/* ----------- User Authentication ----------- */
+/* ----------- Authentication Forms (Register/ Login) ----------- */
+
+.authentication-form {
+    padding: 40px 0;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.authentication-form .btn {
+    background-color: #9E0035;
+    border-radius: 40px;
+    padding: 10px 40px 10px 40px;
+    color: white;
+}
+
+.form-control:focus {
+    /* Resource: Change box shadow color https://www.tutorialrepublic.com/faq/how-to-change-bootstrap-default-input-focus-glow-style.php */
+    border-color: #9E0035;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px #9e00355d;
+}
+
+/* ----------- Authentication ----------- */
 
 .alternate-authentication {
     height: 100%;
@@ -172,19 +193,6 @@ body, p {
 
 .user-authentication {
     padding-top: 50px;
-}
-
-.authentication-form {
-    padding: 40px 0;
-    max-width: 60%;
-    margin: 0 auto;
-}
-
-.authentication-form .btn {
-    background-color: #9E0035;
-    border-radius: 40px;
-    padding: 10px 40px 10px 40px;
-    color: white;
 }
 
 /* ----------- Flash Messages ----------- */
@@ -371,12 +379,6 @@ body, p {
     padding: 30px 20px;
     border-radius: 5px;
     font-size: 14px; 
-}
-
-/* Resource: Change box shadow color https://www.tutorialrepublic.com/faq/how-to-change-bootstrap-default-input-focus-glow-style.php */
-.form-control:focus {
-    border-color: #9E0035;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px #9e00355d;
 }
 
 .profile-button, .log-button {
