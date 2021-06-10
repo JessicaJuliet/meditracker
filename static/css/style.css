@@ -348,31 +348,6 @@ body, p {
     border-radius: 5px;
 }
 
-/* ----------- Modals ----------- */
-
-.btn-modal-cancel {
-    background-color: #3B424A;
-    color: white;
-}
-
-.btn-modal-delete {
-    background-color: #930035;
-    color: white;
-}
-
-.btn-modal-delete:hover, .btn-modal-cancel:hover {
-    color: lightgray;
-}
-
-.modal-header h5 {
-    color: #3B424A;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.modal-body {
-    color: #3B424A;
-}
-
 /* ----------- Profile Page ----------- */
 
 .profile-form, .log-form {
@@ -452,6 +427,32 @@ body, p {
     color: white !important;
     border-radius: 40px;
     padding: 10px 40px 10px 40px;
+}
+
+/* ----------- Modals ----------- */
+
+.btn-modal-cancel {
+    background-color: #3B424A;
+    color: white;
+}
+
+.btn-modal-delete {
+    background-color: #930035;
+    color: white;
+}
+
+.btn-modal-delete:hover, .btn-modal-cancel:hover {
+    color: lightgray;
+}
+
+.modal-header h5 {
+    color: #3B424A;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.modal-body {
+    color: #3B424A;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* ----------- Footer ----------- */
