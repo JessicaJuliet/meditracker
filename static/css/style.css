@@ -140,45 +140,6 @@ body, p {
     font-size: 14px;
 }
 
-/* ----------- Footer ----------- */
-
-/* Used Chrome Dev Tools to find padding on bulleted items */
-.footer{
-    background-color: #3B424A;
-    padding: 40px 0;
-}
-
-.footer-link {
-    list-style-type: none;
-    padding-inline-start: 0;
-    color: white;
-}
-
-.footer-link a {
-    color: white;
-}
-
-.footer h5 {
-    color: white;
-}
-
-footer .fab {
-    color: white;
-    font-size: 40px;
-    padding-right: 13px;
-    padding-top: 10px;
-}
-
-.copyright {
-    background-color: #24292e;
-    color: white;
-    font-size: 13px;
-}
-
-.copyright p {
-    margin-bottom: 0px;
-}
-
 /* ----------- User Authentication ----------- */
 
 .alternate-authentication {
@@ -491,6 +452,43 @@ footer .fab {
     color: white !important;
     border-radius: 40px;
     padding: 10px 40px 10px 40px;
+}
+
+/* ----------- Footer ----------- */
+
+.footer {
+    background-color: #3B424A;
+    padding: 50px 0;
+}
+
+.footer-link {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.footer-link a {
+    color: white;
+}
+
+.footer h5 {
+    color: white;
+}
+
+footer .fab {
+    color: white;
+    font-size: 40px;
+    padding-right: 13px;
+    padding-top: 10px;
+}
+
+.copyright {
+    background-color: #24292e;
+    font-size: 13px;
+}
+
+.copyright p {
+    margin-bottom: 0px;
+    color: white;
 }
 
 /* ----------- Media Queries ----------- */

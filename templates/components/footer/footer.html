@@ -1,39 +1,32 @@
-    <!-- Footer Starts -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <h5>Quick links</h5>
-                    <ul class="footer-link">
-                    {% if session.user %}
-                    <li><a href="{{ url_for('home') }}">Home</a></li>
-                    <li><a href="{{ url_for('home') }}#about-link">About Us</a></li>
-                    <li><a href="{{ url_for('home') }}#clinic-hours">Clinic hours</a></li>
-                    {% else %}
-                        <li><a href="{{ url_for('home') }}">Home</a></li>
-                        <li><a href="{{ url_for('login') }}">Login</a></li>
-                        <li><a href="{{ url_for('register') }}">Register</a></li>
-                        <li><a href="{{ url_for('home') }}">About Us</a></li>
-                        <li><a href="{{ url_for('home') }}">Clinic Hours</a></li>
-                    {% endif %}
-                    </ul>
-                </div>
-                <div class="col-sm">
-                    <h5>Find us on social:</h5>
-                    <a href="{{ url_for('facebook') }}" target="_blank">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="{{ url_for('instagram') }}" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="{{ url_for('linkedin') }}" target="_blank">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h5>Quick links</h5>
+                <ul class="footer-link">
+                {% if session.user %}
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('home') }}#about-link">About Us</a></li>
+                <li><a href="{{ url_for('home') }}#clinic-hours">Clinic hours</a></li>
+                {% else %}
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
+                <li><a href="{{ url_for('home') }}#about-link">About Us</a></li>
+                <li><a href="{{ url_for('home') }}#clinic-hours">Clinic Hours</a></li>
+                {% endif %}
+                </ul>
             </div>
-          </div>
-    </footer>
-    <div class="copyright">
-        <!-- Copyright symbol - www.w3schools.com/html/html -->
-        <p class="container">&copy; 2021 Jessica Akomfrah. All rights reserved.</p>
+            <div class="col-sm">
+                <h5>Find us on social:</h5>
+                <a href="{{ url_for('facebook') }}" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="{{ url_for('instagram') }}" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="{{ url_for('linkedin') }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
     </div>
+</footer>
+<div class="copyright">
+    <!-- Resource: copyright symbol from www.w3schools.com/html/html -->
+    <p class="container">&copy; 2021 Jessica Akomfrah. All rights reserved.</p>
+</div>
