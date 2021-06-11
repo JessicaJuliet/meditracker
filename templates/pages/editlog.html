@@ -18,9 +18,7 @@
                 <p>Edit your existing log by updating the form below:</p>
             </div>
         </div>
-        <form class="log-form" method="POST" action="{{ url_for('editlog', log_id=log._id) }}">
-            {% include 'components/forms/edit-log.html' %}
-        </form>
+        {% include 'components/forms/edit-log-form.html' %}
     </div>
     <!-- Back to Dashboard -->
     <div class="container">

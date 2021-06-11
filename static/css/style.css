@@ -161,8 +161,18 @@ body, p {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px #9e00355d;
 }
 
-/* ----------- General Forms Styling ----------- */
+/* ----------- Form Styling ----------- */
 
+.profile-form, .log-form {
+    max-width: 50%;
+    margin-bottom: 40px;
+    color:#3B424A;
+}
+
+.profile-form h5, .log-form h5 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
 .form-input {
     background-color: rgba(211, 211, 211, 0.315);
     padding: 30px 20px;
@@ -176,6 +186,21 @@ body, p {
     border-radius: 40px;
     padding: 10px 40px 10px 40px;
     margin-top: 30px;
+}
+
+.submit-button {
+    background-color: #9E0035;
+    color: white !important;
+    border-radius: 40px;
+    padding: 10px 40px 10px 40px;
+    margin-top: 30px;
+}
+
+.submit-button:hover {
+    background-color: #9e0035e1;
+    color: white;
+    /* Resource: Box shadow form https://getcssscan.com/css-box-shadow-examples */
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 /* ----------- Authentication ----------- */
@@ -371,46 +396,6 @@ body, p {
     padding: 3px 3px 3px 7px;
     margin-bottom: 15px;
     border-radius: 5px;
-}
-
-/* ----------- Profile Page ----------- */
-
-.profile-form, .log-form {
-    max-width: 50%;
-    margin-bottom: 40px;
-    color:#3B424A;
-}
-
-.profile-form h5 {
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-.log-form h5 {
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-.form-input, .profile-input {
-    background-color: rgba(211, 211, 211, 0.315);
-    padding: 30px 20px;
-    border-radius: 5px;
-    font-size: 14px; 
-}
-
-.profile-button, .log-button {
-    background-color: #9E0035;
-    color: white !important;
-    border-radius: 40px;
-    padding: 10px 40px 10px 40px;
-    margin-top: 30px;
-}
-
-.log-button:hover, .profile-button:hover {
-    background-color: #9e0035e1;
-    color: white;
-    /* Resource: Box shadow form https://getcssscan.com/css-box-shadow-examples */
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 /* ----------- 404 Page ----------- */
