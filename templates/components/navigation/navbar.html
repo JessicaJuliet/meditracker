@@ -2,16 +2,17 @@
     <div class="row">
         <span class="col-xs-12 col-md-8">
             <!-- MediTracker logo -->
+            {% if session.user %}
+            <a href="{{ url_for('home_user') }}"><img src="{{ url_for('static', filename='images/meditracker-logo.png') }}" width="300" alt="MediTracker logo"></a>
+            {% else %}
             <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/meditracker-logo.png') }}" width="300" alt="MediTracker logo"></a>
+            {% endif %}
         </span>
         <span class="col-sm-">
             {% if session.user %}
             <!-- Resource: Navbar code from https://getbootstrap.com/docs/4.0/components/dropdowns/ -->
             <div class="dropdown show">
-                <a class="btn dropdown-toggle custom-dropdown" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-user"></i>
-                    Hi, {{ username }}
-                </a>
+                <a class="btn dropdown-toggle custom-dropdown" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i> Hi, {{ username }}</a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <a class="dropdown-item" href="{{ url_for('dashboard', username=session['user']) }}"><i class="fas fa-columns"></i> My Dashboard</a>
                     <a class="dropdown-item" href="{{ url_for('patientprofile', username=session['user']) }}"><i class="fas fa-user-circle"></i> My Profile</a>
@@ -23,14 +24,10 @@
         {% else %}
         <!-- Resource: https://getbootstrap.com/docs/4.0/components/buttons/ -->
         <span class="col-xs-12">
-            <a type="button" class="btn login-button" href="{{ url_for('login') }}" role="button">
-                <strong>Login</strong>
-            </a>
+            <a type="button" class="btn login-button" href="{{ url_for('login') }}" role="button"><strong>Login</strong></a>
         </span>
         <span class="col-xs-12">
-            <a type="button" class="btn register-button" href="{{ url_for('register') }}">
-                Register
-            </a>
+            <a type="button" class="btn register-button" href="{{ url_for('register') }}">Register</a>
         </span>
         {% endif %}
     </div>
@@ -43,14 +40,14 @@
     <div class="collapse navbar-collapse container" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             {% if session.user %}
-                <a class="nav-item nav-link active" href="{{ url_for('home') }}">Home</a>
-                <a class="nav-item nav-link" href="{{ url_for('home') }}#about-link">About Us</a>
-                <a class="nav-item nav-link" href="{{ url_for('home') }}#clinic-hours">Clinic hours</a>
-                <a class="nav-item nav-link" href="{{ url_for('dashboard', username=session['user']) }}">My Dashboard</a>
+            <a class="nav-item nav-link active" href="{{ url_for('home_user', username=session['user']) }}">Home</a>
+            <a class="nav-item nav-link" href="{{ url_for('home_user') }}#about-link">About Us</a>
+            <a class="nav-item nav-link" href="{{ url_for('home_user') }}#clinic-hours">Clinic hours</a>
+            <a class="nav-item nav-link" href="{{ url_for('dashboard', username=session['user']) }}">My Dashboard</a>
             {% else %}
-                <a class="nav-item nav-link active" href="{{ url_for('home') }}">Home</a>
-                <a class="nav-item nav-link" href="{{ url_for('home') }}#about-link">About Us</a>
-                <a class="nav-item nav-link" href="{{ url_for('home') }}#clinic-hours">Clinic hours</a>
+            <a class="nav-item nav-link active" href="{{ url_for('home') }}">Home</a>
+            <a class="nav-item nav-link" href="{{ url_for('home') }}#about-link">About Us</a>
+            <a class="nav-item nav-link" href="{{ url_for('home') }}#clinic-hours">Clinic hours</a>
             {% endif %}
         </div>
     </div>

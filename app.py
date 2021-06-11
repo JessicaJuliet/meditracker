@@ -24,11 +24,20 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def home():
-    """
-    Function to load the homepage
-    Pull User's username from MongoDB
-    """
     return render_template('pages/home.html')
+
+
+@app.route('/home/user')
+def home_user():
+    user = mongo.db.users.find_one({"username": session["user"]})
+    username = user["username"]
+    if session["user"]:
+        return render_template(
+            'pages/home-user.html', username=username, user=user)
+    else:
+        return render_template('pages/home.html')
+
+    return render_template('pages/home-user.html')
 
 
 @app.route('/register', methods=["GET", "POST"])

@@ -4,11 +4,9 @@
     {% include 'layout/head.html' %}
 </head>
 <body>
-
     <header>
         {% include 'components/navigation/navbar.html' %}
     </header>
-
     <div>
         <section class="flash-section">
             <!-- Flash Messages -->
@@ -29,7 +27,6 @@
         {% block content %}
         {% endblock %}
     </div>
-    
     {% include 'components/footer/footer.html' %}
     {% include 'layout/scripts.html' %}
     {% block scripts %}

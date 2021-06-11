@@ -1,0 +1,58 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+    <!-- Start Hero Images -->
+    <div class="hero-image" class="container-fluid">
+        <div class="container">
+            <h1 class="hero-heading">Welcome to MediTracker</h1>
+            <p class="hero-text">Your online patient portal</p>
+        </div>
+        <!-- Start Boxes -->
+        <div class="container box-text">
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="box box1">
+                        <i class="fa fa-user-md" aria-hidden="true"></i>
+                        <h4>Our Service</h4>
+                        <p>MediTracker is an online patient <br> portal service.</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="box box2">
+                        <i class="fa fa-pen" aria-hidden="true"></i>
+                        <h4>Request Appointment</h4>
+                        <p>Please email to request a GP appointment.</p>
+                        <a class="btn book-appointment" href="mailto:meditracker@test.com">Book Appointment</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4" id="clinic-hours">
+                    <div class="box box3">
+                        <i class="fa fa-clock" aria-hidden="true"></i>
+                        <h4>Clinic Hours</h4>
+                        <p>
+                            <strong>9:00 - 5:30pm </strong> - Mon - Fri<br>
+                            <strong>9:00 - 4:00pm</strong> - Sat<br>
+                            <strong>Closed</strong> - Sun
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start About section -->
+    <div class="container about" id="about-link">
+        <h3>About</h3>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <p>
+                    MediTracker provides a secure, safe and convenient way to keep a log of your medical symptoms between GP appointments. Register today to create an online portal and start keeping logs of your medical symptoms to share with your GP at your next visit.
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <p>
+                    Register today to create an online portal and start keeping logs of your medical symptoms to share with your GP at your next visit. Register today to create an online portal and start keeping logs of your medical symptoms to share with your GP at your next visit.
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
