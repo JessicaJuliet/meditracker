@@ -43,6 +43,8 @@ To tackle this problem, I have devised a patient portal application called MediT
     * [Local Deployment](#Local-Deployment)
     * [Heroku Deployment](#Heroku-Deployment)
 * [Credits](#credits)
+    * [Code](#Code)
+    * [Acknowledgements](#Acknowledgements)
 
 ### Vision and Mission
 MediTracker's Vision is to empower chronic illness patients to take control of their health. Its Mission is to provide patients with a secure web application which allows them to keep logs of their medical records and report it back to their medical team. 
@@ -248,10 +250,10 @@ This project was created on GitHub using the following steps:
 2. Click on 'Reveal Config Vars'
 3. Securely tell Heroku which variables are required using the key value pairs listed below:
 > IP = 0.0.0.0
-PORT = 5000
-SECRET_KEY = YOUR_SECRET_KEY
-MONGO_URI = YOUR_MONGODB_URI
-MONGO_DBNAME = DATABASE_NAME
+> PORT = 5000
+> SECRET_KEY = YOUR_SECRET_KEY
+> MONGO_URI = YOUR_MONGODB_URI
+> MONGO_DBNAME = DATABASE_NAME
 
 **Enable Automatic Deployment:**
 1. Go back to the 'Deploy' tab
@@ -269,3 +271,15 @@ The following steps are required to run this locally:
 5. Alternatively, if you download the ZIP, unpackage locally and open in your IDE
 
 [Back to top](#Table-of-Contents)
+
+## Credits
+
+### Code
+* Bootstrap Navbar - https://getbootstrap.com/docs/4.0/components/navbar/
+* Bootstrap drowdown menu - https://getbootstrap.com/docs/4.0/components/dropdowns/ 
+* Back-to-top button - https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+
+### Acknowledgements
+I would like to thank the following people for help with my project:
+* All of the tutors who have supported through various obstacles which I came up against
+* My mentor Simen [Eventry_mentor](https://github.com/Eventyret) for his guidance and motivation throughout this project
