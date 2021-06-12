@@ -36,11 +36,13 @@
 </div>
 <!-- Navbar code sourced from Bootstrap - https://getbootstrap.com/docs/4.0/components/navbar/ -->
 <nav class="navbar navbar-expand-lg navbar-style">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <!-- Align hamburger icon to right -->
+    <div></div>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
     </button>
-    <div class="collapse navbar-collapse container" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav mr-auto">
             {% if session.user %}
             <a class="nav-item nav-link active" href="{{ url_for('home_user', username=session['user']) }}">Home</a>
             <a class="nav-item nav-link" href="{{ url_for('home_user') }}#about-link">About Us</a>

@@ -54,6 +54,10 @@ body, p {
     background-color: #9E0035;
 }
 
+.custom-toggler {
+    color: white;
+}
+
 .nav-link {
     color: white;
 }
