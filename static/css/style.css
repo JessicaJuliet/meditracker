@@ -76,7 +76,6 @@ body, p {
 .hero-heading {
     color: #3B424A;
     padding: 100px 0px 0px 0px;
-    color: white;
 }
 
 .hero-text {
@@ -84,6 +83,7 @@ body, p {
     line-height: 35px;
     color: white;
     position: absolute;
+    color: #3B424A;
 }
 
 /* ----------- Homepage ----------- */
