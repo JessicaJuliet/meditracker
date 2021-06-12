@@ -209,3 +209,63 @@ Given the scope and timeframe for this project, not all features could be implem
 * [W3C CSS validator](https://jigsaw.w3.org/css-validator/) was used regularly to check for any errors in the CSS on the site
 
 [Back to top](#Table-of-Contents)
+
+## Deployment
+
+### Project Creation
+
+This project was created on GitHub using the following steps:
+* A new repository was created using the [CI full template tempates](https://github.com/Code-Institute-Org/gitpod-full-template)
+* I gave my repository a meaningful name and clicked 'Create repository'
+* Once the repository was created, I opened it on GitHub and clicked the 'Gitpod' button to build the workspace
+* Version control was used throughout the project using the following commands:
+    * git commit -m "descriptive updates" - This command was used to commit changes to the local repository
+    * git push - This command was used to push all committed changes to the GitHub repository
+
+### Heroku Deployment
+
+**Setup Files**
+* Tell Heroku which applications and dependencies are required to run our app by setting up a requirements.txt and Procfile: 
+
+> pip3 freeze --local > requirements.txt
+
+> echo web: python app.py > Procfile
+
+**Create Application**
+1. Login to Heroku account
+2. Click on the 'New' button
+3. Select the 'Create new app' button
+4. Create a unique app name
+5. Choose relevant region
+
+**Connect App to GitHub Repository**
+1. Select GitHub from the 'Deployment Method'
+2. Enter the repository name for the project and click search
+3. When the repository has been found, click to connect to this app
+
+**Set Environemnt Variables**
+1. Click on settings tab for your app
+2. Click on 'Reveal Config Vars'
+3. Securely tell Heroku which variables are required using the key value pairs listed below:
+> IP = 0.0.0.0
+PORT = 5000
+SECRET_KEY = YOUR_SECRET_KEY
+MONGO_URI = YOUR_MONGODB_URI
+MONGO_DBNAME = DATABASE_NAME
+
+**Enable Automatic Deployment:**
+1. Go back to the 'Deploy' tab
+2. In the 'Automatic deploys' section, select to enable automatic deploys 
+
+### Local Deployment
+
+The following steps are required to run this locally: 
+
+1. Go to the GitHub [repository](https://github.com/JessicaJuliet/meditracker)
+2. Click the 'Code' dropdown menu
+3. Copy Git URL from HTTPS box or select to download the ZIP file
+4. If usings the Git URL, open a new terminal in your IDE and type the 'git clone' command in the CLI and paste the copied URL
+5. A clone of this project will be created locally on your machine
+5. Alternatively, if you download the ZIP, unpackage locally and open in your IDE
+
+[Back to top](#Table-of-Contents)
