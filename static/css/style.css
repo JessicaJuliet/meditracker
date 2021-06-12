@@ -74,16 +74,17 @@ body, p {
 }
 
 .hero-heading {
-    color: #3B424A;
     padding: 100px 0px 0px 0px;
+    -webkit-text-stroke: 0.3px #24292e;
+	-webkit-text-fill-color: white;
 }
 
 .hero-text {
     font-size: 30px;
     line-height: 35px;
-    color: white;
     position: absolute;
-    color: #3B424A;
+    -webkit-text-stroke: 0.3px #24292e;
+	-webkit-text-fill-color: white;
 }
 
 /* ----------- Homepage ----------- */
@@ -491,6 +492,18 @@ footer .fab {
 /* ----------- Media Queries ----------- */
 
 @media only screen and (max-width: 765px) {
+    .custom-dropdown  {
+        margin-top: 40px;
+        }
+    }
+
+@media only screen and (max-width: 765px) {
+    .login-button, .register-button {
+        margin-top: 40px;
+        }
+    }
+
+@media only screen and (max-width: 765px) {
     .welcome-alternate  {
         padding: 30px 0px;
         }
@@ -513,15 +526,15 @@ footer .fab {
 @media only screen and (max-width: 767px){
     .box {
         width: 100%;
-        height: 250px;
+        height: 280px;
         margin-bottom: 15px;
     }
 }
 
 @media only screen and (max-width: 767px){
     .about {
-        padding-top: 450px;
-        margin-bottom: 50px;
+        padding-top: 580px;
+        margin-bottom: 60px;
         }
 }
 
