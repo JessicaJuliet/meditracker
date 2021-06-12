@@ -155,44 +155,38 @@ The websites features and how they meet the user stories identified at the begin
 
 ### Existing Features
 
-> As a patient, I want a website which is easy to navigate on both mobile and desktop devices
-
-> As a patient, I want a website which is visually appealing and its purpose immediately apparent
-
-> As a patient, I want to be able to register to create my own personal account
-
-> As a patient, I want to feel that my information is secure by creating a password to my personal account
-
-> As a patient, I want to be able to update my health profile with my personal details
-
-> As a patient, I want to be able to add and edit logs to record my medical symptoms over time
-
-> As a patient, I want to be able to delete logs I no longer wish to record
-
-> As a patient, I want to be able to filter logs by the date they were entered
-
-> As a patient, I want to be able to request an appointment with a medical professional
-
+* Fully responsive website which rescales to preserve user experience across all device sizes
+* Visually appealing website throughout with a strong use of colour and whitespace making for an intuitive design 
+* Homepage displays relevant content and images making its purpose immediately evident
+* Registration functionality for users to access a private dashboard area
+* Sign in/sign out functionality for registered users
+* Site wide footer which includes links to other pages, copyright and social icons
+* A 'back to top' button to maximise usability on dashboard when multiple logs are created
+* Profile section on dashboard which is fully customisable by the user (CRUD) to include an image and health information
+* Log section on dashboard displaying a list of logs added by the user and which are fully customisable (CRUD)
+* Defensive programming on user dashboard which ensures nothing can be deleted without a two step approval
 
 ### Features To Be Implemented
 Given the scope and timeframe for this project, not all features could be implemented. Other features to be added in the future include:  
 
+* Sort logs by date and with most recent appearing first
 * A 'Forgot Password' functionality
 * Add pagination to reduce scrolling and set the max number of logs displayed to 10 on the dashboard
 * Have the functionality to upload an image as opposed to using an image URL
 * Have the option to filter patient logs by 'patient status' so it's quick to locate days when they were having a flare up of symptoms
 * Provide users with a walk through tutorial on how to use the Dashboard and update the profile and add logs
 * Provide the user with the last date they logged in on their Dashboard
+* Implement a medical professional login in a future release so they can access their patient data online 
 
 [Back to top](#Table-of-Contents)
 
 ## Technologies Used
 
 ### Languages
-* [HTML]() was the main language used to create this website
-* [CSS]() was used to add bespoke design
-* [JavaScript]() was used to create interactive elements on the website
-* [Python]() was used for the backend of the website
+* [HTML](https://en.wikipedia.org/wiki/HTML) was the main language used to create this website
+* [CSS](https://en.wikipedia.org/wiki/CSS) was used to add bespoke design
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used to create interactive elements on the website
+* [Python](https://www.python.org/) was used for the backend of the website
 
 ### Libraries and Frameworks
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/) was the chosen micro web framework
