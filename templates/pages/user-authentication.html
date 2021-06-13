@@ -10,14 +10,14 @@
                     MediTracker dashboard
                 </p>
                 <!-- Resource: Button code from https://getbootstrap.com/docs/4.0/components/buttons -->               
-                <a href="{{ url_for('login') }}" type="button" role="button" class="btn btn-outline-dark">Login</a>
+                <a href="{{ url_for('login') }}" class="btn btn-outline-dark">Login</a>
             {% else %}
                 <h3>Create Account</h3>
                 <p>
                     Create an account to start<br>
                     using MediTracker today
                 </p>          
-                <a href="{{ url_for('register') }}" type="button" role="button" class="btn btn-outline-dark">Register</a>
+                <a href="{{ url_for('register') }}" class="btn btn-outline-dark">Register</a>
             {% endif %}
         </div>
         <!-- Register/ Login Starts -->

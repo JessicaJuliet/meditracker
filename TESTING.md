@@ -8,11 +8,20 @@
 
 #### [W3C Markup Validation](https://validator.w3.org/)
 
-<img src="">
+<img src="wireframes/homepage-html-validation.png">
+<img src="wireframes/login-html-validation.png">
+<img src="wireframes/homepage-html-validation">
+<img src="wireframes/homepage-html-validation">
+<img src="wireframes/homepage-html-validation">
+
 
 ### Issues and Fixes during testing of deployed website
 * Homepage HTML validation
     * Issues: Incorrect use of div element within a span and duplicate class
+    * Fix: Updated to meet passing requirements
+* Login HTML validation
+    * Issue: Incorrect use of button tag
+    * Fix: Changed to a element
 
 
 ### Manual Testing
