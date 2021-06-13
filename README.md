@@ -249,6 +249,10 @@ Given the scope and timeframe for this project, not all features could be implem
 
 [Back to top](#Table-of-Contents)
 
+## Testing
+
+Manual and automated testing has been carried out across the site for all user stories and features. The testing [results can be found in the TESTING.md file](TESTING.md). 
+
 ## Deployment
 
 ### Project Creation
@@ -315,6 +319,9 @@ The following steps are required to run this locally:
 * Bootstrap Navbar - https://getbootstrap.com/docs/4.0/components/navbar/
 * Bootstrap drowdown menu - https://getbootstrap.com/docs/4.0/components/dropdowns/ 
 * Back-to-top button - https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+
+### Testing
+* Daisy Mc Girr's [workshop on testing](https://us02web.zoom.us/rec/play/9FIKllHX2ZiQNFRhYPn_hBh_ZeA8964ZvIDLnhpKGAf1NLVc3_hBJ6zSL8Hv5Hx7ALnPtDmbg8CmFAs.YVsZ9LR_uI7OjEwH) proved to be invaluable for creating my TESTING.md document 
 
 ### Acknowledgements
 I would like to thank the following people for help with my project:

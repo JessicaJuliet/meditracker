@@ -189,7 +189,7 @@ body, p {
     background-color: lightgray;
     color: black !important;
     border-radius: 40px;
-    padding: 10px 40px 10px 40px;
+    padding: 10px 15px 10px 15px;
     margin-top: 30px;
 }
 
@@ -197,7 +197,7 @@ body, p {
     background-color: #9E0035;
     color: white !important;
     border-radius: 40px;
-    padding: 10px 40px 10px 40px;
+    padding: 10px 15px 10px 15px;
     margin-top: 30px;
 }
 
