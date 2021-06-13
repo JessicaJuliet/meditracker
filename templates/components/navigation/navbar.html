@@ -15,7 +15,7 @@
                 <a class="btn dropdown-toggle custom-dropdown" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i> Hi, {{ username }}</a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <a class="dropdown-item" href="{{ url_for('dashboard', username=session['user']) }}"><i class="fas fa-columns"></i> My Dashboard</a>
-                    <a class="dropdown-item" href="{{ url_for('patientprofile', username=session['user']) }}"><i class="fas fa-user-circle"></i> My Profile</a>
+                    <a class="dropdown-item" href="{{ url_for('patientprofile', username=session['user']) }}"><i class="fas fa-user-circle"></i> Edit Profile</a>
                     <a class="dropdown-item" href="{{ url_for('patientlog') }}"><i class="fas fa-plus-circle"></i> Create Log</a>
                     <a class="dropdown-item" href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
                 </div>
