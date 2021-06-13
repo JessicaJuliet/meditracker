@@ -42,6 +42,8 @@
                     {% for metric in height_metric %}
                     {% if metric.height_metric == user.height_metric %}
                     <option selected value="{{ metric.height_metric }}">{{ metric.height_metric }}</option>
+                    {% else %}
+                    <option value="{{ metric.height_metric }}">{{ metric.height_metric }}</option>
                     {% endif %}
                     {% endfor %}
                 </select>

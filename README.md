@@ -276,7 +276,7 @@ The following steps are required to run this locally:
 
 1. Go to the GitHub [repository](https://github.com/JessicaJuliet/meditracker)
 2. Click the 'Code' dropdown menu
-3. Copy Git URL from HTTPS box or select to download the ZIP file
+3. Copy Git URL from HTTPS box (https://github.com/JessicaJuliet/meditracker.git), or select to download the ZIP file
 4. If usings the Git URL, open a new terminal in your IDE and type the 'git clone' command in the CLI and paste the copied URL
 5. A clone of this project will be created locally on your machine
 5. Alternatively, if you download the ZIP, unpackage locally and open in your IDE

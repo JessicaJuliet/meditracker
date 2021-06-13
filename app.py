@@ -178,7 +178,7 @@ def patientprofile(username):
     return render_template(
         "pages/patientprofile.html",
         gender=gender, height_metric=height_metric,
-        username=username, height=height, dob=dob, image=image)
+        username=username, height=height, dob=dob, image=image, user=user)
 
 
 # DELETE PROFILE CODE
