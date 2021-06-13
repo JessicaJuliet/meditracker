@@ -22,7 +22,8 @@
         <div class="form-group row">
             <label for="patient-weight" class="col-xs-12 col-md-3 col-form-label"><strong>Weight</strong></label>
             <span class="col-xs-10 col-md-5">
-                <input id="patient-weight" name="patient-weight" class="form-control" type="text" placeholder="Enter Weight" value="{{ log.weight }}">
+                <!-- Resource: Adding decimals to number https://stackoverflow.com/questions/34057595/allow-2-decimal-places-in-input-type-number/34057860 -->
+                <input id="patient-weight" name="patient-weight" class="form-control" type="number"  step=".01" placeholder="Enter Weight" value="{{ log.weight }}">
             </span>
             <div class="col-xs-2 col-md-3">
                 <select id="weight_metric" name="weight_metric" class="form-control">

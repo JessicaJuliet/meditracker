@@ -33,6 +33,7 @@ To tackle this problem, I have devised a patient portal application called MediT
     * [Mockups](#Mockups)
     * [Database Structure](#Database-Structure)
     * [Sitemap](#Sitemap)
+    * [Site Structure and Implementation](#Site-Structure-and-Implementation)
 * [Features](#features)
     * [Existing Features](#Existing-Features)
     * [Features to be Implemented](#Features-to-be-Implemented)
@@ -42,8 +43,9 @@ To tackle this problem, I have devised a patient portal application called MediT
     * [Tools](#Tools)
 * [Testing](#Testing)
 * [Deployment](#deployment)
-    * [Local Deployment](#Local-Deployment)
+    * [Project Creation](#Project-Creation)
     * [Heroku Deployment](#Heroku-Deployment)
+    * [Local Deployment](#Local-Deployment)
 * [Credits](#credits)
     * [Code](#Code)
     * [Acknowledgements](#Acknowledgements)
@@ -70,6 +72,8 @@ The target audience for this application are both medical professionals who want
 * As a medical professional, I want to provide my patients with a secure patient portal
 * As a medical professional, I want to empower my patients to take control of their medical condition(s) by keeping their own logs
 * As a medical professional, I want to better understand my patient's disease activity
+
+The end users of this website will be patients and their user stories are outlined below:
 
 ### User Stories
 * As a patient, I want a web application which is easy to navigate on both mobile and desktop devices
@@ -150,6 +154,11 @@ MongoDB was used to set up the database for MediTracker. I used [Canva](www.canv
 I also used Canva to design a sitemap for this website as displayed below:
 
 <img src="wireframes/meditracker-sitemap.png" alt="MediTracker Sitemap">
+
+### Site Structure and Implementation]
+
+
+
 
 [Back to top](#Table-of-Contents)
 
