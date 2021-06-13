@@ -1,5 +1,14 @@
 ### Automated Testing
 
+#### [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/):
+
+**Pass/ Fail:** Pass
+
+<img src="wireframes/w3c-css-validation.png">
+
+#### [W3C Markup Validation](https://validator.w3.org/)
+
+<img src="">
 
 ### Manual Testing
 
