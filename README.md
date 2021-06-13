@@ -1,5 +1,7 @@
 # MediTracker
 
+<img src="wireframes/amiresponsive.png" alt="MediTracker webiste responsiveness">
+
 ## Purpose
 
 ### Introduction
