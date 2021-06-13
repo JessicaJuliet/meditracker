@@ -34,13 +34,13 @@ Verify the homepage displays a hero image
 3. Check hero text displays over image
 4. Repeat above steps on mobile
 
-**Expected Result**
+**Expected Result:**
 Hero text displays over hero image 
 
-**Actual Result**
+**Actual Result:**
 Hero text displays over hero image
 
-**Pass/Fail**
+**Pass/Fail:**
 Pass
 
 #### Test Case 3
@@ -52,13 +52,13 @@ Verify the homepage displays an 'About' section
 2. Scroll down to ensure About section appears
 3. Repeat above steps on mobile
 
-**Expected Result**
+**Expected Result:**
 About section appears on homepage
 
-**Actual Result**
+**Actual Result:**
 About section appears on homepage
 
-**Pass/Fail**
+**Pass/Fail:**
 Pass
 
 ---
@@ -73,13 +73,13 @@ Verify the website's responsiveness across varying device types
 2. Open up Chrome Google Developer Tools
 3. Use 'Responsive' tool to test responsiveness across all pages on website
 
-**Expected Result**
+**Expected Result:**
 Website rescales for varying device types 
 
-**Actual Result**
+**Actual Result:**
 Website rescales for varying device types 
 
-**Pass/Fail** Pass
+**Pass/Fail:** Pass
 
 #### Test Case 5
 **Description:**
@@ -89,13 +89,13 @@ Verify the hamburger menu appears on small devices
 2. Ensure hamburger icon displays 
 3. Ensure hamburger icon opens with functioning links
 
-**Expected Result**
+**Expected Result:**
 Navbar displays and functions on mobile
 
-**Actual Result**
+**Actual Result:**
 Navbar displays and functions on mobile
 
-**Pass/Fail**
+**Pass/Fail:**
 Pass
 
 #### Test Case 6
@@ -107,220 +107,196 @@ Verify all pages container a navbar and footer with the correct links
 2. Check homepage containers header and footer with correct links
 3. Login and ensure all logged in pages display header and footer with correct links
 
-**Expected Result**
+**Expected Result:**
 Header and footer display with links functioning
 
-**Actual Result**
+**Actual Result:**
 Header and footer display with links functioning
 
 **Pass/Fail**
 Pass
 
 #### Test Case 7
-
 **Description:**
 Ensure 'back-to-top' button display on dashboard
+
 **Steps:**
+1. Navigate to website on Chrome
+2. Sign into account dashboard
+3. Check back-to-top button appears when scrolling down page
+4. Click button to check it brings page to top
 
-**Expected Result**
+**Expected Result:**
+'Back-to-top' button appears and scrolls page to top on click
 
-**Actual Result**
+**Actual Result:**
+'Back-to-top' button appears and scrolls page to top on click
 
-**Pass/Fail**
+**Pass/Fail:**
+Pass
 
-### Issues and Resolutions to issues found during testing of deployed website
+### Issues and Fixes during testing of deployed website
 
 * Test Case 4:
     * Issue: 'Cancel' button jumped beneath 'Update Profile' and 'Update log' buttons for mobile devices
-    * Fix: 
+    * Fix: Reduce side padding on buttons from 40px to 15px
 
 ---
 
 > As a patient, I want a website which is visually appealing and looks professional so I feel confident in storing my medical data
 
 #### Test Case 8
-
 **Description:**
+Verify consistent colours and styling across website
 
 **Steps:**
+1. Navigate to website on Chrome
+2. View homepage colours and layout and ensure all are consistent
+3. Login to dashboard and ensure colours and styling are consistent for logged in users
 
-**Expected Result**
+**Expected Result:**
+Consistent styling and colour theme across website
 
-**Actual Result**
+**Actual Result:**
+Consistent styling and colour theme across website
 
-**Pass/Fail**
-
-#### Test Case 9
-
-**Description:**
-
-**Steps:**
-
-**Expected Result**
-
-**Actual Result**
-
-**Pass/Fail**
-
-#### Test Case 10
-
-**Description:**
-
-**Steps:**
-
-**Expected Result**
-
-**Actual Result**
-
-**Pass/Fail**
+**Pass/Fail:**
+Pass
 
 ---
 
 > As a patient, I want to be able to register to create my own personal account and feel that my information is secure
 
-#### Test Case 11
-
+#### Test Case 9
 **Description:**
+Verify registration functionality form performs as expected
 
 **Steps:**
+1. Navigate to website's register page on Chrome
+2. Ensure the contact form is visible and containers the following fileds
+    1. Username
+    2. Password
+    3. GDPR consent box
+3. Enter the following data into the form fields
+    1. Username: TestLogin
+    2. Password: TestLogin
+    3. Check GDPR box
+4. Click Register
 
 **Expected Result**
+Form submits without errors
 
 **Actual Result**
+Form submits without errors
 
-**Pass/Fail**
+**Pass/Fail** Pass
 
-#### Test Case 12
-
+#### Test Case 10
 **Description:**
+Ensure registration functionality form performs as expected when incorrect or null data is added
 
 **Steps:**
+1. Navigate to website's register page on Chrome
+2. Ensure the contact form is visible and contains the following fileds
+    1. Username
+    2. Password
+    3. GDPR consent box
+3. Submit the form when the username is blank and ensure a warning appears to say 'Please fill in this field'. Repeat the same for password and GDPR box
+4. Submit the form when the username has the incorrect format and ensure a warning message appears outlining the required format. Repeat same for password
 
 **Expected Result**
+Form will not submit with incorrect or null data
 
 **Actual Result**
+Form will not submit with incorrect or null data
 
 **Pass/Fail**
-
-#### Test Case 13
-
-**Description:**
-
-**Steps:**
-
-**Expected Result**
-
-**Actual Result**
-
-**Pass/Fail**
+Pass
 
 --- 
 > As a patient, I want to be able to update my health profile with my personal details
 
-
-#### Test Case 14
-
-**Description:**
-
-**Steps:**
-
-**Expected Result**
-
-**Actual Result**
-
-**Pass/Fail**
-
-
-#### Test Case 15
+#### Test Case 11
 
 **Description:**
+Verify patient can update, edit and delete their health profile when logged in
 
 **Steps:**
+1. Open Chrome and navigate to website
+2. Login and go to dashboard
+3. Click to edit profile
+4. Enter image url, gender, dob and height
+5. Click to update profile
+6. Click to edit profile on dashboard
+7. Submit new data
+8. Click to delete profile
+9. Ensure that modal appears to confirm deletion
 
-**Expected Result**
+**Expected Result:**
+Users can create, read, update and delete profile data which displays on dashboard
 
-**Actual Result**
+**Actual Result:**
+Users can create, read, update and delete profile data which displays on dashboard
 
-**Pass/Fail**
+**Pass/Fail:**
+Pass
 
+### Issues and Fixes during testing of deployed website
 
-#### Test Case 16
+* Test case 11:
+    * Issue: Cancel button updates form 
+    * Fix: Replace 'button' tag with 'a' tag and remove type="submit"
+
+--- 
+
+> As a patient, I want to be able to record my medical logs and have the ability to edit and delete data I no longer wish to record
+
+#### Test Case 12
 
 **Description:**
+Ensure that users can create, read, update and delete medical logs
 
 **Steps:**
+1. Go to Chrome and navigate to website
+2. Login to account dashboard
+3. Click to create new log
+4. Fill in form data and submit
+5. Ensure log appears on dashboard
+5. Click to edit log on dashboard
+6. Update fields and submit
+7. Ensure updated fields display on dashboard
+8. Click to delete log
+9. Ensure that modal appears to confirm deletion
 
 **Expected Result**
+Users can create, read, update and delete medical logs
 
 **Actual Result**
+Users can create, read, update and delete medical logs
 
 **Pass/Fail**
-
----
-
-> As a patient, I want to be able to record my medical symtpoms and have the ability to edit and delete data I no longer wish to record
-
-#### Test Case 17
-
-**Description:**
-
-**Steps:**
-
-**Expected Result**
-
-**Actual Result**
-
-**Pass/Fail**
-
-#### Test Case 18
-
-**Description:**
-
-**Steps:**
-
-**Expected Result**
-
-**Actual Result**
-
-**Pass/Fail**
-
-#### Test Case 19
-
-**Description:**
-
-**Steps:**
-
-**Expected Result**
-
-**Actual Result**
-
-**Pass/Fail**
+Pass
 
 ---
 
 > As a patient, I want to be able to request an appointment with my medical team
 
-#### Test Case 20
+#### Test Case 13
 
 **Description:**
+Verify that patients can email the medical team
 
 **Steps:**
+1. Open Chrome and navigate to website
+2. Click 'Request Appointment' button on homepage
+3. Ensure button opens email client
 
 **Expected Result**
+Email client opens
 
 **Actual Result**
+Email client opens
 
 **Pass/Fail**
+Pass
 
-
-#### Test Case 21
-
-**Description:**
-
-**Steps:**
-
-**Expected Result**
-
-**Actual Result**
-
-**Pass/Fail**
