@@ -8,7 +8,7 @@
         {% include 'components/navigation/navbar.html' %}
     </header>
     <div>
-        <section class="flash-section">
+        <div class="flash-section">
             <!-- Flash Messages -->
             {% with messages = get_flashed_messages() %}
                 {% if messages%}
@@ -21,7 +21,7 @@
                     {% endfor %}
                 {% endif %}
             {% endwith %}
-        </section>
+        </div>
         {% block content %}
         {% endblock %}
     </div>

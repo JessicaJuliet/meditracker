@@ -8,8 +8,8 @@
             <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/meditracker-logo.png') }}" width="300" alt="MediTracker logo"></a>
             {% endif %}
         </span>
-        <span class="col-xs-12 col-md-4">
         {% if session.user %}
+        <span class="col-xs-12 col-md-4">
             <!-- Resource: Bootstrap dropdown button code sourced from https://getbootstrap.com/docs/4.0/components/dropdowns/ -->
             <div class="dropdown show">
                 <a class="btn dropdown-toggle custom-dropdown" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i> Hi, {{ username }}</a>
@@ -23,14 +23,14 @@
         </span>
         {% else %}
         <!-- Resource: https://getbootstrap.com/docs/4.0/components/buttons/ -->
-        <div class="home-buttons">
+        <span class="home-buttons">
             <span class="col-xs-12">
-                <a type="button" class="btn login-button" href="{{ url_for('login') }}" role="button"><strong>Login</strong></a>
+                <a class="btn login-button" href="{{ url_for('login') }}" role="button"><strong>Login</strong></a>
             </span>
             <span class="col-xs-12">
-                <a type="button" class="btn register-button" href="{{ url_for('register') }}">Register</a>
+                <a class="btn register-button" href="{{ url_for('register') }}">Register</a>
             </span>
-        </div>
+        </span>
         {% endif %}
     </div>
 </div>

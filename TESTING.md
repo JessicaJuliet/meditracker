@@ -10,6 +10,11 @@
 
 <img src="">
 
+### Issues and Fixes during testing of deployed website
+* Homepage HTML validation
+    * Issues: Incorrect use of div element within a span and duplicate class
+
+
 ### Manual Testing
 
 > As a patient, I want the main purpose of the website to immediately apparent upon entering so I understand what the site is used for
