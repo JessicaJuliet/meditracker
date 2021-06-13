@@ -251,6 +251,7 @@ body, p {
 
 .flash-message {
     padding-top: 7px;
+    margin-left: 40px;
 }
 
 /* ----------- Pages ----------- */
