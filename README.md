@@ -245,7 +245,7 @@ This project was created on GitHub using the following steps:
 2. Enter the repository name for the project and click search
 3. When the repository has been found, click to connect to this app
 
-**Set Environemnt Variables**
+**Set Environement Variables**
 1. Click on settings tab for your app
 2. Click on 'Reveal Config Vars'
 3. Securely tell Heroku which variables are required using the key value pairs listed below:
