@@ -7,10 +7,12 @@
             <label for="patient-status" class="col-xs-12 col-md-3 col-form-label"><strong>Status</strong></label>
             <div class="col-xs-12 col-md-8">
                 <select id="patient-status" name="patient-status" class="form-control">
-                    {% for status in status %}
-                        {% if status.status == status.status %}
-                        <option value="{{ status.status }}" selected>{{ status.status }}</option>
-                        {% endif %}
+                    {% for update in status %}
+                    {% if update.status == log.status %}
+                    <option value="{{ update.status }}" selected>{{ update.status }}</option>
+                    {% else %}
+                    <option value="{{ update.status }}">{{ update.status }}</option>
+                    {% endif %}
                     {% endfor %}
                 </select>
             </div>
@@ -27,8 +29,12 @@
             </span>
             <div class="col-xs-2 col-md-3">
                 <select id="weight_metric" name="weight_metric" class="form-control">
-                    {% for weight_metric in weight_metric %}
-                    <option value="{{ weight_metric.weight_metric }}" selected>{{ weight_metric.weight_metric }}</option>
+                    {% for metric in weight_metric %}
+                    {% if metric.weight_metric == log.weight_metric %}
+                    <option value="{{ metric.weight_metric }}" selected>{{ metric.weight_metric }}</option>
+                    {% else %}
+                    <option value="{{ metric.weight_metric }}">{{ metric.weight_metric }}</option>
+                    {% endif %}
                     {% endfor %}
                 </select>
             </div>

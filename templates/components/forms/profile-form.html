@@ -35,12 +35,14 @@
         <div class="form-group row">
             <label for="patient-height" class="col-xs-12 col-md-3 col-form-label"><strong>Height</strong></label>
             <span class="col-xs-10 col-md-5">
-                <input id="patient-height" name="patient-height" class="form-control" type="number" step=".01" placeholder="Enter Height" required value="{{ height }}">
+                <input id="patient-height" name="patient-height" class="form-control" type="number" step=".01" placeholder="Enter Height" value="{{ height }}" required>
             </span>
             <div class="col-xs-2 col-md-3">
                 <select id="height_metric" name="height_metric" class="form-control">
-                    {% for height_metric in height_metric %}
-                    <option selected value="{{ height_metric.height_metric }}">{{ height_metric.height_metric }}</option>
+                    {% for metric in height_metric %}
+                    {% if metric.height_metric == user.height_metric %}
+                    <option selected value="{{ metric.height_metric }}">{{ metric.height_metric }}</option>
+                    {% endif %}
                     {% endfor %}
                 </select>
             </div>
