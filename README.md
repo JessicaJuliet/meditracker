@@ -76,14 +76,12 @@ The target audience for this application are both medical professionals who want
 The end users of this website will be patients and their user stories are outlined below:
 
 ### User Stories
-* As a patient, I want a web application which is easy to navigate on both mobile and desktop devices
-* As a patient, I want a web application which is visually appealing and its purpose immediately apparent
-* As a patient, I want to be able to register to create my own personal account
-* As a patient, I want to feel that my information is secure by creating a password to my personal account
+* As a patient, I want the main purpose of the website to immediately apparent upon entering so I understand what the site is used for
+* As a patient, I want a web application which is easy to navigate on both mobile, tablet and desktop devices
+* As a patient, I want a website which is visually appealing and looks professional so I feel confident in storing my medical data
+* As a patient, I want to be able to register to create my own personal account and feel that my information is secure
 * As a patient, I want to be able to update my health profile with my personal details
-* As a patient, I want to be able to add and edit logs to record my medical symptoms over time
-* As a patient, I want to be able to delete logs I no longer wish to record
-* As a patient, I want to be able to filter logs by the date they were entered
+* As a patient, I want to be able to record my medical symtpoms and have the ability to edit and delete data I no longer wish to record
 * As a patient, I want to be able to request an appointment with my medical team
 
 ### Design Inspiration
@@ -155,38 +153,64 @@ I also used Canva to design a sitemap for this website as displayed below:
 
 <img src="wireframes/meditracker-sitemap.png" alt="MediTracker Sitemap">
 
-### Site Structure and Implementation]
-
-
-
-
 [Back to top](#Table-of-Contents)
 
 ## Features
 
-The websites features and how they meet the user stories identified at the beginning of the README document are outlined in greater details below:
-
 ### Existing Features
 
-* Fully responsive website which rescales to preserve user experience across all device sizes
-* Visually appealing website throughout with a strong use of colour and whitespace making for an intuitive design 
-* Homepage displays relevant content and images making its purpose immediately evident
-* Registration functionality for users to access a private dashboard area
-* Sign in/sign out functionality for registered users
-* Site wide footer which includes links to other pages, copyright and social icons
-* A 'back to top' button to maximise usability on dashboard when multiple logs are created
-* Profile section on dashboard which is fully customisable by the user (CRUD) to include an image and health information
-* Log section on dashboard displaying a list of logs added by the user and which are fully customisable (CRUD)
-* Defensive programming on user dashboard which ensures nothing can be deleted without a two step approval
+MediTracker is a fully responsive website which offers users a login to a private dashboard area. Below I have gone into greater detail on how the website's features meet each of the [user stories](#User-Stories) identified at the beginning of the README document:
+
+> As a patient, I want the main purpose of the website to immediately apparent upon entering so I understand what the site is used for
+
+* The website displays the MediTracker logo in the top left corner which remains fixed across all site pages
+* The homepage includes a clear title and website description over the hero image which is immediatebly visible to users upon entering the site 
+* The homepage includes an 'About' section which provides the user with further information on the application
+* The homepage displays a large and relevant hero image
+
+> As a patient, I want a web application which is easy to navigate on mobile, tablet and desktop devices
+
+* The website is fully responsive and rescales to preserve user experience across all device sizes
+* The website provides users with full functionality across different device types
+* The navigation menu resizes into a hamburger icon on smaller devices
+* A 'back-to-top' button is provided for users on the dashboard page to reduce scrolling when multiple logs are created and subsequently increase page length
+* A site wide footer which includes links to other pages, copyright and social icons
+
+> As a patient, I want a website which is visually appealing and looks professional so I feel confident in storing my medical data
+
+* The website uses consistent colours and styles throughout providing a pleasant user experience 
+* There is a strong use of whitespace which helps to position items on the page and provide an intuitive desig for the user
+* The strong brand colours and focus on UX/UI indicate a website which is secure and experienced in its offering 
+
+> As a patient, I want to be able to register to create my own personal account and feel that my information is secure
+
+* Registration functionality is provided to users to access their own private dashboard area
+* The form provides users with a GDPR statement on storing their data and required to consent to this
+* The form requires user to create a username and password with a minimum of 5 characters
+* Sign out functionality is offered so users can exit their dashboard if using a shared device
+* All registered users can use the sign in functionality
+
+> As a patient, I want to be able to update my health profile with my personal details
+
+* The profile section on dashboard is fully customisable by the user so they can create, read, update and delete their profile data 
+* The profile section allows users to add an image, gender, date of birth and height to their profile
+* Defensive programming is use on the user dashboard to ensure nothing can be deleted without a two step approval 
+
+> As a patient, I want to be able to record my medical symtpoms and have the ability to edit and delete data I no longer wish to record
+* The dashboard provides users with functionality to create new logs to record their medical symptoms
+* Edit and delete functionality are applied to all new logs created by the user
+* Users can view all of their newly created logs on the dashboard
+
+> As a patient, I want to be able to request an appointment with my medical team
+* 'Request Appointment' buttons are provided to the user on both the homepage and dashboard
 
 ### Features To Be Implemented
 Given the scope and timeframe for this project, not all features could be implemented. Other features to be added in the future include:  
 
-* Sort logs by date and with most recent appearing first
+* Filter logs by the date and status
 * A 'Forgot Password' functionality
 * Add pagination to reduce scrolling and set the max number of logs displayed to 10 on the dashboard
 * Have the functionality to upload an image as opposed to using an image URL
-* Have the option to filter patient logs by 'patient status' so it's quick to locate days when they were having a flare up of symptoms
 * Provide users with a walk through tutorial on how to use the Dashboard and update the profile and add logs
 * Provide the user with the last date they logged in on their Dashboard
 * Implement a medical professional login in a future release so they can access their patient data online 
