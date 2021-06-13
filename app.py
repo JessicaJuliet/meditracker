@@ -53,7 +53,7 @@ def register():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            flash("Sorry, this username already exists")
+            flash("Sorry, that username or password already exists")
             return redirect(url_for("register"))
 
         register = {
@@ -261,6 +261,8 @@ def editlog(log_id):
         }
         mongo.db.logs.update({"_id": ObjectId(log_id)}, submit)
         flash("Log Successfully Updated")
+        return redirect(
+            url_for("dashboard", username=session["user"]))
 
     user = mongo.db.users.find_one({"username": session["user"]})
     username = user["username"]
