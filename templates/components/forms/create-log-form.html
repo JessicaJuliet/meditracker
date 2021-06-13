@@ -8,7 +8,7 @@
             <div class="col-xs-12 col-md-8">
                 <select id="patient-status" name="patient-status" class="form-control">
                     {% for status in status %}
-                    <option value="{{ status.status }}" selected>{{ status.status }}</option>
+                        <option value="{{ status.status }}" selected>{{ status.status }}</option>
                     {% endfor %}
                 </select>
             </div>
@@ -25,7 +25,7 @@
             <div class="col-xs-2 col-md-3">
                 <select id="weight_metric" name="weight_metric" class="form-control" required>
                     {% for weight_metric in weight_metric %}
-                    <option value="{{ weight_metric.weight_metric }}" selected>{{ weight_metric.weight_metric }}</option>
+                        <option value="{{ weight_metric.weight_metric }}" selected>{{ weight_metric.weight_metric }}</option>
                     {% endfor %}
                 </select>
             </div>

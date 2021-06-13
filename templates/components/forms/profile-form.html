@@ -19,7 +19,7 @@
             <div class="col-xs-12 col-md-8">
                 <select id="patient-gender" name="patient-gender" class="form-control" required>
                     {% for gender in gender %}
-                    <option value="{{ gender.gender }}">{{ gender.gender }}</option>
+                        <option value="{{ gender.gender }}">{{ gender.gender }}</option>
                     {% endfor %}
                 </select>
             </div>
@@ -40,11 +40,11 @@
             <div class="col-xs-2 col-md-3">
                 <select id="height_metric" name="height_metric" class="form-control">
                     {% for metric in height_metric %}
-                    {% if metric.height_metric == user.height_metric %}
-                    <option selected value="{{ metric.height_metric }}">{{ metric.height_metric }}</option>
-                    {% else %}
-                    <option value="{{ metric.height_metric }}">{{ metric.height_metric }}</option>
-                    {% endif %}
+                        {% if metric.height_metric == user.height_metric %}
+                            <option selected value="{{ metric.height_metric }}">{{ metric.height_metric }}</option>
+                        {% else %}
+                            <option value="{{ metric.height_metric }}">{{ metric.height_metric }}</option>
+                        {% endif %}
                     {% endfor %}
                 </select>
             </div>

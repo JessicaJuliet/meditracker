@@ -19,15 +19,15 @@
                 <h4 class="dashboard-username">Welcome, {{ username }}</h4>
                 <p class="user-id"><em>[UserID: {{ user_id }}]</em><br></p>
                 {% if profiles %}
-                {% for profile in profiles %}
-                    <img class="profile-image" src="{{ profile.image}}">
-                <div class="profile-details">
-                    <p><strong>Gender:</strong> {{ profile.gender }}</p>
-                    <p><strong>DOB:</strong> {{ profile.dob }}</p>
-                    <p><strong>Height:</strong> <span>{{ profile.height }}</span><span>{{ profile.height_metric}}</span></p>
-                    <br>
-                </div>
-                {% endfor %}
+                    {% for profile in profiles %}
+                        <img class="profile-image" src="{{ profile.image}}">
+                        <div class="profile-details">
+                            <p><strong>Gender:</strong> {{ profile.gender }}</p>
+                            <p><strong>DOB:</strong> {{ profile.dob }}</p>
+                            <p><strong>Height:</strong> <span>{{ profile.height }}</span><span>{{ profile.height_metric}}</span></p>
+                            <br>
+                        </div>
+                    {% endfor %}
                 {% endif %}
                 <!-- Edit/ delete buttons -->
                 <span>
@@ -61,8 +61,8 @@
             </div>
             {% if logs %}
                 {% for log in logs %}
-                <div class="dashboard-log">
-                    <!-- Resource: Icons source from Font Awesome -->
+                    <div class="dashboard-log">
+                        <!-- Resource: Icons source from Font Awesome -->
                         <div class="log-date">
                             <i class="fas fa-calendar-week"></i> 
                             <strong>Date:</strong> {{ log.log_date }}
@@ -70,14 +70,10 @@
                         <p><strong>Status:</strong> {{ log.status }}</p>
                         <p><strong>Weight:</strong> <span>{{ log.weight }}</span><span>{{ log.weight_metric}}</span></p>
                         <p><strong>Symptoms:</strong> {{ log.symptoms }}</p>
-                        <a type="button" data-toggle="modal" data-target="#delete-log-modal">
-                            <i class="fas fa-trash"></i>
-                        </a>
+                        <a type="button" data-toggle="modal" data-target="#delete-log-modal"><i class="fas fa-trash"></i></a>
                         {% include 'components/modals/delete-log-modal.html' %}
-                        <a href="{{ url_for('editlog', log_id=log._id)}}">
-                            <i class="fas fa-pencil-alt"></i>
-                        </a>
-                </div>
+                        <a href="{{ url_for('editlog', log_id=log._id)}}"><i class="fas fa-pencil-alt"></i></a>
+                    </div>
                 {% endfor %}
             {% endif %}
         </div>
