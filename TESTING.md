@@ -1,21 +1,22 @@
 ### Automated Testing
 
-#### [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/):
-
-**Pass/ Fail:** Pass
+**CSS Validation: Pass**
 
 <img src="wireframes/w3c-css-validation.png">
 
 #### [W3C Markup Validation](https://validator.w3.org/)
 
-**Homepage**
+**Homepage: PASS**
+
 <img src="wireframes/homepage-html-validation.png">
 
-**Login Page**
+**Login Page: PASS**
+
 <img src="wireframes/login-html-validation.png">
 
-**Register Page**
-<img src="wireframes/register-html-validation">
+**Register Page: PASS**
+
+<img src="wireframes/register-html-validation.png">
 
 ### Issues and Fixes during testing of deployed website
 * Homepage HTML validation
