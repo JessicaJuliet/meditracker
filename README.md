@@ -124,12 +124,12 @@ I created wireframes for this web application using [balsamiq](https://balsamiq.
 
 Desktop Wireframes | Mobile Wireframes | Tablet Wireframes
 ------------------ | ------------------ | ----------------
-[Homepage](wireframes/homepage-desktop-wireframe.png) | [Homepage](wireframes/mobile-homepage-wireframe.png)
-[Register](wireframes/register-desktop-wireframe.png) | [Register](wireframes/mobile-register-wireframe.png) 
-[Sign In](wireframes/signin-desktop-wireframe.png) | [Sign In](wireframes/mobile-sign-in-wireframe.png)
-[Dashboard](wireframes/dashboard-desktop-wireframe.png) | [Dashboard](wireframes/mobile-dashboard-wireframe.png)
-[Health Profile](wireframes/edit-profile-desktop-wireframe.png) | [Health Profile](wireframes/mobile-edit-profile-wireframe.png)
-[Add Log](wireframes/add-log-desktop-wireframe.png) | [Add Log](wireframes/mobile-add-log-wireframe.png)
+[Homepage](wireframes/homepage-desktop-wireframe.png) | [Homepage](wireframes/mobile-homepage-wireframe.png) | [Homepage](wireframes/tablet-homepage-wireframe.png) 
+[Register](wireframes/register-desktop-wireframe.png) | [Register](wireframes/mobile-register-wireframe.png) | [Register](wireframes/tablet-register-wireframe.png)
+[Sign In](wireframes/signin-desktop-wireframe.png) | [Sign In](wireframes/mobile-sign-in-wireframe.png)| [Sign In](wireframes/tablet-sign-in-wireframe.png)
+[Dashboard](wireframes/dashboard-desktop-wireframe.png) | [Dashboard](wireframes/mobile-dashboard-wireframe.png) | [Dashboard](wireframes/tablet-dashboard-wireframe.png)
+[Health Profile](wireframes/edit-profile-desktop-wireframe.png) | [Health Profile](wireframes/mobile-edit-profile-wireframe.png) | [Health Profile](wireframes/tablet-edit-profile-wireframe.png)
+[Add Log](wireframes/add-log-desktop-wireframe.png) | [Add Log](wireframes/mobile-add-log-wireframe.png) | [Add Log](wireframes/tablet-add-log-wireframe.png)
 
 ### Mockups
 I also created some higher fidelity desktop mockups for the key pages on the website. This provided me with an opportunity to sample my chosen colours and ensure the layout I had wireframed looked visually appealing. Please see desktop mockups below:
