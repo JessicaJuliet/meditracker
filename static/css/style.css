@@ -249,6 +249,10 @@ body, p {
     color: white;
 }
 
+.flash-message {
+    padding-top: 7px;
+}
+
 /* ----------- Pages ----------- */
 
 .page-heading {
@@ -574,6 +578,11 @@ footer .fab {
     }
 }
 
+@media screen and (max-width: 736px) {
+    .flash-message {
+        padding-left: 10px;
+    }
+}
 
 /* ----------- Scroll to top button ----------- */
 
