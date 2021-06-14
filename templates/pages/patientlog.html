@@ -1,31 +1,31 @@
 {% extends "layout/base.html" %}
 {% block content %}
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{ url_for('home_user', username=session['user']) }}">Home</a></li>
-      <li class="breadcrumb-item"><a href="{{ url_for('dashboard', username=session['user']) }}">My Dashboard</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Create Log</li>
-    </ol>
-</nav>
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h3 class="page-heading">Create Log</h3>
-            <p>Fill in the form below to add a new log to your dashboard:</p>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ url_for('home_user', username=session['user']) }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ url_for('dashboard', username=session['user']) }}">My Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Create Log</li>
+        </ol>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="page-heading">Create Log</h3>
+                <p>Fill in the form below to add a new log to your dashboard:</p>
+            </div>
+        </div>
+        {% include 'components/forms/create-log-form.html' %}
+    </div>
+    <!-- Back to Dashboard -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <i class="fas fa-chevron-left"></i>
+                <a class="back-to-dashboard" href="{{ url_for('dashboard', username=session['user']) }}">
+                    Back to Dashboard
+                </a>
+            </div>
         </div>
     </div>
-    {% include 'components/forms/create-log-form.html' %}
-</div>
-<!-- Back to Dashboard -->
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <i class="fas fa-chevron-left"></i>
-            <a class="back-to-dashboard" href="{{ url_for('dashboard', username=session['user']) }}">
-                Back to Dashboard
-            </a>
-        </div>
-    </div>
-</div>
-<br>
+    <br>
 {% endblock %}

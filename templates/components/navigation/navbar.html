@@ -3,9 +3,9 @@
         <span class="col-xs-12 col-md-8">
             <!-- MediTracker logo -->
             {% if session.user %}
-            <a href="{{ url_for('home_user') }}"><img src="{{ url_for('static', filename='images/meditracker-logo.png') }}" width="300" alt="MediTracker logo"></a>
+                <a href="{{ url_for('home_user') }}"><img src="{{ url_for('static', filename='images/meditracker-logo.png') }}" width="300" alt="MediTracker logo"></a>
             {% else %}
-            <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/meditracker-logo.png') }}" width="300" alt="MediTracker logo"></a>
+                <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/meditracker-logo.png') }}" width="300" alt="MediTracker logo"></a>
             {% endif %}
         </span>
         {% if session.user %}
@@ -44,14 +44,14 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav mr-auto">
             {% if session.user %}
-            <a class="nav-item nav-link active" href="{{ url_for('home_user', username=session['user']) }}">Home</a>
-            <a class="nav-item nav-link" href="{{ url_for('home_user') }}#about-link">About Us</a>
-            <a class="nav-item nav-link" href="{{ url_for('home_user') }}#clinic-hours">Clinic hours</a>
-            <a class="nav-item nav-link" href="{{ url_for('dashboard', username=session['user']) }}">My Dashboard</a>
+                <a class="nav-item nav-link active" href="{{ url_for('home_user', username=session['user']) }}">Home</a>
+                <a class="nav-item nav-link" href="{{ url_for('home_user') }}#about-link">About Us</a>
+                <a class="nav-item nav-link" href="{{ url_for('home_user') }}#clinic-hours">Clinic hours</a>
+                <a class="nav-item nav-link" href="{{ url_for('dashboard', username=session['user']) }}">My Dashboard</a>
             {% else %}
-            <a class="nav-item nav-link active" href="{{ url_for('home') }}">Home</a>
-            <a class="nav-item nav-link" href="{{ url_for('home') }}#about-link">About Us</a>
-            <a class="nav-item nav-link" href="{{ url_for('home') }}#clinic-hours">Clinic hours</a>
+                <a class="nav-item nav-link active" href="{{ url_for('home') }}">Home</a>
+                <a class="nav-item nav-link" href="{{ url_for('home') }}#about-link">About Us</a>
+                <a class="nav-item nav-link" href="{{ url_for('home') }}#clinic-hours">Clinic hours</a>
             {% endif %}
         </div>
     </div>

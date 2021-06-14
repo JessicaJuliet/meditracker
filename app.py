@@ -5,9 +5,9 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+
 if os.path.exists("env.py"):
     import env
-
 
 app = Flask(__name__)
 
@@ -17,18 +17,23 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-
 # Resource: Adding comments best practices -
 # https://www.askpython.com/python/python-comments
 
 
 @app.route('/')
 def home():
+    """
+    Renders homepage from main website link
+    """
     return render_template('pages/home.html')
 
 
 @app.route('/home/user')
 def home_user():
+    """
+    Renders homepage template for logged in users to display their username
+    """
     user = mongo.db.users.find_one({"username": session["user"]})
     username = user["username"]
     if session["user"]:
@@ -43,9 +48,9 @@ def home_user():
 @app.route('/register', methods=["GET", "POST"])
 def register():
     """
-    Allows user to register on the website
+    Allows user to register for an account
     Checks if username already exists in Database
-    Adds blank user profile data to MongoDB
+    Adds blank user profile fields to MongoDB
     Redirects user to Dashboard
     """
     if request.method == "POST":
@@ -77,7 +82,8 @@ def register():
 @app.route('/login', methods=["GET", "POST"])
 def login():
     """
-    Check if username exists in database
+    Allows registered users to login to website
+    Checks if username exists in database
     Ensure hashed password matches user input
     Redirect to login if no username/password match
     """
@@ -87,13 +93,12 @@ def login():
 
         if existing_user:
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
+                    existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(
                     request.form.get("username")))
                 return redirect(url_for(
                     "dashboard", username=session["user"]))
-
             else:
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
@@ -111,7 +116,6 @@ def dashboard(username):
     Take the session user's username from database
     Set variable username equal to user's username
     Set variable user_id equal to user's _id
-    Set variable profiles equal to user's username
     Set variable logs equal to user's username
     """
     user = mongo.db.users.find_one({"username": session["user"]})
@@ -122,7 +126,7 @@ def dashboard(username):
     if session["user"]:
         return render_template(
             "pages/dashboard.html", username=username,
-            profiles=profiles, logs=logs, user_id=user_id)
+            user_id=user_id, profiles=profiles, logs=logs)
 
     return redirect(url_for("login"))
 
@@ -131,6 +135,7 @@ def dashboard(username):
 def logout():
     """
     Logout function to remove user from session cookies
+    Returns them to login page
     """
     flash("You have successfully logged out")
     session.pop("user")
@@ -141,7 +146,6 @@ def logout():
 def patientprofile(username):
     """
     Post profile form data to MongoDB user document
-    Allow user to create one profile
     Link MongoDB height_metric and gender data to form dropdowns
     """
     if request.method == "POST":
@@ -181,9 +185,11 @@ def patientprofile(username):
         username=username, height=height, dob=dob, image=image, user=user)
 
 
-# DELETE PROFILE CODE
 @app.route("/delete_profile")
 def delete_profile():
+    """
+    Delete user profile
+    """
     {"username": session["user"]}
     user = mongo.db.users
     filter = {

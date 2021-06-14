@@ -1,85 +1,81 @@
 {% extends "layout/base.html" %}
 {% block content %}
-<!-- Resource: Code sourced from https://getbootstrap.com/docs/4.0/components/breadcrumb/ -->
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="{{ url_for('home_user', username=session['user']) }}">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">My Dashboard</li>
-    </ol>
-</nav>
-<div class="container dashboard">
-    <div class="row">
-        <div class="col-12">
-            <h3 class="page-heading">My Dashboard</h3>
-            <span><strong>Date: </strong></span><span id="dateToday"></span>
-        </div>
-        <div class="col-md-4 dashboard-profile">
-            <h4 class="dashboard-heading">Health Profile</h4> 
-            <div class="health-profile">
-                <h4 class="dashboard-username">Welcome, {{ username }}</h4>
-                <p class="user-id"><em>[UserID: {{ user_id }}]</em><br></p>
-                {% if profiles %}
-                    {% for profile in profiles %}
-                        <img class="profile-image" src="{{ profile.image}}">
-                        <div class="profile-details">
-                            <p><strong>Gender:</strong> {{ profile.gender }}</p>
-                            <p><strong>DOB:</strong> {{ profile.dob }}</p>
-                            <p><strong>Height:</strong> <span>{{ profile.height }}</span><span>{{ profile.height_metric}}</span></p>
-                            <br>
+    <!-- Resource: Breadcrumb code sourced from https://getbootstrap.com/docs/4.0/components/breadcrumb/ -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ url_for('home_user', username=session['user']) }}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">My Dashboard</li>
+        </ol>
+    </nav>
+    <div class="container dashboard">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="page-heading">My Dashboard</h3>
+                <span><strong>Date: </strong></span><span id="dateToday"></span>
+            </div>
+            <div class="col-md-4 dashboard-profile">
+                <h4 class="dashboard-heading">Health Profile</h4> 
+                <div class="health-profile">
+                    <h4 class="dashboard-username">Welcome, {{ username }}</h4>
+                    <p class="user-id"><em>[UserID: {{ user_id }}]</em><br></p>
+                    {% if profiles %}
+                        {% for profile in profiles %}
+                            <img class="profile-image" src="{{ profile.image}}">
+                            <div class="profile-details">
+                                <p><strong>Gender:</strong> {{ profile.gender }}</p>
+                                <p><strong>DOB:</strong> {{ profile.dob }}</p>
+                                <p><strong>Height:</strong> <span>{{ profile.height }}</span><span>{{ profile.height_metric}}</span></p>
+                                <br>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    <!-- Edit/ delete buttons -->
+                    <span>
+                        <!-- Resource: Icon from https://fontawesome.com/v5.15/icons/trash?style=solid -->
+                        <a type="button" data-toggle="modal" data-target="#delete-profile-modal" class="profile-delete" href="{{ url_for('delete_profile') }}">
+                            <i class="fas fa-trash"></i><br>
+                        </a>
+                        {% include 'components/modals/delete-profile-modal.html' %}
+                    </span>
+                    <span>
+                        <a class="edit-profile" href="{{ url_for('patientprofile', username=session['user']) }}">
+                            <i class="fas fa-edit"></i> Edit Profile
+                        </a>
+                    </span>
+                </div>
+                <!-- Resource: Icon from https://fontawesome.com/icons/angle-right?style=solid -->
+                <a class="btn appointment-button" type="button" role="button" href="mailto:meditracker@meditracker.com">
+                    <strong>Request Appointment <i class="fas fa-angle-right"></i></strong>
+                </a>
+            </div>
+            <div class="col-md-8">
+                <h4 class="dashboard-heading">Symptom Tracker</h4>
+                <div>
+                    <a href="{{ url_for('patientlog') }}" class="btn add-log">
+                        <i class="fas fa-folder-plus"></i> Create New Log
+                    </a>
+                </div>
+                {% if logs %}
+                    {% for log in logs %}
+                        <div class="dashboard-log">
+                            <!-- Resource: Icons source from Font Awesome -->
+                            <div class="log-date">
+                                <i class="fas fa-calendar-week"></i> 
+                                <strong>Date:</strong> {{ log.log_date }}
+                            </div>
+                            <p><strong>Status:</strong> {{ log.status }}</p>
+                            <p><strong>Weight:</strong> <span>{{ log.weight }}</span><span>{{ log.weight_metric}}</span></p>
+                            <p><strong>Symptoms:</strong> {{ log.symptoms }}</p>
+                            <a type="button" data-toggle="modal" data-target="#delete-log-modal"><i class="fas fa-trash"></i></a>
+                            {% include 'components/modals/delete-log-modal.html' %}
+                            <a href="{{ url_for('editlog', log_id=log._id)}}"><i class="fas fa-pencil-alt"></i></a>
                         </div>
                     {% endfor %}
                 {% endif %}
-                <!-- Edit/ delete buttons -->
-                <span>
-                    <!-- Resource: Icon from https://fontawesome.com/v5.15/icons/trash?style=solid -->
-                    <a type="button" data-toggle="modal" data-target="#delete-profile-modal" class="profile-delete" href="{{ url_for('delete_profile') }}">
-                        <i class="fas fa-trash"></i><br>
-                    </a>
-                    {% include 'components/modals/delete-profile-modal.html' %}
-                </span>
-                <span>
-                    <a class="edit-profile" href="{{ url_for('patientprofile', username=session['user']) }}">
-                        <i class="fas fa-edit"></i>
-                        Edit Profile
-                    </a>
-                </span>
             </div>
-            <!-- Resource: Icon from https://fontawesome.com/icons/angle-right?style=solid -->
-            <a class="btn appointment-button" type="button" role="button" href="mailto:meditracker@meditracker.com">
-                <strong>Request Appointment 
-                    <i class="fas fa-angle-right"></i>
-                </strong>
-            </a>
-        </div>
-        <div class="col-md-8">
-            <h4 class="dashboard-heading">Symptom Tracker</h4>
-            <div>
-                <a href="{{ url_for('patientlog') }}" class="btn add-log">
-                    <i class="fas fa-folder-plus"></i>
-                    Create New Log
-                </a>
-            </div>
-            {% if logs %}
-                {% for log in logs %}
-                    <div class="dashboard-log">
-                        <!-- Resource: Icons source from Font Awesome -->
-                        <div class="log-date">
-                            <i class="fas fa-calendar-week"></i> 
-                            <strong>Date:</strong> {{ log.log_date }}
-                        </div>
-                        <p><strong>Status:</strong> {{ log.status }}</p>
-                        <p><strong>Weight:</strong> <span>{{ log.weight }}</span><span>{{ log.weight_metric}}</span></p>
-                        <p><strong>Symptoms:</strong> {{ log.symptoms }}</p>
-                        <a type="button" data-toggle="modal" data-target="#delete-log-modal"><i class="fas fa-trash"></i></a>
-                        {% include 'components/modals/delete-log-modal.html' %}
-                        <a href="{{ url_for('editlog', log_id=log._id)}}"><i class="fas fa-pencil-alt"></i></a>
-                    </div>
-                {% endfor %}
-            {% endif %}
         </div>
     </div>
-</div>
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 {% endblock %} 
 {% block scripts %}
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>

@@ -254,7 +254,7 @@ body, p {
     margin-left: 40px;
 }
 
-/* ----------- Pages ----------- */
+/* ----------- General Page Styling ----------- */
 
 .page-heading {
     color: #9E0035;
@@ -263,6 +263,7 @@ body, p {
 
 .breadcrumb a {
     color: #9e0035;
+    padding-left: 8px;
 }
 
 .back-to-dashboard {
@@ -408,6 +409,31 @@ body, p {
     border-radius: 5px;
 }
 
+/* ----------- Scroll to top button ----------- */
+
+/* Resource: Code sourced from W3Schools and styling ammended to match website branding 
+- https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none;
+    background-color: #9E0035; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-color: #3B424A; /* Add a dark-grey background on hover */
+    border: 1px solid white;    
+}
+
 /* ----------- 404 Page ----------- */
 
 .error-page{
@@ -547,7 +573,8 @@ footer .fab {
         }
 }
 
-/* Resource: CSS flex column reverse - https://stackoverflow.com/questions/51719144/css-flex-column-reverse-responsive */
+/* Resource: CSS flex column reverse - 
+https://stackoverflow.com/questions/51719144/css-flex-column-reverse-responsive */
 
 .alternate-authentication {
     display: flex;
@@ -581,29 +608,6 @@ footer .fab {
 
 @media screen and (max-width: 736px) {
     .flash-message {
-        padding-left: 10px;
+        padding-left: 8px;
     }
 }
-
-/* ----------- Scroll to top button ----------- */
-
-/* Resource: Code sourced from W3Schools and styling ammended to match website branding - https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
-#myBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none;
-    background-color: #9E0035; /* Set a background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
-  }
-  
-  #myBtn:hover {
-    background-color: #3B424A; /* Add a dark-grey background on hover */
-    border: 1px solid white;    
-  }

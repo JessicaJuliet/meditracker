@@ -1,68 +1,68 @@
 {% block content %}
-<form class="profile-form" method="POST" action="{{ url_for('patientprofile', username=session['user']) }}">
-    <h5>First, upload a profile image</h5>
-    <!-- Disease status -->
-    <div class="form-input shadow-sm">
-        <div class="form-group row image-div">
-            <label for="patient-image" class="col-xs-12 col-md-3 col-form-label"><strong>Profile Image</strong></label>
-            <div class="col-xs-12 col-md-8">
-                <input id="patient-image" name="patient-image" class="form-control" type="url" placeholder="Enter Image URL" required value="{{ image }}">
+    <form class="profile-form" method="POST" action="{{ url_for('patientprofile', username=session['user']) }}">
+        <h5>First, upload a profile image</h5>
+        <!-- Disease status -->
+        <div class="form-input shadow-sm">
+            <div class="form-group row image-div">
+                <label for="patient-image" class="col-xs-12 col-md-3 col-form-label"><strong>Profile Image</strong></label>
+                <div class="col-xs-12 col-md-8">
+                    <input id="patient-image" name="patient-image" class="form-control" type="url" placeholder="Enter Image URL" required value="{{ image }}">
+                </div>
             </div>
         </div>
-    </div>
-    <h5>Now, enter your details</h5>
-    <!-- Enter Patient Profile Details -->
-    <div class="form-input shadow-sm">
-        <!-- Enter Gender -->
-        <div class="form-group row">
-            <label for="patient-gender" class="col-xs-12 col-md-3 col-form-label"><strong>Gender</strong></label>
-            <div class="col-xs-12 col-md-8">
-                <select id="patient-gender" name="patient-gender" class="form-control" required>
-                    {% for gender in gender %}
-                        <option value="{{ gender.gender }}">{{ gender.gender }}</option>
-                    {% endfor %}
-                </select>
+        <h5>Now, enter your details</h5>
+        <!-- Enter Patient Profile Details -->
+        <div class="form-input shadow-sm">
+            <!-- Enter Gender -->
+            <div class="form-group row">
+                <label for="patient-gender" class="col-xs-12 col-md-3 col-form-label"><strong>Gender</strong></label>
+                <div class="col-xs-12 col-md-8">
+                    <select id="patient-gender" name="patient-gender" class="form-control" required>
+                        {% for gender in gender %}
+                            <option value="{{ gender.gender }}">{{ gender.gender }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <!-- Enter DOB -->
+            <div class="form-group row">
+                <label for="patient-dob" class="col-xs-12 col-md-3 col-form-label"><strong>Date of Birth</strong></label>
+                <div class="col-xs-12 col-md-8">
+                    <input id="patient-dob" name="patient-dob" class="form-control" type="date" placeholder="DD/MM/YYYY" required value="{{ dob }}">
+                </div>
+            </div>
+            <!-- Enter Height -->
+            <div class="form-group row">
+                <label for="patient-height" class="col-xs-12 col-md-3 col-form-label"><strong>Height</strong></label>
+                <span class="col-xs-10 col-md-5">
+                    <input id="patient-height" name="patient-height" class="form-control" type="number" step=".01" placeholder="Enter Height" value="{{ height }}" required>
+                </span>
+                <div class="col-xs-2 col-md-3">
+                    <select id="height_metric" name="height_metric" class="form-control">
+                        {% for metric in height_metric %}
+                            {% if metric.height_metric == user.height_metric %}
+                                <option selected value="{{ metric.height_metric }}">{{ metric.height_metric }}</option>
+                            {% else %}
+                                <option value="{{ metric.height_metric }}">{{ metric.height_metric }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
             </div>
         </div>
-        <!-- Enter DOB -->
-        <div class="form-group row">
-            <label for="patient-dob" class="col-xs-12 col-md-3 col-form-label"><strong>Date of Birth</strong></label>
-            <div class="col-xs-12 col-md-8">
-                <input id="patient-dob" name="patient-dob" class="form-control" type="date" placeholder="DD/MM/YYYY" required value="{{ dob }}">
+        <!-- Update Button -->
+        <div class="container">
+            <!-- Resource: Flex Direction https://getbootstrap.com/docs/4.0/utilities/flex/ -->
+            <div class="row d-flex flex-row-reverse">
+                <!-- Update Profile Button-->
+                <div class="p-2">
+                    <button type="submit" class="btn submit-button"><strong>Update Profile</strong></button>
+                </div>
+                <!-- Cancel Button -->
+                <div class="p-2">
+                    <a href="{{ url_for('dashboard', username=session['user']) }}" class="btn cancel-button">Cancel</a>
+                </div>
             </div>
         </div>
-        <!-- Enter Height -->
-        <div class="form-group row">
-            <label for="patient-height" class="col-xs-12 col-md-3 col-form-label"><strong>Height</strong></label>
-            <span class="col-xs-10 col-md-5">
-                <input id="patient-height" name="patient-height" class="form-control" type="number" step=".01" placeholder="Enter Height" value="{{ height }}" required>
-            </span>
-            <div class="col-xs-2 col-md-3">
-                <select id="height_metric" name="height_metric" class="form-control">
-                    {% for metric in height_metric %}
-                        {% if metric.height_metric == user.height_metric %}
-                            <option selected value="{{ metric.height_metric }}">{{ metric.height_metric }}</option>
-                        {% else %}
-                            <option value="{{ metric.height_metric }}">{{ metric.height_metric }}</option>
-                        {% endif %}
-                    {% endfor %}
-                </select>
-            </div>
-        </div>
-    </div>
-    <!-- Update Button -->
-    <div class="container">
-        <!-- Resource: Flex Direction https://getbootstrap.com/docs/4.0/utilities/flex/ -->
-        <div class="row d-flex flex-row-reverse">
-            <!-- Update Profile Button-->
-            <div class="p-2">
-                <button type="submit" class="btn submit-button"><strong>Update Profile</strong></button>
-            </div>
-            <!-- Cancel Button -->
-            <div class="p-2">
-                <a href="{{ url_for('dashboard', username=session['user']) }}" class="btn cancel-button">Cancel</a>
-            </div>
-        </div>
-    </div>
-</form>
+    </form>
 {% endblock %}
