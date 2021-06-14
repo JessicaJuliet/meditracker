@@ -81,3 +81,8 @@
 </div>
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 {% endblock %} 
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}
+
+

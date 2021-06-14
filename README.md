@@ -147,10 +147,6 @@ MongoDB was used to set up the database for MediTracker. I used [Canva](www.canv
 
 <img src="wireframes/meditracker-database.png" alt="MediTracker MongoDB Collections">
 
-**Please note**, on further development of this project a decision was made to merge the 'Users' and 'Patients' collections into one as their data was related and made more sense to store under one collection.
-
-### Sitemap
-
 I also used Canva to design a sitemap for this website as displayed below:
 
 <img src="wireframes/meditracker-sitemap.png" alt="MediTracker Sitemap">

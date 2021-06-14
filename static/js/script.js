@@ -1,8 +1,9 @@
+// Resource: Javascript best practices https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage   
 // Resource: https://www.w3schools.com/jsref/jsref_tolocaledatestring.asp
 window.addEventListener("DOMContentLoaded", function(){
-    const date = new Date();
-    const dateTodayRef = document.getElementById("dateToday")
-    dateTodayRef.innerHTML = date.toLocaleDateString();
+const date = new Date();
+const dateTodayRef = document.getElementById("dateToday")
+dateTodayRef.innerHTML = date.toLocaleDateString();
 })
 
 // Resource: Code sourced from W3Schools - https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
@@ -19,8 +20,7 @@ function scrollFunction() {
 
 // Scroll to the top 
 function topFunction() {
-  // For Safari
   document.body.scrollTop = 0;
-  // For Chrome, Firefox, IE and Opera
   document.documentElement.scrollTop = 0;
 }
+

@@ -326,3 +326,33 @@ Email client opens
 **Pass/Fail**
 Pass
 
+---
+#### Google Chrome's Console
+
+I checked Google Chrome's Console for any errors. It displayed the following for the JavaScript file:
+
+* Issue:
+
+<img src="wireframes/google-console-errors.png">
+
+* Fix: These errors were caused when the index.html had loaded, the JavaScript code was trying to attach an event listener to the dateToday, but it only exists on the dashboard.html file. To fix this error, I imported the JavaScript to the dashboard.html between {% block scripts %}{% endblock %} tags. This resolved the console errors.
+
+#### Website links
+
+All website links were checked across the website to ensure there were no broken links.
+
+#### Bugs left unfixed
+
+As part of the testing, I submitted this project to the Code Institute's peer-to-peer code review channel in Slack. A few minor issues were detected and fixed:
+
+* Flash message padding on mobile to be increased
+* Page link rename to avoid confusion and improve UX
+
+One issue remains:
+
+* The 'Book Appointment' button failed to work on iPhone 11 devices (Safari and Chrome)
+* I was unable to recreate this issue on my iPhone XS Max device and given the timeframe couldn't find a solution to this
+* In a future release, this will be address to ensure the 'Request Appointment' button works across all devices
+
+
+
