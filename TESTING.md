@@ -18,7 +18,7 @@
 
 <img src="wireframes/register-html-validation.png">
 
-### Issues and Fixes during testing of deployed website
+**Issues and Fixes**
 * Homepage HTML validation
     * Issues: Incorrect use of div element within a span and duplicate class
     * Fix: Updated to meet passing requirements
@@ -26,6 +26,15 @@
     * Issue: Incorrect use of button tag
     * Fix: Changed to 'a' tag
 
+#### Web Accessibility Checker
+
+Web Accessibility was used to test if the website's homepage is accessible to people with disabilities.
+
+<img src="wireframes/web-accessibility.png">
+
+**Issues and Fixes**
+
+Three violations were flagged to ensure link text is meaningful within context for the social media links. As these were icons, and did not contain text, I left these unchanged.
 
 ### Manual Testing
 
@@ -353,6 +362,7 @@ One issue remains:
 * The 'Book Appointment' button failed to work on iPhone 11 devices (Safari and Chrome)
 * I was unable to recreate this issue on my iPhone XS Max device and given the timeframe couldn't find a solution to this
 * In a future release, this will be address to ensure the 'Request Appointment' button works across all devices
+
 
 
 
