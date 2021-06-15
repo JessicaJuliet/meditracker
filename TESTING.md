@@ -205,6 +205,9 @@ Pass
 * Test Case 4:
     * Issue: 'Cancel' button jumped beneath 'Update Profile' and 'Update log' buttons for mobile devices
     * Fix: Reduce side padding on buttons from 40px to 15px
+* Test Case 6:
+    * Issue: Username does not appear on dropdown menu on some pages when logged in
+    * Fix: This was fixed on the homepage follow tutor guidance to duplicate the page to render it differently for logged in users. The same issue was discovered on the 404 page however and remains unfixed due to time constraints. Further research needs to be done on how to remedy this issue.
 
 ---
 
