@@ -208,7 +208,7 @@ MediTracker is a fully responsive website which offers users a login to a privat
 ### Features To Be Implemented
 Given the scope and timeframe for this project, not all features could be implemented. Other features to be added in the future include:  
 
-* Filter logs by the date and status
+* Filter logs by the date and status and display logs in order of date added
 * A 'Forgot Password' functionality
 * Add pagination to reduce scrolling and set the max number of logs displayed to 5 on the dashboard
 * Implement emailjs for the Request Booking functionality
