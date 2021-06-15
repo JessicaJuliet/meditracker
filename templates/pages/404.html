@@ -10,7 +10,11 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
+                {% if session.user %}
+                <a class="error-button btn"  href="{{ url_for('home_user', username=session['user']) }}"><i class="fas fa-angle-left"></i> Back to home</a>
+                {% else %}
                 <a class="error-button btn" href="{{ url_for('home') }}"><i class="fas fa-angle-left"></i> Back to home</a>
+                {% endif %}
             </div>
         </div>
     </div>

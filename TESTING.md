@@ -317,7 +317,9 @@ Pass
 
 * Test case 11:
     * Issue: Cancel button updates form 
-    * Fix: Replace 'button' tag with 'a' tag and remove type="submit"
+    * Fix: Replaced 'button' tag with 'a' tag and remove type="submit"
+    * Issue: Date form allows you to enter date in future
+    * Possible fix: JQuery could be used to prevent this, however this could not be implemented due to time constraints for this release and will be in a future release
 
 --- 
 
@@ -348,6 +350,11 @@ Users can create, read, update and delete medical logs
 
 **Pass/Fail**
 Pass
+
+**Issues and Fixes during testing of deployed website**
+* Test Case 12:
+    * Issue: Date form allows you to enter date in future
+    * Possible fix: JQuery could be used to prevent this, however this could not be implemented due to time constraints for this release and will be in a future release
 
 ---
 

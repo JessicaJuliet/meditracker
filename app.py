@@ -180,7 +180,7 @@ def patientprofile(username):
     height_metric = mongo.db.height_metric.find().sort("height_metric", 1)
     gender = mongo.db.gender.find().sort("gender", 1)
     return render_template(
-        "pages/patientprofile.html",
+        "pages/patient-profile.html",
         gender=gender, height_metric=height_metric,
         username=username, height=height, dob=dob, image=image, user=user)
 
@@ -235,7 +235,7 @@ def patientlog():
     weight_metric = mongo.db.weight_metric.find().sort("weight_metric", 1)
     status = mongo.db.status.find().sort("status", 1)
     return render_template(
-        "pages/patientlog.html",
+        "pages/patient-log.html",
         status=status, weight_metric=weight_metric, username=username)
 
 
@@ -264,7 +264,7 @@ def editlog(log_id):
     weight_metric = mongo.db.weight_metric.find().sort("weight_metric", 1)
     status = mongo.db.status.find().sort("status", 1)
     return render_template(
-        "pages/editlog.html",
+        "pages/edit-log.html",
         status=status, weight_metric=weight_metric, log=log, username=username)
 
 
