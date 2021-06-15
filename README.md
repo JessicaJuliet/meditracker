@@ -76,7 +76,7 @@ The target audience for this application are both medical professionals who want
 The end users of this website will be patients and their user stories are outlined below:
 
 ### User Stories
-* As a patient, I want the main purpose of the website to immediately apparent upon entering so I understand what the site is used for
+* As a patient, I want the main purpose of the website to be immediately apparent upon entering so I understand what the site is used for
 * As a patient, I want a web application which is easy to navigate on both mobile, tablet and desktop devices
 * As a patient, I want a website which is visually appealing and looks professional so I feel confident in storing my medical data
 * As a patient, I want to be able to register to create my own personal account and feel that my information is secure
@@ -163,7 +163,7 @@ I also used Canva to design a sitemap for this website as displayed below:
 
 MediTracker is a fully responsive website which offers users a login to a private dashboard area. Below I have gone into greater detail on how the website's features meet each of the [user stories](#User-Stories) identified at the beginning of the README document:
 
-> As a patient, I want the main purpose of the website to immediately apparent upon entering so I understand what the site is used for
+> As a patient, I want the main purpose of the website to be immediately apparent upon entering so I understand what the site is used for
 
 * The website displays the MediTracker logo in the top left corner which remains fixed across all site pages
 * The homepage includes a clear title and website description over the hero image which is immediatebly visible to users upon entering the site 

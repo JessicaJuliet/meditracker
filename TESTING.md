@@ -63,20 +63,22 @@ A linting error remains in the terminal "'env' important but unused". This error
 
 ## Manual Testing
 
-> As a patient, I want the main purpose of the website to immediately apparent upon entering so I understand what the site is used for
+Manual tests were carried out across all user stories and features:
 
-#### Test Case 1
+> As a patient, I want the main purpose of the website to be immediately apparent upon entering so I understand what the site is used for
+
+### Test Case 1
 
 **Description:**
 Verify site logo displays across all website pages for non-registered and registered users
 **Steps:**
 1. Open Chrome and navigate to website
 2. Check logo appears on homepage
-3. Sign into account and navigate through all pages to check logo appears on all of them 
-4. Repeat above steps on mobile
+3. Sign into account and navigate through all pages to ensure logo appears across all of them
+4. Repeat steps on mobile
 
 **Expected Result:**
-Logo displays on all website epages
+Logo displays on all website pages
 
 **Actual Result:**
 Logo displays on all website pages
@@ -84,15 +86,15 @@ Logo displays on all website pages
 **Pass/Fail:**
 Pass
 
-#### Test Case 2
+### Test Case 2
 
 **Description:**
-Verify the homepage displays a hero image
+Verify the homepage displays a relevant hero image and text
 **Steps:**
 1. Open Chrome and navigate to website
 2. Check hero image displays on homepage
 3. Check hero text displays over image
-4. Repeat above steps on mobile
+4. Repeat steps on mobile
 
 **Expected Result:**
 Hero text displays over hero image 
@@ -103,20 +105,20 @@ Hero text displays over hero image
 **Pass/Fail:**
 Pass
 
-#### Test Case 3
+### Test Case 3
 
 **Description:**
-Verify the homepage displays an 'About' section 
+Verify the homepage has an 'About' section 
 **Steps:**
 1. Open Chrome and navigate to website homepage
-2. Scroll down to ensure About section appears
+2. Scroll down to ensure 'About' section displays
 3. Repeat above steps on mobile
 
 **Expected Result:**
-About section appears on homepage
+About section displays on homepage
 
 **Actual Result:**
-About section appears on homepage
+About section displays on homepage
 
 **Pass/Fail:**
 Pass
@@ -125,13 +127,14 @@ Pass
 
 > As a patient, I want a web application which is easy to navigate on mobile, tablet and desktop devices
 
-#### Test Case 4
+### Test Case 4
 **Description:**
 Verify the website's responsiveness across varying device types
 **Steps:**
 1. Navigate to website on Chrome
 2. Open up Chrome Google Developer Tools
 3. Use 'Responsive' tool to test responsiveness across all pages on website
+4. Open website on different physical home devices to further ensure responsiveness
 
 **Expected Result:**
 Website rescales for varying device types 
@@ -141,7 +144,7 @@ Website rescales for varying device types
 
 **Pass/Fail:** Pass
 
-#### Test Case 5
+### Test Case 5
 **Description:**
 Verify the hamburger menu appears on small devices
 **Steps:**
@@ -158,25 +161,27 @@ Navbar displays and functions on mobile
 **Pass/Fail:**
 Pass
 
-#### Test Case 6
+### Test Case 6
 **Description:**
-Verify all pages container a navbar and footer with the correct links
+Verify all pages contain a navbar and footer with the correct and functioning links
 
 **Steps:**
 1. Navigate to website in Chrome
-2. Check homepage containers header and footer with correct links
+2. Check homepage contains header and footer with correct links
+3. Test all header and footer links
 3. Login and ensure all logged in pages display header and footer with correct links
+4. Test all header and footer links when signed in
 
 **Expected Result:**
-Header and footer display with links functioning
+Header and footer display with functioning links
 
 **Actual Result:**
-Header and footer display with links functioning
+Header and footer display with functioning links
 
 **Pass/Fail**
 Pass
 
-#### Test Case 7
+### Test Case 7
 **Description:**
 Ensure 'back-to-top' button display on dashboard
 
@@ -195,7 +200,7 @@ Ensure 'back-to-top' button display on dashboard
 **Pass/Fail:**
 Pass
 
-### Issues and Fixes during testing of deployed website
+**Issues and Fixes during testing of deployed website**
 
 * Test Case 4:
     * Issue: 'Cancel' button jumped beneath 'Update Profile' and 'Update log' buttons for mobile devices
@@ -205,7 +210,7 @@ Pass
 
 > As a patient, I want a website which is visually appealing and looks professional so I feel confident in storing my medical data
 
-#### Test Case 8
+### Test Case 8
 **Description:**
 Verify consistent colours and styling across website
 
@@ -227,13 +232,13 @@ Pass
 
 > As a patient, I want to be able to register to create my own personal account and feel that my information is secure
 
-#### Test Case 9
+### Test Case 9
 **Description:**
-Verify registration functionality form performs as expected
+Verify registration form performs as expected
 
 **Steps:**
 1. Navigate to website's register page on Chrome
-2. Ensure the contact form is visible and containers the following fileds
+2. Ensure the contact form is visible and containers the following fields
     1. Username
     2. Password
     3. GDPR consent box
@@ -242,6 +247,7 @@ Verify registration functionality form performs as expected
     2. Password: TestLogin
     3. Check GDPR box
 4. Click Register
+5. Repeat same on mobile device
 
 **Expected Result**
 Form submits without errors
@@ -251,18 +257,19 @@ Form submits without errors
 
 **Pass/Fail** Pass
 
-#### Test Case 10
+### Test Case 10
 **Description:**
 Ensure registration functionality form performs as expected when incorrect or null data is added
 
 **Steps:**
 1. Navigate to website's register page on Chrome
-2. Ensure the contact form is visible and contains the following fileds
+2. Ensure the contact form is visible and contains the following fields
     1. Username
     2. Password
     3. GDPR consent box
-3. Submit the form when the username is blank and ensure a warning appears to say 'Please fill in this field'. Repeat the same for password and GDPR box
-4. Submit the form when the username has the incorrect format and ensure a warning message appears outlining the required format. Repeat same for password
+3. Submit the form when the username is blank and ensure a warning appears prompting to fill in field. Repeat the same for password and GDPR box
+4. Submit the form when the username has the incorrect format and ensure a warning message appears outline required format. Repeat same for password
+5. Repeat on mobile device
 
 **Expected Result**
 Form will not submit with incorrect or null data
@@ -273,10 +280,14 @@ Form will not submit with incorrect or null data
 **Pass/Fail**
 Pass
 
+**Issues and Fixes during testing of deployed website**
+*  Test Case 10
+    * Issue: On mobile devices, users cannot see the form title as it appears on desktop outlining the required format
+    * Fix: A fix has not been found for this at present, but users are still notified when their input is wrong
 --- 
 > As a patient, I want to be able to update my health profile with my personal details
 
-#### Test Case 11
+### Test Case 11
 
 **Description:**
 Verify patient can update, edit and delete their health profile when logged in
@@ -287,21 +298,22 @@ Verify patient can update, edit and delete their health profile when logged in
 3. Click to edit profile
 4. Enter image url, gender, dob and height
 5. Click to update profile
-6. Click to edit profile on dashboard
-7. Submit new data
+6. Click to edit profile on dashboard and edit fields above
+7. Submit new data and ensure profile updates on dashboard
 8. Click to delete profile
 9. Ensure that modal appears to confirm deletion
+10. Repeat on mobile device
 
 **Expected Result:**
-Users can create, read, update and delete profile data which displays on dashboard
+Users can create, read, update and delete profile data on dashboard
 
 **Actual Result:**
-Users can create, read, update and delete profile data which displays on dashboard
+Users can create, read, update and delete profile data on dashboard
 
 **Pass/Fail:**
 Pass
 
-### Issues and Fixes during testing of deployed website
+**Issues and Fixes during testing of deployed website**
 
 * Test case 11:
     * Issue: Cancel button updates form 
@@ -311,7 +323,7 @@ Pass
 
 > As a patient, I want to be able to record my medical logs and have the ability to edit and delete data I no longer wish to record
 
-#### Test Case 12
+### Test Case 12
 
 **Description:**
 Ensure that users can create, read, update and delete medical logs
@@ -341,15 +353,18 @@ Pass
 
 > As a patient, I want to be able to request an appointment with my medical team
 
-#### Test Case 13
+### Test Case 13
 
 **Description:**
-Verify that patients can email the medical team
+Verify that patients can email their medical team
 
 **Steps:**
 1. Open Chrome and navigate to website
 2. Click 'Request Appointment' button on homepage
 3. Ensure button opens email client
+4. Login and go to dashboard
+5. Click 'Request Appointment' button on Dashboard
+6. Ensure button opens email client
 
 **Expected Result**
 Email client opens
@@ -361,33 +376,31 @@ Email client opens
 Pass
 
 ---
-#### Google Chrome's Console
+### Google Chrome's Console
 
-I checked Google Chrome's Console for any errors. It displayed the following for the JavaScript file:
+I checked Google Chrome's Console for any code errors. It displayed the following for the JavaScript file:
 
 * Issue:
 
 <img src="wireframes/google-console-errors.png">
 
-* Fix: These errors were caused when the index.html had loaded, the JavaScript code was trying to attach an event listener to the dateToday, but it only exists on the dashboard.html file. To fix this error, I imported the JavaScript to the dashboard.html between {% block scripts %}{% endblock %} tags. This resolved the console errors.
+* Fix: These errors were caused when the index.html had loaded, the JavaScript code was trying to attach an event listener to the dateToday, but it only exists on the dashboard.html file. 
 
-#### Website links
+To fix this error, I imported the JavaScript directly to the dashboard.html between {% block scripts %}{% endblock %} tags and removed it from the scripts.html as it did not apply to all pages. This resolved the console errors.
 
-All website links were checked across the website to ensure there were no broken links.
+### Website links/ 404 Error
 
-#### Bugs left unfixed
+All website links were reviewed across the website to ensure there were no broken links. I tested the 404 page by typing in an incorrect URL. This loaded correctly.
+
+### Peer Code Review
 
 As part of the testing, I submitted this project to the Code Institute's peer-to-peer code review channel in Slack. A few minor issues were detected and fixed:
 
 * Flash message padding on mobile to be increased
 * Page link rename to avoid confusion and improve UX
 
-One issue remains:
+One possible issue remains:
 
-* The 'Book Appointment' button failed to work on iPhone 11 devices (Safari and Chrome)
-* I was unable to recreate this issue on my iPhone XS Max device and given the timeframe couldn't find a solution to this
-* In a future release, this will be address to ensure the 'Request Appointment' button works across all devices
-
-
-
-
+* The 'Book Appointment' button failed to work on iPhone 11 devices (Safari and Chrome). This could possibly be due to whether the user has an email client installed on their device or not
+* I was unable to recreate this issue on my iPhone XS Max or MacBook 12 devices and given the timeframe couldn't find a solution to this
+* In a future release, this will be addressed to ensure the 'Request Appointment' button works across all devices
