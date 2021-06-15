@@ -20,7 +20,7 @@
             <div class="form-group row">
                 <label for="patient-weight" class="col-xs-12 col-md-3 col-form-label"><strong>Weight</strong></label>
                 <span class="col-xs-10 col-md-5">
-                    <input id="patient-weight" name="patient-weight" class="form-control" type="text" placeholder="Enter Weight" required>
+                    <input id="patient-weight" name="patient-weight" class="form-control" type="number" placeholder="Enter Weight" required>
                 </span>
                 <div class="col-xs-2 col-md-3">
                     <select id="weight_metric" name="weight_metric" class="form-control" required>
@@ -54,7 +54,7 @@
                 </div>
                 <!-- Cancel Button -->
                 <div class="p-2">
-                    <button href="{{ url_for('dashboard', username=session['user']) }}" class="btn cancel-button">Cancel</button>
+                    <a href="{{ url_for('dashboard', username=session['user']) }}" class="btn cancel-button">Cancel</a>
                 </div>
             </div>
         </div>

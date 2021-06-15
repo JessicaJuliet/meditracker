@@ -274,7 +274,7 @@ body, p {
     color: #3B424A;
 }
 
-.btn {
+i, .btn {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
