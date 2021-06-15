@@ -1,24 +1,31 @@
-### Automated Testing
+## Automated Testing
 
-**CSS Validation: Pass**
+### CSS Validation Check
 
-<img src="wireframes/w3c-css-validation.png">
+The website's CSS passed the W3C CSS Validation checker:
 
-#### [W3C Markup Validation](https://validator.w3.org/)
+**CSS: Pass**
 
-**Homepage: PASS**
+<img src="wireframes/w3c-css-validation.png" alt="MediTracker CSS check">
 
-<img src="wireframes/homepage-html-validation.png">
+### W3C Markup Validation Check
 
-**Login Page: PASS**
+The website's HTML passed the W3C HTML Validation checker:
 
-<img src="wireframes/login-html-validation.png">
+**Homepage: Pass**
 
-**Register Page: PASS**
+<img src="wireframes/homepage-html-validation.png" alt="MediTracker HTML check">
 
-<img src="wireframes/register-html-validation.png">
+**Login Page: Pass**
+
+<img src="wireframes/login-html-validation.png" alt="MediTracker HTML check">
+
+**Register Page: Pass**
+
+<img src="wireframes/register-html-validation.png" alt="MediTracker HTML check">
 
 **Issues and Fixes**
+
 * Homepage HTML validation
     * Issues: Incorrect use of div element within a span and duplicate class
     * Fix: Updated to meet passing requirements
@@ -26,17 +33,35 @@
     * Issue: Incorrect use of button tag
     * Fix: Changed to 'a' tag
 
-#### Web Accessibility Checker
+### Python PEP8 Compliant
 
-Web Accessibility was used to test if the website's homepage is accessible to people with disabilities.
+The website's Python code was checked for [PEP8 compliance](http://pep8online.com/) and returned no errors:
+
+<img src="wireframes/python-pep8-test.png" alt="MediTracker Python PEP8 compiance test">
+
+### JSHint JavaScript Test
+
+The website's JavaScript was tested for errors using [JSHint](https://jshint.com/).
+
+**Issues and Fixes**
+
+JSHint returned three warnings - two related to the use of 'const' in ES6 which didn't require attention. Another was in relation to a mission semicolon, however this line of code contained the appropriate semicolons.
+
+### Web Accessibility 
+
+The website's homepage was tested to ensure it was accessible to people with disabilities using the [Web Accessibility](https://www.webaccessibility.com/) checker.
 
 <img src="wireframes/web-accessibility.png">
 
 **Issues and Fixes**
 
-Three violations were flagged to ensure link text is meaningful within context for the social media links. As these were icons, and did not contain text, I left these unchanged.
+Three violations were highlighted to ensure link text is meaningful within context for the social media links. As these were icons, and did not contain text, I left these unchanged. Overall, the homepage received a good score of 89%.
 
-### Manual Testing
+## Linter
+
+A linting error remains in the terminal "'env' important but unused". This error was ignored as the env.py file is not discoverable and thus performing as desired.
+
+## Manual Testing
 
 > As a patient, I want the main purpose of the website to immediately apparent upon entering so I understand what the site is used for
 

@@ -3,9 +3,9 @@
 // Resource: https://www.w3schools.com/jsref/jsref_tolocaledatestring.asp
 window.addEventListener("DOMContentLoaded", function(){
   const date = new Date();
-  const dateTodayRef = document.getElementById("dateToday")
+  const dateTodayRef = document.getElementById("dateToday");
   dateTodayRef.innerHTML = date.toLocaleDateString();
-})
+});
 
 // Resource: Code sourced from W3Schools - https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
 mybutton = document.getElementById("myBtn");
