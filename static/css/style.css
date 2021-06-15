@@ -79,16 +79,14 @@ body, p {
 
 .hero-heading {
     padding: 100px 0px 0px 0px;
-    -webkit-text-stroke: 0.3px #24292e;
-	-webkit-text-fill-color: white;
+    color: white;
 }
 
 .hero-text {
     font-size: 30px;
     line-height: 35px;
     position: absolute;
-    -webkit-text-stroke: 0.3px #24292e;
-	-webkit-text-fill-color: white;
+    color: white;
 }
 
 /* ----------- Homepage ----------- */
@@ -274,7 +272,7 @@ body, p {
     color: #3B424A;
 }
 
-i, .btn {
+.btn {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -527,6 +525,12 @@ footer .fab {
 /* ----------- Media Queries ----------- */
 
 @media only screen and (max-width: 765px) {
+    .hero-text  {
+        padding: 0px 3px;
+        }
+    }
+
+@media only screen and (max-width: 765px) {
     .custom-dropdown  {
         margin-top: 40px;
         }
@@ -587,10 +591,6 @@ https://stackoverflow.com/questions/51719144/css-flex-column-reverse-responsive 
     }
     .user-authentication {
         width: 100%;
-    }
-    .welcome-alternat {
-        color: #222;
-        background: #ccc;
     }
 }
 
