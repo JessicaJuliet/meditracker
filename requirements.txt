@@ -16,6 +16,7 @@ cryptography==3.4.7
 decorator==5.0.7
 defusedxml==0.7.1
 distlib==0.3.1
+dnspython==2.2.1
 docutils==0.17
 entrypoints==0.3
 filelock==3.0.12
@@ -23,7 +24,6 @@ flake8==3.9.0
 flake8-django==1.1.1
 flake8-flask==0.9.3
 Flask==2.2.2
-Flask-PyMongo==2.3.0
 gitdb==4.0.7
 GitPython==3.1.14
 idna==2.10
@@ -71,7 +71,7 @@ pyflakes==2.3.1
 Pygments==2.8.1
 pylama==7.7.1
 pylint==2.7.4
-pymongo==3.11.4
+pymongo==4.3.3
 pyparsing==2.4.7
 pyrsistent==0.17.3
 python-dateutil==2.8.1
