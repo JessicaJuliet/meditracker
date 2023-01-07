@@ -24,6 +24,7 @@ flake8==3.9.0
 flake8-django==1.1.1
 flake8-flask==0.9.3
 Flask==2.2.2
+Flask-PyMongo==2.3.0
 gitdb==4.0.7
 GitPython==3.1.14
 idna==2.10
